@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "login.html";
     }
 
-    const socket = new WebSocket("ws://anyahubs.github.io/CommanderX:8080");
+    const socket = new WebSocket("ws://anyahubs.github.io:8080");
 
     socket.onmessage = function (event) {
         const data = JSON.parse(event.data);
