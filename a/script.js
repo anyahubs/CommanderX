@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "login.html";
     }
 
-    const socket = new WebSocket("ws://localhost:8080"); // استبدال بعنوان واجتماعي WebSocket الفعلي
+    const socket = new WebSocket("ws://anyahubs.github.io/CommanderX:8080");
 
     socket.onmessage = function (event) {
         const data = JSON.parse(event.data);
