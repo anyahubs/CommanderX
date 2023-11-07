@@ -10,16 +10,17 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "login.html";
     }
 
-    function appendMessage(sender, message) {
-        const messageElement = document.createElement("div");
-        messageElement.textContent = `${sender}: ${message}`;
-        conversation.appendChild(messageElement);
-    }
+    const socket = new WebSocket("ws://localhost:8080"); // استبدال بعنوان واجتماعي WebSocket الفعلي
+
+    socket.onmessage = function (event) {
+        const data = JSON.parse(event.data);
+        appendMessage(data.sender, data.message);
+    };
 
     sendButton.addEventListener("click", function () {
         const messageText = messageInput.value;
         if (messageText.trim() !== "") {
-            appendMessage(username, messageText);
+            socket.send(JSON.stringify({ sender: username, message: messageText }));
             messageInput.value = "";
         }
     });
@@ -36,4 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
         a.download = "conversation.txt";
         a.click();
     });
+
+    function appendMessage(sender, message) {
+        const messageElement = document.createElement("div");
+        messageElement.textContent = `${sender}: ${message}`;
+        conversation.appendChild(messageElement);
+    }
 });
