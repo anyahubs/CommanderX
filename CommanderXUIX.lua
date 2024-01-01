@@ -3161,8 +3161,8 @@ local function onPlayerChatted(message)
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/CommanderX/main/Commander.lua'))()
 	end
 end
-Players.LocalPlayer.Chatted:Connect(onPlayerChatted)
---onPlayerChatted()
+--Players.LocalPlayer.Chatted:Connect(onPlayerChatted)
+onPlayerChatted()
 
 	local ffps = f1.fps.TextLabel
 	local pping = f1.ping.TextLabel
