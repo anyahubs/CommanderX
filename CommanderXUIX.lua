@@ -22,8 +22,6 @@ G2L["2"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
 G2L["2"]["Size"] = UDim2.new(0, 601, 0, 353);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["Position"] = UDim2.new(0.21886950731277466, 0, 0.2276298999786377, 0);
-G2L["2"]["ZIndex"] = 99999999;
-
 
 -- StarterGui.dev.Frame.UICorner
 G2L["3"] = Instance.new("UICorner", G2L["2"]);
@@ -2369,7 +2367,7 @@ local function C_96()
 		local decoded = http:JSONDecode(response)
 		for _, script in pairs(decoded.result.scripts) do
 			if(script.isUniversal == true) then
-				AddTab("rbxassetid://0", script.title, script.script)
+				AddTab("rbxassetid://000", script.title, script.script)
 			else
 				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
 			end
@@ -3052,7 +3050,7 @@ local function C_10e()
 	script.Parent.Position = UDim2.new(0.219, 0,-5, 0)
 	script.Parent.ui.Visible = false
 	game.TweenService:Create(script.Parent.Parent.ImageButton, TweenInfo.new(3), {Position = UDim2.new(-5, 0,0.121, 0)}):Play()
-	wait(1.5)
+	wait(3)
 	script.Parent.Parent.ImageButton.Visible = true
 	script.Parent.Visible = true
 	game.TweenService:Create(script.Parent, TweenInfo.new(1), {Position = UDim2.new(0.219, 0,-5, 0)}):Play()
