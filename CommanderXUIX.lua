@@ -1,5 +1,5 @@
 -- Gui to Lua
--- Version: 3.2
+-- Version: 3.6
 
 -- Instances:
 
@@ -269,9 +269,10 @@ local dev = {
 	ImageButton_2 = Instance.new("ImageButton"),
 	UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint"),
 	UICorner_48 = Instance.new("UICorner"),
+	UIStroke = Instance.new("UIStroke"),
 }
 
---Properties:
+-- Properties:
 
 dev.dev.Name = "dev"
 dev.dev.Parent = game.CoreGui
@@ -283,7 +284,7 @@ dev.Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 dev.Frame.BorderSizePixel = 0
 dev.Frame.Position = UDim2.new(0.218869507, 0, 0.2276299, 0)
 dev.Frame.Size = UDim2.new(0, 601, 0, 353)
-dev.Frame.ZIndex = 99999999
+dev.Frame.ZIndex = 999999999
 
 dev.UICorner.Parent = dev.Frame
 
@@ -1055,6 +1056,7 @@ dev.ScrollingFrame.BorderSizePixel = 0
 dev.ScrollingFrame.Position = UDim2.new(-0.00216590823, 0, 0.0111345463, 0)
 dev.ScrollingFrame.Size = UDim2.new(0.999873996, 0, 1.19197977, 0)
 dev.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 5, 0)
+dev.ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
 
 dev.UICorner_27.Parent = dev.ScrollingFrame
 
@@ -1287,6 +1289,7 @@ dev.ScrollingFrame_2.BackgroundTransparency = 1.000
 dev.ScrollingFrame_2.BorderColor3 = Color3.fromRGB(14, 14, 14)
 dev.ScrollingFrame_2.Position = UDim2.new(0, 0, 0, 31)
 dev.ScrollingFrame_2.Size = UDim2.new(1, 0, 0.911286831, -20)
+dev.ScrollingFrame_2.ScrollBarImageColor3 = Color3.fromRGB(14, 14, 14)
 dev.ScrollingFrame_2.ScrollBarThickness = 6
 
 dev.UIListLayout_3.Parent = dev.ScrollingFrame_2
@@ -1386,6 +1389,7 @@ dev.ScrollingFrame_3.BorderSizePixel = 0
 dev.ScrollingFrame_3.Position = UDim2.new(-0.00216590823, 0, 0.0111345463, 0)
 dev.ScrollingFrame_3.Size = UDim2.new(0.999873996, 0, 0.97078979, 0)
 dev.ScrollingFrame_3.CanvasSize = UDim2.new(0, 0, 5, 0)
+dev.ScrollingFrame_3.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
 
 dev.UICorner_37.Parent = dev.ScrollingFrame_3
 
@@ -2224,9 +2228,13 @@ dev.UIAspectRatioConstraint_19.AspectRatio = 1.021
 
 dev.UICorner_48.Parent = dev.ImageButton_2
 
+dev.UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+dev.UIStroke.Thickness = 3
+dev.UIStroke.Parent = dev.ImageButton_2
+
 -- Scripts:
 
-local function HGHWQLV_fake_script() -- dev.ImageLabel_5.LocalScript 
+local function FMSRI_fake_script() -- dev.ImageLabel_5.LocalScript 
 	local script = Instance.new('LocalScript', dev.ImageLabel_5)
 
 	repeat wait() until game.Players.LocalPlayer.Character ~= nil
@@ -2239,8 +2247,8 @@ local function HGHWQLV_fake_script() -- dev.ImageLabel_5.LocalScript
 	
 	script.Parent.Image = game.Players:GetUserThumbnailAsync(UserId,ThumbType,ThumbSize)
 end
-coroutine.wrap(HGHWQLV_fake_script)()
-local function KKQVCQ_fake_script() -- dev.Frame.search 
+coroutine.wrap(FMSRI_fake_script)()
+local function JVAZZ_fake_script() -- dev.Frame.search 
 	local script = Instance.new('LocalScript', dev.Frame)
 
 	--[[
@@ -2252,63 +2260,50 @@ local function KKQVCQ_fake_script() -- dev.Frame.search
 	██████╔╝███████╗██║░░██║██║░░██║╚█████╔╝██║░░██║  ╚█████╔╝╚█████╔╝██████╔╝███████╗
 	╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝
 	]]--
+	local scriptsframe = script.Parent.sr
+	local btn = scriptsframe.tags.clip.TextButton
 	
-	local search = script.Parent.sr
-	local btn = search.tags.clip.TextButton
+	local function AddTab(imageTab, scriptname, source)
+		local scriptFrame = scriptsframe.tx.ScrollingFrame
+		local newList = scriptFrame.Frame.Folder.Frame:Clone()
 	
-local function AddTab(imageTab, scriptname, source)
-    local scriptFrame = search.tx.ScrollingFrame
-    local folderFrame = scriptFrame.Frame.Folder
-
-    -- Check if the Folder exists
-    if not folderFrame:IsA("Folder") then
-        warn("Folder not found.")
-        return
-    end
-
-    local newList = folderFrame.Frame:Clone()
-
-    -- Check if newList is valid
-    if not newList:IsA("Frame") then
-        warn("Cloning failed.")
-        return
-    end
-
-    local execute = newList.load
-    local copy = newList.copy
-    local scname = newList.s
-    local img = newList.ImageLabel
-
-    newList.Name = scriptname
-    newList.Parent = scriptFrame
-    newList.Visible = true
-
-    img.Image = imageTab
-    scname.Text = scriptname
-
-    execute.MouseButton1Click:Connect(function()
-        loadstring(source)()
-    end)
-    copy.MouseButton1Click:Connect(function()
-        setclipboard(source)
-    end)
-end
+		local execute = newList.load
+	    local copy = newList.copy
+		local scname = newList.s
+		local img = newList.ImageLabel
+	
+		newList.Name = scriptname
+		newList.Parent = scriptFrame
+		newList.Visible = true
+	
+		img.Image = imageTab
+	
+		scname.Text = scriptname
+	
+		execute.MouseButton1Click:Connect(function()
+			loadstring(source)()
+		end)
+		copy.MouseButton1Click:Connect(function()
+			setclipboard(source)
+		end)
+	end
+	
 	
 	local http = game:GetService("HttpService")
 	btn.MouseButton1Click:Connect(function()
-		for _, child in ipairs(script.Parent.sr.tx.ScrollingFrame:GetChildren()) do
+		for _, child in ipairs(scriptsframe.ScrollingFrame:GetChildren()) do
 			if child:IsA("Frame") then
 				child:Destroy()
 			end
 		end
 	
 	
-		local url = "https://scriptblox.com/api/script/search?filters=free&q="..script.Parent.sr.tags.TextBox.Text
+		local url = "https://scriptblox.com/api/script/search?filters=free&q="..scriptsframe.tags.TextBox.Text
 		local response = game:HttpGetAsync(url)
 		local decoded = http:JSONDecode(response)
 		for _, script in pairs(decoded.result.scripts) do
 			if(script.isUniversal == true) then
-				AddTab("rbxassetid://000", script.title, script.script)
+				AddTab("rbxassetid://15117873611", script.title, script.script)
 			else
 				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
 			end
@@ -2317,10 +2312,9 @@ end
 	
 	end)
 	
-	
 end
-coroutine.wrap(KKQVCQ_fake_script)()
-local function PEVUP_fake_script() -- dev.Frame_7.LocalScript 
+coroutine.wrap(JVAZZ_fake_script)()
+local function UEWNX_fake_script() -- dev.Frame_7.LocalScript 
 	local script = Instance.new('LocalScript', dev.Frame_7)
 
 	local textLabel = script.Parent.lol
@@ -2329,8 +2323,8 @@ local function PEVUP_fake_script() -- dev.Frame_7.LocalScript
 		textLabel.Text = txtbox.Text
 	end
 end
-coroutine.wrap(PEVUP_fake_script)()
-local function OZGBLTR_fake_script() -- dev.TextButton_8.LocalScript 
+coroutine.wrap(UEWNX_fake_script)()
+local function JFXFT_fake_script() -- dev.TextButton_8.LocalScript 
 	local script = Instance.new('LocalScript', dev.TextButton_8)
 
 	local main = script.Parent.Parent.Parent
@@ -2359,8 +2353,8 @@ local function OZGBLTR_fake_script() -- dev.TextButton_8.LocalScript
 	
 	
 end
-coroutine.wrap(OZGBLTR_fake_script)()
-local function IYDKG_fake_script() -- dev.TextButton_9.LocalScript 
+coroutine.wrap(JFXFT_fake_script)()
+local function GTWVO_fake_script() -- dev.TextButton_9.LocalScript 
 	local script = Instance.new('LocalScript', dev.TextButton_9)
 
 	local main = script.Parent.Parent.Parent
@@ -2370,8 +2364,8 @@ local function IYDKG_fake_script() -- dev.TextButton_9.LocalScript
 	
 	
 end
-coroutine.wrap(IYDKG_fake_script)()
-local function BTQQOK_fake_script() -- dev.TextButton_11.LocalScript 
+coroutine.wrap(GTWVO_fake_script)()
+local function JDCBR_fake_script() -- dev.TextButton_11.LocalScript 
 	local script = Instance.new('LocalScript', dev.TextButton_11)
 
 	local main = script.Parent.Parent.Parent.Parent.Parent
@@ -2400,8 +2394,8 @@ local function BTQQOK_fake_script() -- dev.TextButton_11.LocalScript
 	
 	
 end
-coroutine.wrap(BTQQOK_fake_script)()
-local function TVBRRYN_fake_script() -- dev.Frame.execute 
+coroutine.wrap(JDCBR_fake_script)()
+local function VZQHPC_fake_script() -- dev.Frame.execute 
 	local script = Instance.new('LocalScript', dev.Frame)
 
 	
@@ -2950,8 +2944,8 @@ local function TVBRRYN_fake_script() -- dev.Frame.execute
 		end
 	end
 end
-coroutine.wrap(TVBRRYN_fake_script)()
-local function VGVBTOB_fake_script() -- dev.Frame.homr 
+coroutine.wrap(VZQHPC_fake_script)()
+local function UCJU_fake_script() -- dev.Frame.homr 
 	local script = Instance.new('LocalScript', dev.Frame)
 
 	local frames = script.Parent
@@ -3094,8 +3088,8 @@ local function VGVBTOB_fake_script() -- dev.Frame.homr
 	print("No Errors From Roblox Studio!")
 	print("No Errors From Executor!")
 end
-coroutine.wrap(VGVBTOB_fake_script)()
-local function WCBNLNV_fake_script() -- dev.dev.resize 
+coroutine.wrap(UCJU_fake_script)()
+local function TCMIAWP_fake_script() -- dev.dev.resize 
 	local script = Instance.new('LocalScript', dev.dev)
 
 	-- bruh this is probably not the most optimal way to do this, but it works so i dont care
@@ -3209,4 +3203,4 @@ local function WCBNLNV_fake_script() -- dev.dev.resize
 		end)
 	end
 end
-coroutine.wrap(WCBNLNV_fake_script)()
+coroutine.wrap(TCMIAWP_fake_script)()
