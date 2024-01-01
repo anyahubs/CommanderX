@@ -2310,71 +2310,69 @@ task.spawn(C_1a);
 -- StarterGui.dev.Frame.search
 local function C_96()
 	local script = G2L["96"];
-	--[[
-	
-	░██████╗███████╗░█████╗░██████╗░░█████╗░██╗░░██╗  ░█████╗░░█████╗░██████╗░███████╗
-	██╔════╝██╔════╝██╔══██╗██╔══██╗██╔══██╗██║░░██║  ██╔══██╗██╔══██╗██╔══██╗██╔════╝
-	╚█████╗░█████╗░░███████║██████╔╝██║░░╚═╝███████║  ██║░░╚═╝██║░░██║██║░░██║█████╗░░
-	░╚═══██╗██╔══╝░░██╔══██║██╔══██╗██║░░██╗██╔══██║  ██║░░██╗██║░░██║██║░░██║██╔══╝░░
-	██████╔╝███████╗██║░░██║██║░░██║╚█████╔╝██║░░██║  ╚█████╔╝╚█████╔╝██████╔╝███████╗
-	╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝
-	]]--
+--[[
 
-	local search = script.Parent.sr
-	local btn = search.tags.clip.TextButton
+░██████╗███████╗░█████╗░██████╗░░█████╗░██╗░░██╗  ░█████╗░░█████╗░██████╗░███████╗
+██╔════╝██╔════╝██╔══██╗██╔══██╗██╔══██╗██║░░██║  ██╔══██╗██╔══██╗██╔══██╗██╔════╝
+╚█████╗░█████╗░░███████║██████╔╝██║░░╚═╝███████║  ██║░░╚═╝██║░░██║██║░░██║█████╗░░
+░╚═══██╗██╔══╝░░██╔══██║██╔══██╗██║░░██╗██╔══██║  ██║░░██╗██║░░██║██║░░██║██╔══╝░░
+██████╔╝███████╗██║░░██║██║░░██║╚█████╔╝██║░░██║  ╚█████╔╝╚█████╔╝██████╔╝███████╗
+╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝
+]]--
 
-	local function AddTab(imageTab, scriptname, source)
-		local scriptFrame = search.tx.ScrollingFrame
-		local newList = scriptFrame.Frame.Folder.Frame:Clone()
+local search = script.Parent.sr
+local btn = search.tags.clip.TextButton
 
-		local execute = newList.load
-		local copy = newList.copy
+local function AddTab(imageTab, scriptname, source)
+	local scriptFrame = search.tx.ScrollingFrame
+	local newList = scriptFrame.Frame.Folder.Frame:Clone()
+
+	local execute = newList.load
+	local copy = newList.copy
 
 
-		local scname = newList.s
-		local scdesk = newList.TextLabel
-		local img = newList.ImageLabel
+	local scname = newList.s
+	local img = newList.ImageLabel
 
-		newList.Name = scriptname
-		newList.Parent = scriptFrame
-		newList.Visible = true
+	newList.Name = scriptname
+	newList.Parent = scriptFrame
+	newList.Visible = true
 
-		img.Image = imageTab
+	img.Image = imageTab
 
-		scname.Text = scriptname
-		scdesk.Text = "still dev"
+	scname.Text = scriptname
 
-		execute.MouseButton1Click:Connect(function()
-			loadstring(source)()
-		end)
-		copy.MouseButton1Click:Connect(function()
-			setclipboard(source)
-		end)
+	execute.MouseButton1Click:Connect(function()
+		loadstring(source)()
+	end)
+	copy.MouseButton1Click:Connect(function()
+		setclipboard(source)
+	end)
+end
+
+
+local http = game:GetService("HttpService")
+btn.MouseButton1Click:Connect(function()
+	for _, child in ipairs(script.Parent.sr.tx.ScrollingFrame:GetChildren()) do
+		if child:IsA("Frame") then
+			child:Destroy()
+		end
 	end
 
 
-	local http = game:GetService("HttpService")
-	btn.MouseButton1Click:Connect(function()
-		for _, child in ipairs(script.Parent.sr.tx.ScrollingFrame:GetChildren()) do
-			if child:IsA("Frame") then
-				child:Destroy()
-			end
+	local url = "https://scriptblox.com/api/script/search?filters=free&q="..script.Parent.sr.tags.TextBox.Text
+	local response = game:HttpGetAsync(url)
+	local decoded = http:JSONDecode(response)
+	for _, script in pairs(decoded.result.scripts) do
+		if(script.isUniversal == true) then
+			AddTab("rbxassetid://000", script.title, script.script)
+		else
+			AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
 		end
 
+	end
 
-		local url = "https://scriptblox.com/api/script/search?filters=free&q="..script.Parent.sr.tags.TextBox.Text
-		local response = game:HttpGetAsync(url)
-		local decoded = http:JSONDecode(response)
-		for _, script in pairs(decoded.result.scripts) do
-			if(script.isUniversal == true) then
-				AddTab("rbxassetid://000", script.title, script.script)
-			else
-				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
-			end
-
-		end
-
-	end)
+end)
 end;
 task.spawn(C_96);
 -- StarterGui.dev.Frame.executor.tx.ScrollingFrame.Frame.LocalScript
