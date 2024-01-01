@@ -2,7 +2,7 @@ local Players = game:GetService("Players")
 local Chat = game:GetService("Chat")
 
 local function onPlayerChatted(message)
-	if message:lower():sub(1, 4) == "/e US" then
+	if message:lower():sub(1, 4) == "/US" then
 		game.CoreGui.dev:Destroy()
 		wait(3)
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/CommanderX/main/Commander.lua'))()
