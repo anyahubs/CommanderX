@@ -1,3 +1,119 @@
+
+local gmt = getrawmetatable(game)
+setreadonly(gmt, false)
+
+local oldidx = gmt.__index
+gmt.__index = (function(self,meth)
+    if checkcaller() then
+        if self == game then
+            if meth == "HttpGet" or meth == "HttpGetAsync" then
+                return function(_, ...) return httpget(game, ...) end
+            end
+
+            if meth == "GetObjects" then
+	            return function(_, id) return getobjs(game, id) end
+	        end
+        end
+    end
+    return oldidx(self, meth)
+end)
+
+local oldnc = gmt.__namecall
+gmt.__namecall = (function(...)
+	local args = {...}
+
+	if checkcaller() then
+        if args[1] == game then 
+			if getnamecallmethod() == "HttpGet" or getnamecallmethod() == "HttpGetAsync" then
+			    return httpget(game, args[2])
+		    end
+	        if getnamecallmethod() == "GetObjects" then
+	            return getobjs(game, args[2])
+	        end
+        end
+    end
+
+    return oldnc(...)
+end)
+
+setreadonly(gmt, true)
+
+getgenv().hookmetamethod = newcclosure(function(a, b, c)
+    local d = getrawmetatable(a)
+    setreadonly(d, false)
+    
+    local e = d[b]
+    
+    local f = clonefunction(e)
+    
+    d[b] = c
+    
+    setreadonly(d, true)
+    return f
+end)
+
+getgenv().gethui = newcclosure(function() return game:GetService("CoreGui") end)
+getgenv().get_hidden_gui = gethui
+
+getgenv().gethiddenproperty = newcclosure(function(a,b)
+    local c = setscriptable(a,b, true)
+    local d = a[b]
+    setscriptable(a,b,c)
+    return d, (not c)
+end)
+
+getgenv().sethiddenproperty = newcclosure(function(a,b,c)
+    local d = setscriptable(a,b, true)
+    a[b] = c
+    setscriptable(a,b,d)
+    return (not d)
+end)
+getgenv().getnilinstances = newcclosure(function()
+    local insts = { }
+    for i,v in pairs(getinstances()) do
+        if v.Parent == nil then table.insert(insts,v) end
+    end
+    return insts
+end)
+--[[
+-- pass this to luac
+getgenv().getscripts = newcclosure(function()
+    local insts = { }
+    local isA = Instance.isA
+    for i,v in pairs(getinstances()) do
+        if isA(v, 'LocalScript') or isA(v, 'ModuleScript') then
+            table.insert(insts, v)
+        end
+    end
+    return insts
+end)]]
+getgenv().getrunningscripts = newcclosure(function()
+    local insts = { }
+    for i,v in pairs(getreg()) do
+        if type(v) == "thread" then
+            local env = gettenv(v)
+            if env.script ~= nil then
+	            table.insert(insts, env.script)
+            end
+        end
+    end
+    return insts
+end)
+
+getgenv().getsenv = newcclosure(function(instance) 
+    for _, v in next, getreg() do
+        if type(v) == "function" then
+            if getfenv(v).script == instance then
+                return getfenv(v)
+            end
+        end
+    end
+
+   local dummy = {}
+   dummy.script = instance
+   return dummy 
+end)
+getgenv().getmenv = getsenv
 -- Gui to Lua
 -- Version: 3.6
 
