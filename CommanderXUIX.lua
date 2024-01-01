@@ -2256,33 +2256,43 @@ local function KKQVCQ_fake_script() -- dev.Frame.search
 	local search = script.Parent.sr
 	local btn = search.tags.clip.TextButton
 	
-	local function AddTab(imageTab, scriptname, source)
-		local scriptFrame = search.tx.ScrollingFrame
-		local newList = scriptFrame.Frame.Folder.Frame:Clone()
-	
-		local execute = newList.load
-		local copy = newList.copy
-	
-	
-		local scname = newList.s
-		local img = newList.ImageLabel
-	
-		newList.Name = scriptname
-		newList.Parent = scriptFrame
-		newList.Visible = true
-	
-		img.Image = imageTab
-	
-		scname.Text = scriptname
-	
-		execute.MouseButton1Click:Connect(function()
-			loadstring(source)()
-		end)
-		copy.MouseButton1Click:Connect(function()
-			setclipboard(source)
-		end)
-	end
-	
+local function AddTab(imageTab, scriptname, source)
+    local scriptFrame = search.tx.ScrollingFrame
+    local folderFrame = scriptFrame.Frame.Folder
+
+    -- Check if the Folder exists
+    if not folderFrame:IsA("Folder") then
+        warn("Folder not found.")
+        return
+    end
+
+    local newList = folderFrame.Frame:Clone()
+
+    -- Check if newList is valid
+    if not newList:IsA("Frame") then
+        warn("Cloning failed.")
+        return
+    end
+
+    local execute = newList.load
+    local copy = newList.copy
+    local scname = newList.s
+    local img = newList.ImageLabel
+
+    newList.Name = scriptname
+    newList.Parent = scriptFrame
+    newList.Visible = true
+
+    img.Image = imageTab
+    scname.Text = scriptname
+
+    execute.MouseButton1Click:Connect(function()
+        loadstring(source)()
+    end)
+    copy.MouseButton1Click:Connect(function()
+        setclipboard(source)
+    end)
+end
 	
 	local http = game:GetService("HttpService")
 	btn.MouseButton1Click:Connect(function()
