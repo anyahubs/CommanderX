@@ -3,6 +3,8 @@
 
 -- Instances:
 
+wait(5)
+
 local EVONUI = Instance.new("ScreenGui")
 local open = Instance.new("ImageButton")
 local MAIN = Instance.new("Frame")
