@@ -2214,7 +2214,7 @@ local function RMQRF_fake_script() -- EVONUI.LocalScript
 				gg9.Image = "rbxassetid://15115194626"
 				gg9.SliceScale = 0.000
 				gg9.MouseButton1Click:Connect(function()
-					loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/executer/main/infyieldevon.lua'))()
+					--loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/executer/main/infyieldevon.lua'))()
 				end)
 	
 	
@@ -2504,7 +2504,7 @@ coroutine.wrap(JRLT_fake_script)()
 -- EVONUI.resize is disabled.
 local function XHTFYZV_fake_script() -- KeyS.PandaAuth 
 	local script = Instance.new('LocalScript', KeyS)
-
+--[[
 	local pandaAuth = loadstring(game:HttpGet("https://pandadevelopment.net/service_api/PandaBetaLib.lua", true))()
 	local getKey = script.Parent.GetKey
 	local verifyKey = script.Parent.VerifyKey
@@ -2523,5 +2523,6 @@ local function XHTFYZV_fake_script() -- KeyS.PandaAuth
 		setclipboard(pandaAuth:GetLink("Evon"))
 		textBox.PlaceholderText = "Link Copied to Clipboard"
 	end)
+	]]--
 end
 coroutine.wrap(XHTFYZV_fake_script)()
