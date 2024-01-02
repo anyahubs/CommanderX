@@ -2467,24 +2467,6 @@ local function RMQRF_fake_script() -- EVONUI.LocalScript
 			v.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json")
 		end
 	end
-	
-	local plr = game.Players.LocalPlayer
-	
-	if plr.UserId == 3622071182 then
-		wait(2)
-		script.Parent.KeyS.Visible = false
-		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
-		print("skipping key! whitelisted USER!")
-	end
-	
-	if plr.Name == "AKM_97" then
-		wait(2)
-		script.Parent.KeyS.Visible = false
-		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
-		print("skipping key! whitelisted USER!")
-	end
-	
-	
 end
 coroutine.wrap(RMQRF_fake_script)()
 local function MIGFMAP_fake_script() -- Frame.LocalScript 
@@ -2527,3 +2509,19 @@ local function XHTFYZV_fake_script() -- KeyS.PandaAuth
 	end)
 end
 coroutine.wrap(XHTFYZV_fake_script)()
+wait(5)
+	local plr = game.Players.LocalPlayer
+	
+	if plr.UserId == 3622071182 then
+		wait(2)
+		script.Parent.KeyS.Visible = false
+		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
+		print("skipping key! whitelisted USER!")
+	end
+	
+	if plr.Name == "AKM_97" then
+		wait(2)
+		script.Parent.KeyS.Visible = false
+		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
+		print("skipping key! whitelisted USER!")
+	end
