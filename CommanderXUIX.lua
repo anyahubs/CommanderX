@@ -13,285 +13,283 @@ if getgenv().logs then
     getgenv().logs = false
 end
 print("loaded")
-print("AnyaLib LOADED")
-
 -- Gui to Lua
--- Version: 3.6
+-- Version: 3.2
 
 -- Instances:
 
-dev = Instance.new("ScreenGui")
-Frame = Instance.new("Frame")
-UICorner = Instance.new("UICorner")
-tabs = Instance.new("Frame")
-UICorner_2 = Instance.new("UICorner")
-tabs_2 = Instance.new("Frame")
-h = Instance.new("TextButton")
-ImageLabel = Instance.new("ImageLabel")
-UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-UIListLayout = Instance.new("UIListLayout")
-e = Instance.new("TextButton")
-ImageLabel_2 = Instance.new("ImageLabel")
-UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
-search = Instance.new("TextButton")
-ImageLabel_3 = Instance.new("ImageLabel")
-UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
-s = Instance.new("TextButton")
-ImageLabel_4 = Instance.new("ImageLabel")
-UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
-UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
-user = Instance.new("Frame")
-UICorner_3 = Instance.new("UICorner")
-ImageLabel_5 = Instance.new("ImageLabel")
-UICorner_4 = Instance.new("UICorner")
-TextLabel = Instance.new("TextLabel")
-UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
-UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
-exit = Instance.new("Frame")
-UICorner_5 = Instance.new("UICorner")
-TextButton = Instance.new("TextButton")
-UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
-TextLabel_2 = Instance.new("TextLabel")
-UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
-home = Instance.new("Frame")
-key = Instance.new("Frame")
-UICorner_6 = Instance.new("UICorner")
-ImageLabel_6 = Instance.new("ImageLabel")
-TextLabel_3 = Instance.new("TextLabel")
-UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
-list = Instance.new("Frame")
-UICorner_7 = Instance.new("UICorner")
-TextLabel_4 = Instance.new("TextLabel")
-UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
-list_2 = Instance.new("Frame")
-UICorner_8 = Instance.new("UICorner")
-list_3 = Instance.new("Frame")
-UICorner_9 = Instance.new("UICorner")
-list_4 = Instance.new("Frame")
-UICorner_10 = Instance.new("UICorner")
-list_5 = Instance.new("Frame")
-UICorner_11 = Instance.new("UICorner")
-tags = Instance.new("Frame")
-UICorner_12 = Instance.new("UICorner")
-ImageLabel_7 = Instance.new("ImageLabel")
-TextLabel_5 = Instance.new("TextLabel")
-UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
-tags_2 = Instance.new("Frame")
-UICorner_13 = Instance.new("UICorner")
-TextLabel_6 = Instance.new("TextLabel")
-UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
-ImageLabel_8 = Instance.new("ImageLabel")
-teamlist = Instance.new("Frame")
-UICorner_14 = Instance.new("UICorner")
-teamlist_2 = Instance.new("Frame")
-UICorner_15 = Instance.new("UICorner")
-ImageLabel_9 = Instance.new("ImageLabel")
-UICorner_16 = Instance.new("UICorner")
-Frame_2 = Instance.new("Frame")
-TextLabel_7 = Instance.new("TextLabel")
-UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
-teamlist_3 = Instance.new("Frame")
-UICorner_17 = Instance.new("UICorner")
-ImageLabel_10 = Instance.new("ImageLabel")
-UICorner_18 = Instance.new("UICorner")
-Frame_3 = Instance.new("Frame")
-TextLabel_8 = Instance.new("TextLabel")
-UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint")
-teamlist_4 = Instance.new("Frame")
-UICorner_19 = Instance.new("UICorner")
-Frame_4 = Instance.new("Frame")
-TextLabel_9 = Instance.new("TextLabel")
-UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
-ImageLabel_11 = Instance.new("ImageLabel")
-UICorner_20 = Instance.new("UICorner")
-key_2 = Instance.new("Frame")
-UICorner_21 = Instance.new("UICorner")
-TextLabel_10 = Instance.new("TextLabel")
-UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint")
-ImageLabel_12 = Instance.new("ImageLabel")
-UICorner_22 = Instance.new("UICorner")
-TextLabel_11 = Instance.new("TextLabel")
-UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint")
-fps = Instance.new("Frame")
-UICorner_23 = Instance.new("UICorner")
-TextLabel_12 = Instance.new("TextLabel")
-UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint")
-ImageLabel_13 = Instance.new("ImageLabel")
-users = Instance.new("Frame")
-UICorner_24 = Instance.new("UICorner")
-TextLabel_13 = Instance.new("TextLabel")
-UITextSizeConstraint_18 = Instance.new("UITextSizeConstraint")
-ImageLabel_14 = Instance.new("ImageLabel")
-ping = Instance.new("Frame")
-UICorner_25 = Instance.new("UICorner")
-TextLabel_14 = Instance.new("TextLabel")
-UITextSizeConstraint_19 = Instance.new("UITextSizeConstraint")
-ImageLabel_15 = Instance.new("ImageLabel")
-UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
-sr = Instance.new("Frame")
-tx = Instance.new("Frame")
-UICorner_26 = Instance.new("UICorner")
-ScrollingFrame = Instance.new("ScrollingFrame")
-UICorner_27 = Instance.new("UICorner")
-Frame_5 = Instance.new("Frame")
-UIListLayout_2 = Instance.new("UIListLayout")
-Folder = Instance.new("Folder")
-Frame_6 = Instance.new("Frame")
-ImageLabel_16 = Instance.new("ImageLabel")
-UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
-s_2 = Instance.new("TextLabel")
-UITextSizeConstraint_20 = Instance.new("UITextSizeConstraint")
-UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
-TextLabel_15 = Instance.new("TextLabel")
-UITextSizeConstraint_21 = Instance.new("UITextSizeConstraint")
-UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
-load = Instance.new("TextButton")
-UICorner_28 = Instance.new("UICorner")
-UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
-UITextSizeConstraint_22 = Instance.new("UITextSizeConstraint")
-UICorner_29 = Instance.new("UICorner")
-copy = Instance.new("TextButton")
-UICorner_30 = Instance.new("UICorner")
-UITextSizeConstraint_23 = Instance.new("UITextSizeConstraint")
-UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
-tags_3 = Instance.new("Frame")
-UICorner_31 = Instance.new("UICorner")
-ImageLabel_17 = Instance.new("ImageLabel")
-UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint")
-clip = Instance.new("Frame")
-UICorner_32 = Instance.new("UICorner")
-TextButton_2 = Instance.new("TextButton")
-UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint")
-TextBox = Instance.new("TextBox")
-UICorner_33 = Instance.new("UICorner")
-UITextSizeConstraint_24 = Instance.new("UITextSizeConstraint")
-UIAspectRatioConstraint_12 = Instance.new("UIAspectRatioConstraint")
-UIAspectRatioConstraint_13 = Instance.new("UIAspectRatioConstraint")
-Anya = Instance.new("Frame")
-TextLabel_16 = Instance.new("TextLabel")
-UITextSizeConstraint_25 = Instance.new("UITextSizeConstraint")
-ScrollingFrame_2 = Instance.new("ScrollingFrame")
-UIListLayout_3 = Instance.new("UIListLayout")
-UICorner_34 = Instance.new("UICorner")
-TextButton_3 = Instance.new("TextButton")
-ImageLabel_18 = Instance.new("ImageLabel")
-UITextSizeConstraint_26 = Instance.new("UITextSizeConstraint")
-toggle = Instance.new("Frame")
-TextLabel_17 = Instance.new("TextLabel")
-UITextSizeConstraint_27 = Instance.new("UITextSizeConstraint")
-ImageButton = Instance.new("ImageButton")
-UICorner_35 = Instance.new("UICorner")
-executor = Instance.new("Frame")
-tx_2 = Instance.new("Frame")
-UICorner_36 = Instance.new("UICorner")
-ScrollingFrame_3 = Instance.new("ScrollingFrame")
-UICorner_37 = Instance.new("UICorner")
-TextLabel_18 = Instance.new("TextLabel")
-UITextSizeConstraint_28 = Instance.new("UITextSizeConstraint")
-Source = Instance.new("TextBox")
-Comments_ = Instance.new("TextLabel")
-UITextSizeConstraint_29 = Instance.new("UITextSizeConstraint")
-Globals_ = Instance.new("TextLabel")
-UITextSizeConstraint_30 = Instance.new("UITextSizeConstraint")
-Keywords_ = Instance.new("TextLabel")
-UITextSizeConstraint_31 = Instance.new("UITextSizeConstraint")
-RemoteHighlight_ = Instance.new("TextLabel")
-UITextSizeConstraint_32 = Instance.new("UITextSizeConstraint")
-Strings_ = Instance.new("TextLabel")
-UITextSizeConstraint_33 = Instance.new("UITextSizeConstraint")
-Tokens_ = Instance.new("TextLabel")
-UITextSizeConstraint_34 = Instance.new("UITextSizeConstraint")
-Numbers_ = Instance.new("TextLabel")
-UITextSizeConstraint_35 = Instance.new("UITextSizeConstraint")
-UITextSizeConstraint_36 = Instance.new("UITextSizeConstraint")
-Frame_7 = Instance.new("Frame")
-lol = Instance.new("TextLabel")
-UITextSizeConstraint_37 = Instance.new("UITextSizeConstraint")
-Comments__2 = Instance.new("TextLabel")
-UITextSizeConstraint_38 = Instance.new("UITextSizeConstraint")
-Globals__2 = Instance.new("TextLabel")
-UITextSizeConstraint_39 = Instance.new("UITextSizeConstraint")
-Keywords__2 = Instance.new("TextLabel")
-UITextSizeConstraint_40 = Instance.new("UITextSizeConstraint")
-Numbers__2 = Instance.new("TextLabel")
-UITextSizeConstraint_41 = Instance.new("UITextSizeConstraint")
-RemoteHighlight__2 = Instance.new("TextLabel")
-UITextSizeConstraint_42 = Instance.new("UITextSizeConstraint")
-Strings__2 = Instance.new("TextLabel")
-UITextSizeConstraint_43 = Instance.new("UITextSizeConstraint")
-Tokens__2 = Instance.new("TextLabel")
-UITextSizeConstraint_44 = Instance.new("UITextSizeConstraint")
-tags_4 = Instance.new("Frame")
-UICorner_38 = Instance.new("UICorner")
-ImageLabel_19 = Instance.new("ImageLabel")
-TextLabel_19 = Instance.new("TextLabel")
-UITextSizeConstraint_45 = Instance.new("UITextSizeConstraint")
-execute = Instance.new("Frame")
-UICorner_39 = Instance.new("UICorner")
-ImageLabel_20 = Instance.new("ImageLabel")
-TextButton_4 = Instance.new("TextButton")
-UITextSizeConstraint_46 = Instance.new("UITextSizeConstraint")
-copy_2 = Instance.new("Frame")
-UICorner_40 = Instance.new("UICorner")
-ImageLabel_21 = Instance.new("ImageLabel")
-TextButton_5 = Instance.new("TextButton")
-UITextSizeConstraint_47 = Instance.new("UITextSizeConstraint")
-clear = Instance.new("Frame")
-UICorner_41 = Instance.new("UICorner")
-ImageLabel_22 = Instance.new("ImageLabel")
-TextButton_6 = Instance.new("TextButton")
-UITextSizeConstraint_48 = Instance.new("UITextSizeConstraint")
-clip_2 = Instance.new("Frame")
-UICorner_42 = Instance.new("UICorner")
-ImageLabel_23 = Instance.new("ImageLabel")
-TextButton_7 = Instance.new("TextButton")
-UITextSizeConstraint_49 = Instance.new("UITextSizeConstraint")
-UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint")
-ui = Instance.new("Frame")
-UICorner_43 = Instance.new("UICorner")
-TextButton_8 = Instance.new("TextButton")
-TextButton_9 = Instance.new("TextButton")
-s_3 = Instance.new("Frame")
-tags_5 = Instance.new("Frame")
-UICorner_44 = Instance.new("UICorner")
-ImageLabel_24 = Instance.new("ImageLabel")
-UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint")
-TextLabel_20 = Instance.new("TextLabel")
-UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint")
-tx_3 = Instance.new("Frame")
-UICorner_45 = Instance.new("UICorner")
-fps_2 = Instance.new("Frame")
-UICorner_46 = Instance.new("UICorner")
-TextButton_10 = Instance.new("TextButton")
-TextLabel_21 = Instance.new("TextLabel")
-ImageLabel_25 = Instance.new("ImageLabel")
-UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint")
-uiscale = Instance.new("Frame")
-UICorner_47 = Instance.new("UICorner")
-TextButton_11 = Instance.new("TextButton")
-TextLabel_22 = Instance.new("TextLabel")
-ImageLabel_26 = Instance.new("ImageLabel")
-UIAspectRatioConstraint_18 = Instance.new("UIAspectRatioConstraint")
-Up = Instance.new("TextButton")
-Left = Instance.new("TextButton")
-Right = Instance.new("TextButton")
-Down = Instance.new("TextButton")
-Corners = Instance.new("Folder")
-_10 = Instance.new("TextButton")
-_11 = Instance.new("TextButton")
-_01 = Instance.new("TextButton")
-_00 = Instance.new("TextButton")
-ImageButton_2 = Instance.new("ImageButton")
-UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint")
-UICorner_48 = Instance.new("UICorner")
-UIStroke = Instance.new("UIStroke")
+	dev = Instance.new("ScreenGui")
+	Frame = Instance.new("Frame")
+	UICorner = Instance.new("UICorner")
+	tabs = Instance.new("Frame")
+	UICorner_2 = Instance.new("UICorner")
+	tabs_2 = Instance.new("Frame")
+	h = Instance.new("TextButton")
+	ImageLabel = Instance.new("ImageLabel")
+	UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+	UIListLayout = Instance.new("UIListLayout")
+	e = Instance.new("TextButton")
+	ImageLabel_2 = Instance.new("ImageLabel")
+	UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+	search = Instance.new("TextButton")
+	ImageLabel_3 = Instance.new("ImageLabel")
+	UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+	s = Instance.new("TextButton")
+	ImageLabel_4 = Instance.new("ImageLabel")
+	UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+	UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+	UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+	user = Instance.new("Frame")
+	UICorner_3 = Instance.new("UICorner")
+	ImageLabel_5 = Instance.new("ImageLabel")
+	UICorner_4 = Instance.new("UICorner")
+	TextLabel = Instance.new("TextLabel")
+	UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+	UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+	exit = Instance.new("Frame")
+	UICorner_5 = Instance.new("UICorner")
+	TextButton = Instance.new("TextButton")
+	UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
+	TextLabel_2 = Instance.new("TextLabel")
+	UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
+	home = Instance.new("Frame")
+	key = Instance.new("Frame")
+	UICorner_6 = Instance.new("UICorner")
+	ImageLabel_6 = Instance.new("ImageLabel")
+	TextLabel_3 = Instance.new("TextLabel")
+	UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
+	list = Instance.new("Frame")
+	UICorner_7 = Instance.new("UICorner")
+	TextLabel_4 = Instance.new("TextLabel")
+	UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
+	list_2 = Instance.new("Frame")
+	UICorner_8 = Instance.new("UICorner")
+	list_3 = Instance.new("Frame")
+	UICorner_9 = Instance.new("UICorner")
+	list_4 = Instance.new("Frame")
+	UICorner_10 = Instance.new("UICorner")
+	list_5 = Instance.new("Frame")
+	UICorner_11 = Instance.new("UICorner")
+	tags = Instance.new("Frame")
+	UICorner_12 = Instance.new("UICorner")
+	ImageLabel_7 = Instance.new("ImageLabel")
+	TextLabel_5 = Instance.new("TextLabel")
+	UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
+	tags_2 = Instance.new("Frame")
+	UICorner_13 = Instance.new("UICorner")
+	TextLabel_6 = Instance.new("TextLabel")
+	UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
+	ImageLabel_8 = Instance.new("ImageLabel")
+	teamlist = Instance.new("Frame")
+	UICorner_14 = Instance.new("UICorner")
+	teamlist_2 = Instance.new("Frame")
+	UICorner_15 = Instance.new("UICorner")
+	ImageLabel_9 = Instance.new("ImageLabel")
+	UICorner_16 = Instance.new("UICorner")
+	Frame_2 = Instance.new("Frame")
+	TextLabel_7 = Instance.new("TextLabel")
+	UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
+	teamlist_3 = Instance.new("Frame")
+	UICorner_17 = Instance.new("UICorner")
+	ImageLabel_10 = Instance.new("ImageLabel")
+	UICorner_18 = Instance.new("UICorner")
+	Frame_3 = Instance.new("Frame")
+	TextLabel_8 = Instance.new("TextLabel")
+	UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint")
+	teamlist_4 = Instance.new("Frame")
+	UICorner_19 = Instance.new("UICorner")
+	Frame_4 = Instance.new("Frame")
+	TextLabel_9 = Instance.new("TextLabel")
+	UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
+	ImageLabel_11 = Instance.new("ImageLabel")
+	UICorner_20 = Instance.new("UICorner")
+	key_2 = Instance.new("Frame")
+	UICorner_21 = Instance.new("UICorner")
+	TextLabel_10 = Instance.new("TextLabel")
+	UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint")
+	ImageLabel_12 = Instance.new("ImageLabel")
+	UICorner_22 = Instance.new("UICorner")
+	TextLabel_11 = Instance.new("TextLabel")
+	UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint")
+	fps = Instance.new("Frame")
+	UICorner_23 = Instance.new("UICorner")
+	TextLabel_12 = Instance.new("TextLabel")
+	UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint")
+	ImageLabel_13 = Instance.new("ImageLabel")
+	users = Instance.new("Frame")
+	UICorner_24 = Instance.new("UICorner")
+	TextLabel_13 = Instance.new("TextLabel")
+	UITextSizeConstraint_18 = Instance.new("UITextSizeConstraint")
+	ImageLabel_14 = Instance.new("ImageLabel")
+	ping = Instance.new("Frame")
+	UICorner_25 = Instance.new("UICorner")
+	TextLabel_14 = Instance.new("TextLabel")
+	UITextSizeConstraint_19 = Instance.new("UITextSizeConstraint")
+	ImageLabel_15 = Instance.new("ImageLabel")
+	UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+	sr = Instance.new("Frame")
+	tx = Instance.new("Frame")
+	UICorner_26 = Instance.new("UICorner")
+	ScrollingFrame = Instance.new("ScrollingFrame")
+	UICorner_27 = Instance.new("UICorner")
+	Frame_5 = Instance.new("Frame")
+	UIListLayout_2 = Instance.new("UIListLayout")
+	Folder = Instance.new("Folder")
+	Frame_6 = Instance.new("Frame")
+	ImageLabel_16 = Instance.new("ImageLabel")
+	UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+	s_2 = Instance.new("TextLabel")
+	UITextSizeConstraint_20 = Instance.new("UITextSizeConstraint")
+	UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+	TextLabel_15 = Instance.new("TextLabel")
+	UITextSizeConstraint_21 = Instance.new("UITextSizeConstraint")
+	UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+	load = Instance.new("TextButton")
+	UICorner_28 = Instance.new("UICorner")
+	UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+	UITextSizeConstraint_22 = Instance.new("UITextSizeConstraint")
+	UICorner_29 = Instance.new("UICorner")
+	copy = Instance.new("TextButton")
+	UICorner_30 = Instance.new("UICorner")
+	UITextSizeConstraint_23 = Instance.new("UITextSizeConstraint")
+	UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
+	tags_3 = Instance.new("Frame")
+	UICorner_31 = Instance.new("UICorner")
+	ImageLabel_17 = Instance.new("ImageLabel")
+	UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint")
+	clip = Instance.new("Frame")
+	UICorner_32 = Instance.new("UICorner")
+	TextButton_2 = Instance.new("TextButton")
+	UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint")
+	TextBox = Instance.new("TextBox")
+	UICorner_33 = Instance.new("UICorner")
+	UITextSizeConstraint_24 = Instance.new("UITextSizeConstraint")
+	UIAspectRatioConstraint_12 = Instance.new("UIAspectRatioConstraint")
+	UIAspectRatioConstraint_13 = Instance.new("UIAspectRatioConstraint")
+	Anya = Instance.new("Frame")
+	TextLabel_16 = Instance.new("TextLabel")
+	UITextSizeConstraint_25 = Instance.new("UITextSizeConstraint")
+	ScrollingFrame_2 = Instance.new("ScrollingFrame")
+	UIListLayout_3 = Instance.new("UIListLayout")
+	UICorner_34 = Instance.new("UICorner")
+	TextButton_3 = Instance.new("TextButton")
+	ImageLabel_18 = Instance.new("ImageLabel")
+	UITextSizeConstraint_26 = Instance.new("UITextSizeConstraint")
+	toggle = Instance.new("Frame")
+	TextLabel_17 = Instance.new("TextLabel")
+	UITextSizeConstraint_27 = Instance.new("UITextSizeConstraint")
+	ImageButton = Instance.new("ImageButton")
+	UICorner_35 = Instance.new("UICorner")
+	executor = Instance.new("Frame")
+	tx_2 = Instance.new("Frame")
+	UICorner_36 = Instance.new("UICorner")
+	ScrollingFrame_3 = Instance.new("ScrollingFrame")
+	UICorner_37 = Instance.new("UICorner")
+	TextLabel_18 = Instance.new("TextLabel")
+	UITextSizeConstraint_28 = Instance.new("UITextSizeConstraint")
+	Source = Instance.new("TextBox")
+	Comments_ = Instance.new("TextLabel")
+	UITextSizeConstraint_29 = Instance.new("UITextSizeConstraint")
+	Globals_ = Instance.new("TextLabel")
+	UITextSizeConstraint_30 = Instance.new("UITextSizeConstraint")
+	Keywords_ = Instance.new("TextLabel")
+	UITextSizeConstraint_31 = Instance.new("UITextSizeConstraint")
+	RemoteHighlight_ = Instance.new("TextLabel")
+	UITextSizeConstraint_32 = Instance.new("UITextSizeConstraint")
+	Strings_ = Instance.new("TextLabel")
+	UITextSizeConstraint_33 = Instance.new("UITextSizeConstraint")
+	Tokens_ = Instance.new("TextLabel")
+	UITextSizeConstraint_34 = Instance.new("UITextSizeConstraint")
+	Numbers_ = Instance.new("TextLabel")
+	UITextSizeConstraint_35 = Instance.new("UITextSizeConstraint")
+	UITextSizeConstraint_36 = Instance.new("UITextSizeConstraint")
+	Frame_7 = Instance.new("Frame")
+	lol = Instance.new("TextLabel")
+	UITextSizeConstraint_37 = Instance.new("UITextSizeConstraint")
+	Comments__2 = Instance.new("TextLabel")
+	UITextSizeConstraint_38 = Instance.new("UITextSizeConstraint")
+	Globals__2 = Instance.new("TextLabel")
+	UITextSizeConstraint_39 = Instance.new("UITextSizeConstraint")
+	Keywords__2 = Instance.new("TextLabel")
+	UITextSizeConstraint_40 = Instance.new("UITextSizeConstraint")
+	Numbers__2 = Instance.new("TextLabel")
+	UITextSizeConstraint_41 = Instance.new("UITextSizeConstraint")
+	RemoteHighlight__2 = Instance.new("TextLabel")
+	UITextSizeConstraint_42 = Instance.new("UITextSizeConstraint")
+	Strings__2 = Instance.new("TextLabel")
+	UITextSizeConstraint_43 = Instance.new("UITextSizeConstraint")
+	Tokens__2 = Instance.new("TextLabel")
+	UITextSizeConstraint_44 = Instance.new("UITextSizeConstraint")
+	tags_4 = Instance.new("Frame")
+	UICorner_38 = Instance.new("UICorner")
+	ImageLabel_19 = Instance.new("ImageLabel")
+	TextLabel_19 = Instance.new("TextLabel")
+	UITextSizeConstraint_45 = Instance.new("UITextSizeConstraint")
+	execute = Instance.new("Frame")
+	UICorner_39 = Instance.new("UICorner")
+	ImageLabel_20 = Instance.new("ImageLabel")
+	TextButton_4 = Instance.new("TextButton")
+	UITextSizeConstraint_46 = Instance.new("UITextSizeConstraint")
+	copy_2 = Instance.new("Frame")
+	UICorner_40 = Instance.new("UICorner")
+	ImageLabel_21 = Instance.new("ImageLabel")
+	TextButton_5 = Instance.new("TextButton")
+	UITextSizeConstraint_47 = Instance.new("UITextSizeConstraint")
+	clear = Instance.new("Frame")
+	UICorner_41 = Instance.new("UICorner")
+	ImageLabel_22 = Instance.new("ImageLabel")
+	TextButton_6 = Instance.new("TextButton")
+	UITextSizeConstraint_48 = Instance.new("UITextSizeConstraint")
+	clip_2 = Instance.new("Frame")
+	UICorner_42 = Instance.new("UICorner")
+	ImageLabel_23 = Instance.new("ImageLabel")
+	TextButton_7 = Instance.new("TextButton")
+	UITextSizeConstraint_49 = Instance.new("UITextSizeConstraint")
+	UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint")
+	ui = Instance.new("Frame")
+	UICorner_43 = Instance.new("UICorner")
+	TextButton_8 = Instance.new("TextButton")
+	TextButton_9 = Instance.new("TextButton")
+	s_3 = Instance.new("Frame")
+	tags_5 = Instance.new("Frame")
+	UICorner_44 = Instance.new("UICorner")
+	ImageLabel_24 = Instance.new("ImageLabel")
+	UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint")
+	TextLabel_20 = Instance.new("TextLabel")
+	UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint")
+	tx_3 = Instance.new("Frame")
+	UICorner_45 = Instance.new("UICorner")
+	fps_2 = Instance.new("Frame")
+	UICorner_46 = Instance.new("UICorner")
+	TextButton_10 = Instance.new("TextButton")
+	TextLabel_21 = Instance.new("TextLabel")
+	ImageLabel_25 = Instance.new("ImageLabel")
+	UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint")
+	uiscale = Instance.new("Frame")
+	UICorner_47 = Instance.new("UICorner")
+	TextButton_11 = Instance.new("TextButton")
+	TextLabel_22 = Instance.new("TextLabel")
+	ImageLabel_26 = Instance.new("ImageLabel")
+	UIAspectRatioConstraint_18 = Instance.new("UIAspectRatioConstraint")
+	Up = Instance.new("TextButton")
+	Left = Instance.new("TextButton")
+	Right = Instance.new("TextButton")
+	Down = Instance.new("TextButton")
+	Corners = Instance.new("Folder")
+	_10 = Instance.new("TextButton")
+	_11 = Instance.new("TextButton")
+	_01 = Instance.new("TextButton")
+	_00 = Instance.new("TextButton")
+	ImageButton_2 = Instance.new("ImageButton")
+	UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint")
+	UICorner_48 = Instance.new("UICorner")
 
--- Properties:
+--Properties:
 
-Name = "dev"
-Parent = game.CoreGui
-ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+dev.Name = "dev"
+dev.Parent = game.CoreGui
+dev.Enabled = false
+dev.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = dev
 Frame.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
@@ -299,7 +297,6 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.218869507, 0, 0.2276299, 0)
 Frame.Size = UDim2.new(0, 601, 0, 353)
-Frame.ZIndex = 999999999
 
 UICorner.Parent = Frame
 
@@ -1071,7 +1068,6 @@ ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Position = UDim2.new(-0.00216590823, 0, 0.0111345463, 0)
 ScrollingFrame.Size = UDim2.new(0.999873996, 0, 1.19197977, 0)
 ScrollingFrame.CanvasSize = UDim2.new(0, 0, 5, 0)
-ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
 
 UICorner_27.Parent = ScrollingFrame
 
@@ -1304,7 +1300,6 @@ ScrollingFrame_2.BackgroundTransparency = 1.000
 ScrollingFrame_2.BorderColor3 = Color3.fromRGB(14, 14, 14)
 ScrollingFrame_2.Position = UDim2.new(0, 0, 0, 31)
 ScrollingFrame_2.Size = UDim2.new(1, 0, 0.911286831, -20)
-ScrollingFrame_2.ScrollBarImageColor3 = Color3.fromRGB(14, 14, 14)
 ScrollingFrame_2.ScrollBarThickness = 6
 
 UIListLayout_3.Parent = ScrollingFrame_2
@@ -1404,7 +1399,6 @@ ScrollingFrame_3.BorderSizePixel = 0
 ScrollingFrame_3.Position = UDim2.new(-0.00216590823, 0, 0.0111345463, 0)
 ScrollingFrame_3.Size = UDim2.new(0.999873996, 0, 0.97078979, 0)
 ScrollingFrame_3.CanvasSize = UDim2.new(0, 0, 5, 0)
-ScrollingFrame_3.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
 
 UICorner_37.Parent = ScrollingFrame_3
 
@@ -2243,64 +2237,61 @@ UIAspectRatioConstraint_19.AspectRatio = 1.021
 
 UICorner_48.Parent = ImageButton_2
 
-UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-UIStroke.Thickness = 3
-UIStroke.Parent = ImageButton_2
-
 -- Scripts:
 
-local function FMSRI_fake_script() -- ImageLabel_5.LocalScript 
+local function UXUBNBO_fake_script() -- ImageLabel_5.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel_5)
 
 	repeat wait() until game.Players.LocalPlayer.Character ~= nil
-
+	
 	local Player = game.Players.LocalPlayer
-
+	
 	local UserId = game.Players.LocalPlayer.UserId
 	local ThumbType = Enum.ThumbnailType.HeadShot
 	local ThumbSize = Enum.ThumbnailSize.Size420x420
-
+	
 	script.Parent.Image = game.Players:GetUserThumbnailAsync(UserId,ThumbType,ThumbSize)
 end
-coroutine.wrap(FMSRI_fake_script)()
-local function JVAZZ_fake_script() -- Frame.search 
+coroutine.wrap(UXUBNBO_fake_script)()
+local function AHHY_fake_script() -- Frame.search 
 	local script = Instance.new('LocalScript', Frame)
+
 	local main = script.Parent
 	local frames = main
 	local scriptsframe = frames.sr
-	--[[
-	
-	░██████╗███████╗░█████╗░██████╗░░█████╗░██╗░░██╗  ░█████╗░░█████╗░██████╗░███████╗
-	██╔════╝██╔════╝██╔══██╗██╔══██╗██╔══██╗██║░░██║  ██╔══██╗██╔══██╗██╔══██╗██╔════╝
-	╚█████╗░█████╗░░███████║██████╔╝██║░░╚═╝███████║  ██║░░╚═╝██║░░██║██║░░██║█████╗░░
-	░╚═══██╗██╔══╝░░██╔══██║██╔══██╗██║░░██╗██╔══██║  ██║░░██╗██║░░██║██║░░██║██╔══╝░░
-	██████╔╝███████╗██║░░██║██║░░██║╚█████╔╝██║░░██║  ╚█████╔╝╚█████╔╝██████╔╝███████╗
-	╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝
-	]]--
+		--[[
+		
+		░██████╗███████╗░█████╗░██████╗░░█████╗░██╗░░██╗  ░█████╗░░█████╗░██████╗░███████╗
+		██╔════╝██╔════╝██╔══██╗██╔══██╗██╔══██╗██║░░██║  ██╔══██╗██╔══██╗██╔══██╗██╔════╝
+		╚█████╗░█████╗░░███████║██████╔╝██║░░╚═╝███████║  ██║░░╚═╝██║░░██║██║░░██║█████╗░░
+		░╚═══██╗██╔══╝░░██╔══██║██╔══██╗██║░░██╗██╔══██║  ██║░░██╗██║░░██║██║░░██║██╔══╝░░
+		██████╔╝███████╗██║░░██║██║░░██║╚█████╔╝██║░░██║  ╚█████╔╝╚█████╔╝██████╔╝███████╗
+		╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝
+		]]--
 	local btn = scriptsframe.tags.clip.TextButton
-
+	
 	local function AddTab(imageTab, scriptname, source)
 		local scriptFrame = scriptsframe.tx.ScrollingFrame
 		local newList = scriptFrame.Frame.Folder.Frame:Clone()
-
+	
 		local execute = newList.load
 		local scname = newList.s
 		local img = newList.ImageLabel
-
+	
 		newList.Name = scriptname
 		newList.Parent = scriptFrame
 		newList.Visible = true
-
+	
 		img.Image = imageTab
-
+	
 		scname.Text = scriptname
-
+	
 		execute.MouseButton1Click:Connect(function()
 			loadstring(source)()
 		end)
 	end
-
-
+	
+	
 	local http = game:GetService("HttpService")
 	btn.MouseButton1Click:Connect(function()
 		for _, child in ipairs(scriptsframe.ScrollingFrame:GetChildren()) do
@@ -2308,8 +2299,8 @@ local function JVAZZ_fake_script() -- Frame.search
 				child:Destroy()
 			end
 		end
-
-
+	
+	
 		local url = "https://scriptblox.com/api/script/search?filters=free&q="..scriptsframe.search.TextBox.Text
 		local response = game:HttpGetAsync(url)
 		local decoded = http:JSONDecode(response)
@@ -2319,13 +2310,13 @@ local function JVAZZ_fake_script() -- Frame.search
 			else
 				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
 			end
-
+	
 		end
-
+	
 	end)
 end
-coroutine.wrap(JVAZZ_fake_script)()
-local function UEWNX_fake_script() -- Frame_7.LocalScript 
+coroutine.wrap(AHHY_fake_script)()
+local function ABUWICN_fake_script() -- Frame_7.LocalScript 
 	local script = Instance.new('LocalScript', Frame_7)
 
 	local textLabel = script.Parent.lol
@@ -2334,12 +2325,12 @@ local function UEWNX_fake_script() -- Frame_7.LocalScript
 		textLabel.Text = txtbox.Text
 	end
 end
-coroutine.wrap(UEWNX_fake_script)()
-local function JFXFT_fake_script() -- TextButton_8.LocalScript 
+coroutine.wrap(ABUWICN_fake_script)()
+local function DBNXHQ_fake_script() -- TextButton_8.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_8)
 
 	local main = script.Parent.Parent.Parent
-
+	
 	local Conter = main.Corners
 	local down = main.Down
 	local left = main.Left
@@ -2349,7 +2340,7 @@ local function JFXFT_fake_script() -- TextButton_8.LocalScript
 	local b01 = Conter["01"]
 	local b10 = Conter["10"]
 	local b11 = Conter["11"]
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		down.Visible = false
 		left.Visible = false
@@ -2359,28 +2350,28 @@ local function JFXFT_fake_script() -- TextButton_8.LocalScript
 		b01.Visible = false
 		b10.Visible = false
 		b11.Visible = false
-		script.Parent.Parent.Visible = false
+	script.Parent.Parent.Visible = false
 	end)
-
-
+	
+	
 end
-coroutine.wrap(JFXFT_fake_script)()
-local function GTWVO_fake_script() -- TextButton_9.LocalScript 
+coroutine.wrap(DBNXHQ_fake_script)()
+local function MDLVSWH_fake_script() -- TextButton_9.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_9)
 
 	local main = script.Parent.Parent.Parent
 	script.Parent.MouseButton1Click:Connect(function()
 		main.Size =  UDim2.new(0.561, 0,0.542, 0)
 	end)
-
-
+	
+	
 end
-coroutine.wrap(GTWVO_fake_script)()
-local function JDCBR_fake_script() -- TextButton_11.LocalScript 
+coroutine.wrap(MDLVSWH_fake_script)()
+local function HDSE_fake_script() -- TextButton_11.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_11)
 
 	local main = script.Parent.Parent.Parent.Parent.Parent
-
+	
 	local Conter = main.Corners
 	local down = main.Down
 	local left = main.Left
@@ -2390,26 +2381,26 @@ local function JDCBR_fake_script() -- TextButton_11.LocalScript
 	local b01 = Conter["01"]
 	local b10 = Conter["10"]
 	local b11 = Conter["11"]
-
+	
 	script.Parent.MouseButton1Click:Connect(function()
-		down.Visible = true
-		left.Visible = true
-		right.Visible = true
-		up.Visible = true
-		b00.Visible = true
-		b01.Visible = true
-		b10.Visible = true
-		b11.Visible = true
-		main.ui.Visible = true
+	down.Visible = true
+	left.Visible = true
+	right.Visible = true
+	up.Visible = true
+	b00.Visible = true
+	b01.Visible = true
+	b10.Visible = true
+	b11.Visible = true
+	main.ui.Visible = true
 	end)
-
-
+	
+	
 end
-coroutine.wrap(JDCBR_fake_script)()
-local function VZQHPC_fake_script() -- Frame.execute 
+coroutine.wrap(HDSE_fake_script)()
+local function MGVGP_fake_script() -- Frame.execute 
 	local script = Instance.new('LocalScript', Frame)
 
-
+	
 	--[[
 	███████╗██╗░░██╗███████╗░█████╗░██╗░░░██╗████████╗░█████╗░██████╗░  ░█████╗░░█████╗░██████╗░███████╗
 	██╔════╝╚██╗██╔╝██╔════╝██╔══██╗██║░░░██║╚══██╔══╝██╔══██╗██╔══██╗  ██╔══██╗██╔══██╗██╔══██╗██╔════╝
@@ -2418,7 +2409,7 @@ local function VZQHPC_fake_script() -- Frame.execute
 	███████╗██╔╝╚██╗███████╗╚█████╔╝╚██████╔╝░░░██║░░░╚█████╔╝██║░░██║  ╚█████╔╝╚█████╔╝██████╔╝███████╗
 	╚══════╝╚═╝░░╚═╝╚══════╝░╚════╝░░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝
 	]]--
-
+	
 	local builtin = {
 		"script", "workspace", "game", "gcinfo", "getmetatable", "newproxy",
 		"pairs", "next", "string", "table", "debug", "wait", "setmetatable",
@@ -2435,12 +2426,12 @@ local function VZQHPC_fake_script() -- Frame.execute
 		"GetService", "Players", "Lighting", "ReplicatedStorage", "tick", "wait",
 		"Delay", "print", "warn", "error", "tostring", "type"
 	}
-
+	
 	local keyword = {
 		"if", "for", "else", "continue", "break", "do", "local", "self",
 		"return", "repeat", "function", "nil", "while", "elseif", "then"
 	}
-
+	
 	local function GetLineSelected(s)
 		local text = s.Text
 		local p = s.CursorPosition
@@ -2455,12 +2446,12 @@ local function VZQHPC_fake_script() -- Frame.execute
 		end
 		return text2:reverse(), #text:sub(1, p):split("\n")
 	end
-
+	
 	local function GetCurrentLine(s)
 		local Line, LineNumber = GetLineSelected(s)
 		return LineNumber, Line
 	end
-
+	
 	local function StopAndGetWord(s)
 		local text = s.Text
 		local p = s.CursorPosition - 1
@@ -2475,7 +2466,7 @@ local function VZQHPC_fake_script() -- Frame.execute
 		end
 		return text2:reverse()
 	end
-
+	
 	local function Match(text, list)
 		local matches = {}
 		for _, v in pairs(list) do
@@ -2485,7 +2476,7 @@ local function VZQHPC_fake_script() -- Frame.execute
 		end
 		return matches
 	end
-
+	
 	local function MashTables(t, t2)
 		local tab = {}
 		for i, v in pairs(t) do
@@ -2504,18 +2495,18 @@ local function VZQHPC_fake_script() -- Frame.execute
 		end
 		return tab
 	end
-
+	
 	local a = script.Parent.executor.tx.ScrollingFrame.Source
-
+	
 	local textButton = script.Parent.Anya
-
+	
 	local selectedSuggestion = script.Parent.Anya.TextLabel
-
+	
 	local listView = script.Parent.Anya.ScrollingFrame
-
+	
 	local tgbutton = script.Parent.toggle.ImageButton
 	local suggestionsEnabled = false
-
+	
 	tgbutton.MouseButton1Click:Connect(function()
 		suggestionsEnabled = not suggestionsEnabled
 		if suggestionsEnabled then
@@ -2533,21 +2524,21 @@ local function VZQHPC_fake_script() -- Frame.execute
 			end
 		end
 	end)
-
+	
 	local function UpdateSuggestions(input)
 		if not suggestionsEnabled then
 			return
 		end
-
+	
 		local values = MashTables(keyword, builtin)
 		local suggestions = Match(input, values)
-
+	
 		for _, child in pairs(listView:GetChildren()) do
 			if child:IsA("TextButton") then
 				child:Destroy()
 			end
 		end
-
+	
 		local nm = {1, 2, 3, 4, 5, 6}
 		local yPos = 0
 		for suggestion, _ in pairs(suggestions) do
@@ -2579,14 +2570,14 @@ local function VZQHPC_fake_script() -- Frame.execute
 			textButton.Visible = false
 		end
 	end
-
+	
 	spawn(function()
 		a:GetPropertyChangedSignal("Text"):Connect(function()
 			local word = StopAndGetWord(a)
 			UpdateSuggestions(word)
 		end)
 	end)
-
+	
 	spawn(function()
 		while wait() do
 			local linen, line = GetCurrentLine(a)
@@ -2594,7 +2585,7 @@ local function VZQHPC_fake_script() -- Frame.execute
 			textButton.Position = UDim2.new(1.015, 0, 0.34, 0)
 		end
 	end)
-
+	
 	local UIS = game:GetService("UserInputService")
 	a.Changed:Connect(function(i)
 		if UIS:IsKeyDown(Enum.KeyCode.V) and UIS:IsKeyDown(Enum.KeyCode.RightControl) then
@@ -2720,7 +2711,7 @@ local function VZQHPC_fake_script() -- Frame.execute
 	]]--
 	local frames = script.Parent
 	local f2 = frames.executor
-
+	
 	local lua_keywords = {"and", "break", "do", "else", "elseif", "end", "false", "for", "function", "goto", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while", "is_synapse_function","is_protosmasher_caller", "execute","foreach","foreachi","insert","syn","HttpGet","HttpPost","__index","__namecall","__add","__call","__tostring","__tonumber","__div"}
 	local global_env = {"getrawmetatable", "game", "workspace", "script", "math", "string", "table", "print", "wait", "BrickColor", "Color3", "next", "pairs", "ipairs", "select", "unpack", "Instance", "Vector2", "Vector3", "CFrame", "Ray", "UDim2", "Enum", "assert", "error", "warn", "tick", "loadstring", "_G", "shared", "getfenv", "setfenv", "newproxy", "setmetatable", "getmetatable", "os", "debug", "pcall", "ypcall", "xpcall", "rawequal", "rawset", "rawget", "tonumber", "tostring", "type", "typeof", "_VERSION", "coroutine", "delay", "require", "spawn", "LoadLibrary", "settings", "stats", "time", "UserSettings", "version", "Axes", "ColorSequence", "Faces", "ColorSequenceKeypoint", "NumberRange", "NumberSequence", "NumberSequenceKeypoint", "gcinfo", "elapsedTime", "collectgarbage", "PhysicalProperties", "Rect", "Region3", "Region3int16", "UDim", "Vector2int16", "Vector3int16","run_secure_function","create_secure_function","hookfunc","hookfunction","newcclosure","replaceclosure","islclosure","getgc","gcinfo","rconsolewarn","rconsoleprint","rconsoleinfo","rconsoleinput","rconsoleinputasync","rconsoleclear","rconsoleerr",}
 	local exeframe = f2
@@ -2728,7 +2719,7 @@ local function VZQHPC_fake_script() -- Frame.execute
 	local Lines = exeframe.tx.ScrollingFrame.TextLabel
 	local src = Source
 	local lin = Lines
-
+	
 	local Highlight = function(string, keywords)
 		local K = {}
 		local S = string
@@ -2772,10 +2763,10 @@ local function VZQHPC_fake_script() -- Frame.execute
 				return (" "):rep(#c)
 			end
 		end)
-
+	
 		return S
 	end
-
+	
 	local strings = function(string)
 		local highlight = ""
 		local quote = false
@@ -2797,10 +2788,10 @@ local function VZQHPC_fake_script() -- Frame.execute
 				highlight = highlight .. "\32"
 			end
 		end)
-
+	
 		return highlight
 	end
-
+	
 	local comments = function(string)
 		local ret = ""
 		string:gsub("[^\r\n]+", function(c)
@@ -2819,10 +2810,10 @@ local function VZQHPC_fake_script() -- Frame.execute
 			end)
 			ret = ret
 		end)
-
+	
 		return ret
 	end
-
+	
 	local numbers = function(string)
 		local A = ""
 		string:gsub(".", function(c)
@@ -2836,10 +2827,10 @@ local function VZQHPC_fake_script() -- Frame.execute
 				A = A .. "\32"
 			end
 		end)
-
+	
 		return A
 	end
-
+	
 	local highlight_source = function(type)
 		if type == "Text" then
 			src.Text = Source.Text:gsub("\13", "")
@@ -2852,26 +2843,26 @@ local function VZQHPC_fake_script() -- Frame.execute
 			src.Strings_.Text = strings(s)
 		end
 	end
-
+	
 	highlight_source("Text")
 	src.Changed:Connect(highlight_source)
 	local exeframe = exeframe
-
+	
 	local frame = exeframe.tx.ScrollingFrame
 	local textbox = frame.Source
 	local textlab1 = frame.Frame.lol
-
+	
 	local function updateScrollFrameSize()
 		frame.CanvasSize = UDim2.new(0, 0, 0, textbox.TextBounds.Y)
 	end
-
+	
 	textbox:GetPropertyChangedSignal("Text"):Connect(updateScrollFrameSize)
 	updateScrollFrameSize()
-
+	
 	local frame = exeframe.tx.ScrollingFrame
 	local src = frame.Frame.lol
 	local sr = frame.Frame
-
+	
 	local highlight_source = function(type)
 		if type == "Text" then
 			src.Text = Source.Text:gsub("\13", "")
@@ -2892,21 +2883,21 @@ local function VZQHPC_fake_script() -- Frame.execute
 			end
 		end
 	end
-
+	
 	highlight_source("Text")
 	src.Changed:Connect(highlight_source)
-
+	
 	--llllllllllllllllllllllllllllllllllllllll
-
+	
 	print("No Errors From Roblox Studio!")
-
-
+	
+	
 	local execute = script.Parent.executor.execute.TextButton
 	local clear = script.Parent.executor.clear.TextButton
 	local copy = script.Parent.executor.copy.TextButton
 	local clip = script.Parent.executor.clip.TextButton
 	local txtbox = script.Parent.executor.tx.ScrollingFrame.Source
-
+	
 	execute.MouseButton1Click:Connect(function()
 		loadstring(txtbox.Text)()
 	end)
@@ -2926,7 +2917,7 @@ local function VZQHPC_fake_script() -- Frame.execute
 			end
 		end
 	end)
-
+	
 	for _, obj in pairs(script.Parent:GetDescendants()) do
 		if obj:IsA("TextLabel") or obj:IsA("TextButton") then
 			obj.FontFace = Font.fromId(12187377099) 
@@ -2955,8 +2946,8 @@ local function VZQHPC_fake_script() -- Frame.execute
 		end
 	end
 end
-coroutine.wrap(VZQHPC_fake_script)()
-local function UCJU_fake_script() -- Frame.homr 
+coroutine.wrap(MGVGP_fake_script)()
+local function MDXEOBK_fake_script() -- Frame.homr 
 	local script = Instance.new('LocalScript', Frame)
 
 	local frames = script.Parent
@@ -2970,11 +2961,11 @@ local function UCJU_fake_script() -- Frame.homr
 	local b2 = tabs.e
 	local b4 = tabs.search
 	local b5 = tabs.s
-
+	
 	--fix ui 
 	script.Parent.Visible = false
 	local main = script.Parent
-
+	
 	local Conter = main.Corners
 	local down = main.Down
 	local left = main.Left
@@ -2984,15 +2975,15 @@ local function UCJU_fake_script() -- Frame.homr
 	local b01 = Conter["01"]
 	local b10 = Conter["10"]
 	local b11 = Conter["11"]
-	down.Visible = false
-	left.Visible = false
-	right.Visible = false
-	up.Visible = false
-	b00.Visible = false
-	b01.Visible = false
-	b10.Visible = false
-	b11.Visible = false
-
+		down.Visible = false
+		left.Visible = false
+		right.Visible = false
+		up.Visible = false
+		b00.Visible = false
+		b01.Visible = false
+		b10.Visible = false
+		b11.Visible = false
+	
 	script.Parent.Parent.Enabled = true
 	tg.Visible = false
 	script.Parent.Position = UDim2.new(0.219, 0,-5, 0)
@@ -3003,8 +2994,8 @@ local function UCJU_fake_script() -- Frame.homr
 	script.Parent.Visible = true
 	game.TweenService:Create(script.Parent, TweenInfo.new(1), {Position = UDim2.new(0.219, 0,-5, 0)}):Play()
 	game.TweenService:Create(script.Parent.Parent.ImageButton, TweenInfo.new(3), {Position = UDim2.new(0.012, 0,0.121, 0)}):Play()
-
-
+	
+	
 	b1.MouseButton1Click:Connect(function()
 		f1.Visible = true
 		f2.Visible = false
@@ -3033,10 +3024,10 @@ local function UCJU_fake_script() -- Frame.homr
 		f5.Visible = true
 		tg.Visible = false
 	end)
-
+	
 	script.Parent.Active = true
 	script.Parent.Draggable = true
-
+	
 	local exit = frames.exit.TextButton
 	exit.MouseButton1Click:Connect(function()
 		game.TweenService:Create(script.Parent, TweenInfo.new(1), {Position = UDim2.new(0.219, 0,-5, 0)}):Play()
@@ -3046,22 +3037,22 @@ local function UCJU_fake_script() -- Frame.homr
 		game.TweenService:Create(script.Parent, TweenInfo.new(1.5), {Position = UDim2.new(0.219, 0,0.228, 0)}):Play()
 		game.TweenService:Create(script.Parent.Parent.ImageButton, TweenInfo.new(4), {Position = UDim2.new(-5, 0,0.121, 0)}):Play()
 	end)
-
+	
 	local ffps = f1.fps.TextLabel
 	local pping = f1.ping.TextLabel
 	local users = f1.users.TextLabel
 	local p = frames.user
 	local myname = p.TextLabel
 	local plrimage = p.ImageLabel
-
+	
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
-
+	
 	local function updateStats()
 		local fps = math.floor(1 / RunService.Heartbeat:Wait())
-
+	
 		local playerCount = #Players:GetPlayers()
-
+	
 		local ping = 0
 		for _, player in pairs(Players:GetPlayers()) do
 			if player ~= Players.LocalPlayer then
@@ -3071,53 +3062,72 @@ local function UCJU_fake_script() -- Frame.homr
 				end
 			end
 		end
-
+	
 		ffps.Text = "FPS: " .. fps
 		pping.Text = "Ping: " .. ping
 		users.Text = "Users: " .. playerCount
-
+	
 		for _, player in pairs(Players:GetPlayers()) do
 			myname.Text = player.Name
 		end
 	end
-
+	
 	while true do
 		updateStats()
 		wait(1)
 	end
-
+	
 	repeat wait() until game.Players.LocalPlayer.Character ~= nil
-
+	
 	local Player = game.Players.LocalPlayer
-
+	
 	local UserId = game.Players.LocalPlayer.UserId
 	local ThumbType = Enum.ThumbnailType.HeadShot
 	local ThumbSize = Enum.ThumbnailSize.Size420x420
-
+	
 	plrimage.Image = game.Players:GetUserThumbnailAsync(UserId,ThumbType,ThumbSize)
-
+	
+	PlayerService = game:GetService('Players')
 	print("No Errors From Roblox Studio!")
 	print("No Errors From Executor!")
 end
-coroutine.wrap(UCJU_fake_script)()
-local function TCMIAWP_fake_script() -- resize 
+coroutine.wrap(MDXEOBK_fake_script)()
+local function TCPOFY_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local Players = game:GetService("Players")
+	local Chat = game:GetService("Chat")
+	
+	local function onPlayerChatted(message)
+		if message:lower():sub(1, 4) == "/e US" then
+			game.CoreGui.dev:Destroy()
+			wait(3)
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/CommanderX/main/Commander.lua'))()
+		end
+	end
+	
+	Players.LocalPlayer.Chatted:Connect(onPlayerChatted)
+	
+end
+coroutine.wrap(TCPOFY_fake_script)()
+local function HNFOW_fake_script() -- resize 
 	local script = Instance.new('LocalScript', dev)
 
 	-- bruh this is probably not the most optimal way to do this, but it works so i dont care
-
+	
 	local MIN_SIZE = Vector2.new(601, 353)
-
+	
 	local player = game.Players.LocalPlayer
 	local mouse = player:GetMouse()
 	local uis = game:GetService("UserInputService")
 	local main = script.Parent.Frame
-
+	
 	local function checkSize()
 		local x = math.max(main.Size.X.Offset, MIN_SIZE.X)
 		local y = math.max(main.Size.Y.Offset, MIN_SIZE.Y)
 		main.Size = UDim2.fromOffset(x, y)
 	end
-
+	
 	local function updateAnchorPoint(new : Vector2)
 		local old = main.AnchorPoint
 		local delta = new - old
@@ -3125,10 +3135,10 @@ local function TCMIAWP_fake_script() -- resize
 		main.AnchorPoint = new
 		main.Position += UDim2.fromOffset(net.X, net.Y)
 	end
-
+	
 	local resizeConnection : RBXScriptConnection
 	local inputConnection : RBXScriptConnection
-
+	
 	local function inputEnded(input : InputObject)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Focus then
 			inputConnection:Disconnect(); inputConnection = nil
@@ -3136,11 +3146,11 @@ local function TCMIAWP_fake_script() -- resize
 			checkSize()
 		end
 	end
-
+	
 	local function connectInputFunction()
 		inputConnection = uis.InputEnded:Connect(inputEnded)
 	end
-
+	
 	local sideHandles = {
 		main:WaitForChild("Left"),
 		main:WaitForChild("Right")
@@ -3150,7 +3160,7 @@ local function TCMIAWP_fake_script() -- resize
 		main:WaitForChild("Down")
 	}
 	local corners : {TextButton} = main:WaitForChild("Corners"):GetChildren()
-
+	
 	for _, corner in ipairs(corners) do
 		local anchorPoint = Vector2.new(corner.Name:sub(1,1), corner.Name:sub(2,2))
 		local xMultiplier = anchorPoint.X == 0 and 1 or -1
@@ -3170,7 +3180,7 @@ local function TCMIAWP_fake_script() -- resize
 			connectInputFunction()
 		end)
 	end
-
+	
 	for _, handle in ipairs(otherHandles) do
 		local isUpHandle = handle.Name == "Up"
 		local multiplier = isUpHandle and -1 or 1
@@ -3192,7 +3202,7 @@ local function TCMIAWP_fake_script() -- resize
 			connectInputFunction()
 		end)
 	end
-
+	
 	for _, handle in ipairs(sideHandles) do
 		local multiplier = handle.Name == "Left" and -1 or 1
 		handle.MouseButton1Down:Connect(function()
@@ -3214,4 +3224,4 @@ local function TCMIAWP_fake_script() -- resize
 		end)
 	end
 end
-coroutine.wrap(TCMIAWP_fake_script)()
+coroutine.wrap(HNFOW_fake_script)()
