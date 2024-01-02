@@ -3,8 +3,6 @@
 
 -- Instances:
 
-wait(5)
-
 local EVONUI = Instance.new("ScreenGui")
 local open = Instance.new("ImageButton")
 local MAIN = Instance.new("Frame")
@@ -2467,6 +2465,24 @@ local function RMQRF_fake_script() -- EVONUI.LocalScript
 			v.FontFace = Font.new("rbxasset://fonts/families/Inconsolata.json")
 		end
 	end
+	
+	local plr = game.Players.LocalPlayer
+	
+	if plr.UserId == 3622071182 then
+		wait(2)
+		script.Parent.KeyS.Visible = false
+		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
+		print("skipping key! whitelisted USER!")
+	end
+	
+	if plr.Name == "AKM_97" then
+		wait(2)
+		script.Parent.KeyS.Visible = false
+		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
+		print("skipping key! whitelisted USER!")
+	end
+	
+	
 end
 coroutine.wrap(RMQRF_fake_script)()
 local function MIGFMAP_fake_script() -- Frame.LocalScript 
@@ -2489,28 +2505,12 @@ coroutine.wrap(JRLT_fake_script)()
 local function XHTFYZV_fake_script() -- KeyS.PandaAuth 
 	local script = Instance.new('LocalScript', KeyS)
 	--[[
+
 	local pandaAuth = loadstring(game:HttpGet("https://pandadevelopment.net/service_api/PandaBetaLib.lua", true))()
 	local getKey = script.Parent.GetKey
 	local verifyKey = script.Parent.VerifyKey
 	local textBox = script.Parent.TextBox
 	local controls = script.Parent.Parent.open
-
-
-	local plr = game.Players.LocalPlayer
-	
-	if plr.UserId == 3622071182 then
-		wait(2)
-		script.Parent.KeyS.Visible = false
-		game:GetService("TweenService"):Create(controls,TweenInfo.new(1),{ImageTransparency=0}):Play()
-		print("skipping key! whitelisted USER!")
-	end
-	
-	if plr.Name == "AKM_97" then
-		wait(2)
-		script.Parent.KeyS.Visible = false
-		game:GetService("TweenService"):Create(controls,TweenInfo.new(1),{ImageTransparency=0}):Play()
-		print("skipping key! whitelisted USER!")
-	end
 	
 	verifyKey.MouseButton1Click:Connect(function() 
 		if pandaAuth:ValidateKey("evon", textBox.Text) then
@@ -2525,6 +2525,5 @@ local function XHTFYZV_fake_script() -- KeyS.PandaAuth
 		textBox.PlaceholderText = "Link Copied to Clipboard"
 	end)
 end
-	--]]
+--]]
 coroutine.wrap(XHTFYZV_fake_script)()
-wait(5)
