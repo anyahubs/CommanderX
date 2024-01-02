@@ -939,8 +939,8 @@ local function C_11()
 	local btn = script.Parent
 
 	local function AddTab(imageTab, scriptname, source)
-		local scriptFrame = script.Parent.Parent.Parent.ScrollingFrame
-		local newList = scriptFrame.Folder.Frame:Clone()
+		local scriptFrame = G2L["16"]
+		local newList = G2L["19"]:Clone()
 
 		local execute = newList.load
 		local delete = newList.del
