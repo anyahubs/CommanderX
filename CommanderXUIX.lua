@@ -1,120 +1,5 @@
 print("AnyaLib LOADED")
 
-local gmt = getrawmetatable(game)
-setreadonly(gmt, false)
-
-local oldidx = gmt.__index
-gmt.__index = (function(self,meth)
-    if checkcaller() then
-        if self == game then
-            if meth == "HttpGet" or meth == "HttpGetAsync" then
-                return function(_, ...) return httpget(game, ...) end
-            end
-
-            if meth == "GetObjects" then
-	            return function(_, id) return getobjs(game, id) end
-	        end
-        end
-    end
-    return oldidx(self, meth)
-end)
-
-local oldnc = gmt.__namecall
-gmt.__namecall = (function(...)
-	local args = {...}
-
-	if checkcaller() then
-        if args[1] == game then 
-			if getnamecallmethod() == "HttpGet" or getnamecallmethod() == "HttpGetAsync" then
-			    return httpget(game, args[2])
-		    end
-	        if getnamecallmethod() == "GetObjects" then
-	            return getobjs(game, args[2])
-	        end
-        end
-    end
-
-    return oldnc(...)
-end)
-
-setreadonly(gmt, true)
-
-getgenv().hookmetamethod = newcclosure(function(a, b, c)
-    local d = getrawmetatable(a)
-    setreadonly(d, false)
-    
-    local e = d[b]
-    
-    local f = clonefunction(e)
-    
-    d[b] = c
-    
-    setreadonly(d, true)
-    return f
-end)
-
-getgenv().gethui = newcclosure(function() return game:GetService("CoreGui") end)
-getgenv().get_hidden_gui = gethui
-
-getgenv().gethiddenproperty = newcclosure(function(a,b)
-    local c = setscriptable(a,b, true)
-    local d = a[b]
-    setscriptable(a,b,c)
-    return d, (not c)
-end)
-
-getgenv().sethiddenproperty = newcclosure(function(a,b,c)
-    local d = setscriptable(a,b, true)
-    a[b] = c
-    setscriptable(a,b,d)
-    return (not d)
-end)
-getgenv().getnilinstances = newcclosure(function()
-    local insts = { }
-    for i,v in pairs(getinstances()) do
-        if v.Parent == nil then table.insert(insts,v) end
-    end
-    return insts
-end)
---[[
--- pass this to luac
-getgenv().getscripts = newcclosure(function()
-    local insts = { }
-    local isA = Instance.isA
-    for i,v in pairs(getinstances()) do
-        if isA(v, 'LocalScript') or isA(v, 'ModuleScript') then
-            table.insert(insts, v)
-        end
-    end
-    return insts
-end)]]
-getgenv().getrunningscripts = newcclosure(function()
-    local insts = { }
-    for i,v in pairs(getreg()) do
-        if type(v) == "thread" then
-            local env = gettenv(v)
-            if env.script ~= nil then
-	            table.insert(insts, env.script)
-            end
-        end
-    end
-    return insts
-end)
-
-getgenv().getsenv = newcclosure(function(instance) 
-    for _, v in next, getreg() do
-        if type(v) == "function" then
-            if getfenv(v).script == instance then
-                return getfenv(v)
-            end
-        end
-    end
-
-   local dummy = {}
-   dummy.script = instance
-   return dummy 
-end)
-getgenv().getmenv = getsenv
 -- Gui to Lua
 -- Version: 3.6
 
@@ -2355,13 +2240,13 @@ local function FMSRI_fake_script() -- dev.ImageLabel_5.LocalScript
 	local script = Instance.new('LocalScript', dev.ImageLabel_5)
 
 	repeat wait() until game.Players.LocalPlayer.Character ~= nil
-	
+
 	local Player = game.Players.LocalPlayer
-	
+
 	local UserId = game.Players.LocalPlayer.UserId
 	local ThumbType = Enum.ThumbnailType.HeadShot
 	local ThumbSize = Enum.ThumbnailSize.Size420x420
-	
+
 	script.Parent.Image = game.Players:GetUserThumbnailAsync(UserId,ThumbType,ThumbSize)
 end
 coroutine.wrap(FMSRI_fake_script)()
@@ -2445,7 +2330,7 @@ local function JFXFT_fake_script() -- dev.TextButton_8.LocalScript
 	local script = Instance.new('LocalScript', dev.TextButton_8)
 
 	local main = script.Parent.Parent.Parent
-	
+
 	local Conter = main.Corners
 	local down = main.Down
 	local left = main.Left
@@ -2455,7 +2340,7 @@ local function JFXFT_fake_script() -- dev.TextButton_8.LocalScript
 	local b01 = Conter["01"]
 	local b10 = Conter["10"]
 	local b11 = Conter["11"]
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
 		down.Visible = false
 		left.Visible = false
@@ -2465,10 +2350,10 @@ local function JFXFT_fake_script() -- dev.TextButton_8.LocalScript
 		b01.Visible = false
 		b10.Visible = false
 		b11.Visible = false
-	script.Parent.Parent.Visible = false
+		script.Parent.Parent.Visible = false
 	end)
-	
-	
+
+
 end
 coroutine.wrap(JFXFT_fake_script)()
 local function GTWVO_fake_script() -- dev.TextButton_9.LocalScript 
@@ -2478,15 +2363,15 @@ local function GTWVO_fake_script() -- dev.TextButton_9.LocalScript
 	script.Parent.MouseButton1Click:Connect(function()
 		main.Size =  UDim2.new(0.561, 0,0.542, 0)
 	end)
-	
-	
+
+
 end
 coroutine.wrap(GTWVO_fake_script)()
 local function JDCBR_fake_script() -- dev.TextButton_11.LocalScript 
 	local script = Instance.new('LocalScript', dev.TextButton_11)
 
 	local main = script.Parent.Parent.Parent.Parent.Parent
-	
+
 	local Conter = main.Corners
 	local down = main.Down
 	local left = main.Left
@@ -2496,26 +2381,26 @@ local function JDCBR_fake_script() -- dev.TextButton_11.LocalScript
 	local b01 = Conter["01"]
 	local b10 = Conter["10"]
 	local b11 = Conter["11"]
-	
+
 	script.Parent.MouseButton1Click:Connect(function()
-	down.Visible = true
-	left.Visible = true
-	right.Visible = true
-	up.Visible = true
-	b00.Visible = true
-	b01.Visible = true
-	b10.Visible = true
-	b11.Visible = true
-	main.ui.Visible = true
+		down.Visible = true
+		left.Visible = true
+		right.Visible = true
+		up.Visible = true
+		b00.Visible = true
+		b01.Visible = true
+		b10.Visible = true
+		b11.Visible = true
+		main.ui.Visible = true
 	end)
-	
-	
+
+
 end
 coroutine.wrap(JDCBR_fake_script)()
 local function VZQHPC_fake_script() -- dev.Frame.execute 
 	local script = Instance.new('LocalScript', dev.Frame)
 
-	
+
 	--[[
 	███████╗██╗░░██╗███████╗░█████╗░██╗░░░██╗████████╗░█████╗░██████╗░  ░█████╗░░█████╗░██████╗░███████╗
 	██╔════╝╚██╗██╔╝██╔════╝██╔══██╗██║░░░██║╚══██╔══╝██╔══██╗██╔══██╗  ██╔══██╗██╔══██╗██╔══██╗██╔════╝
@@ -2524,7 +2409,7 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 	███████╗██╔╝╚██╗███████╗╚█████╔╝╚██████╔╝░░░██║░░░╚█████╔╝██║░░██║  ╚█████╔╝╚█████╔╝██████╔╝███████╗
 	╚══════╝╚═╝░░╚═╝╚══════╝░╚════╝░░╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝
 	]]--
-	
+
 	local builtin = {
 		"script", "workspace", "game", "gcinfo", "getmetatable", "newproxy",
 		"pairs", "next", "string", "table", "debug", "wait", "setmetatable",
@@ -2541,12 +2426,12 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 		"GetService", "Players", "Lighting", "ReplicatedStorage", "tick", "wait",
 		"Delay", "print", "warn", "error", "tostring", "type"
 	}
-	
+
 	local keyword = {
 		"if", "for", "else", "continue", "break", "do", "local", "self",
 		"return", "repeat", "function", "nil", "while", "elseif", "then"
 	}
-	
+
 	local function GetLineSelected(s)
 		local text = s.Text
 		local p = s.CursorPosition
@@ -2561,12 +2446,12 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 		end
 		return text2:reverse(), #text:sub(1, p):split("\n")
 	end
-	
+
 	local function GetCurrentLine(s)
 		local Line, LineNumber = GetLineSelected(s)
 		return LineNumber, Line
 	end
-	
+
 	local function StopAndGetWord(s)
 		local text = s.Text
 		local p = s.CursorPosition - 1
@@ -2581,7 +2466,7 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 		end
 		return text2:reverse()
 	end
-	
+
 	local function Match(text, list)
 		local matches = {}
 		for _, v in pairs(list) do
@@ -2591,7 +2476,7 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 		end
 		return matches
 	end
-	
+
 	local function MashTables(t, t2)
 		local tab = {}
 		for i, v in pairs(t) do
@@ -2610,18 +2495,18 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 		end
 		return tab
 	end
-	
+
 	local a = script.Parent.executor.tx.ScrollingFrame.Source
-	
+
 	local textButton = script.Parent.Anya
-	
+
 	local selectedSuggestion = script.Parent.Anya.TextLabel
-	
+
 	local listView = script.Parent.Anya.ScrollingFrame
-	
+
 	local tgbutton = script.Parent.toggle.ImageButton
 	local suggestionsEnabled = false
-	
+
 	tgbutton.MouseButton1Click:Connect(function()
 		suggestionsEnabled = not suggestionsEnabled
 		if suggestionsEnabled then
@@ -2639,21 +2524,21 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 			end
 		end
 	end)
-	
+
 	local function UpdateSuggestions(input)
 		if not suggestionsEnabled then
 			return
 		end
-	
+
 		local values = MashTables(keyword, builtin)
 		local suggestions = Match(input, values)
-	
+
 		for _, child in pairs(listView:GetChildren()) do
 			if child:IsA("TextButton") then
 				child:Destroy()
 			end
 		end
-	
+
 		local nm = {1, 2, 3, 4, 5, 6}
 		local yPos = 0
 		for suggestion, _ in pairs(suggestions) do
@@ -2685,14 +2570,14 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 			textButton.Visible = false
 		end
 	end
-	
+
 	spawn(function()
 		a:GetPropertyChangedSignal("Text"):Connect(function()
 			local word = StopAndGetWord(a)
 			UpdateSuggestions(word)
 		end)
 	end)
-	
+
 	spawn(function()
 		while wait() do
 			local linen, line = GetCurrentLine(a)
@@ -2700,7 +2585,7 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 			textButton.Position = UDim2.new(1.015, 0, 0.34, 0)
 		end
 	end)
-	
+
 	local UIS = game:GetService("UserInputService")
 	a.Changed:Connect(function(i)
 		if UIS:IsKeyDown(Enum.KeyCode.V) and UIS:IsKeyDown(Enum.KeyCode.RightControl) then
@@ -2826,7 +2711,7 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 	]]--
 	local frames = script.Parent
 	local f2 = frames.executor
-	
+
 	local lua_keywords = {"and", "break", "do", "else", "elseif", "end", "false", "for", "function", "goto", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while", "is_synapse_function","is_protosmasher_caller", "execute","foreach","foreachi","insert","syn","HttpGet","HttpPost","__index","__namecall","__add","__call","__tostring","__tonumber","__div"}
 	local global_env = {"getrawmetatable", "game", "workspace", "script", "math", "string", "table", "print", "wait", "BrickColor", "Color3", "next", "pairs", "ipairs", "select", "unpack", "Instance", "Vector2", "Vector3", "CFrame", "Ray", "UDim2", "Enum", "assert", "error", "warn", "tick", "loadstring", "_G", "shared", "getfenv", "setfenv", "newproxy", "setmetatable", "getmetatable", "os", "debug", "pcall", "ypcall", "xpcall", "rawequal", "rawset", "rawget", "tonumber", "tostring", "type", "typeof", "_VERSION", "coroutine", "delay", "require", "spawn", "LoadLibrary", "settings", "stats", "time", "UserSettings", "version", "Axes", "ColorSequence", "Faces", "ColorSequenceKeypoint", "NumberRange", "NumberSequence", "NumberSequenceKeypoint", "gcinfo", "elapsedTime", "collectgarbage", "PhysicalProperties", "Rect", "Region3", "Region3int16", "UDim", "Vector2int16", "Vector3int16","run_secure_function","create_secure_function","hookfunc","hookfunction","newcclosure","replaceclosure","islclosure","getgc","gcinfo","rconsolewarn","rconsoleprint","rconsoleinfo","rconsoleinput","rconsoleinputasync","rconsoleclear","rconsoleerr",}
 	local exeframe = f2
@@ -2834,7 +2719,7 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 	local Lines = exeframe.tx.ScrollingFrame.TextLabel
 	local src = Source
 	local lin = Lines
-	
+
 	local Highlight = function(string, keywords)
 		local K = {}
 		local S = string
@@ -2878,10 +2763,10 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 				return (" "):rep(#c)
 			end
 		end)
-	
+
 		return S
 	end
-	
+
 	local strings = function(string)
 		local highlight = ""
 		local quote = false
@@ -2903,10 +2788,10 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 				highlight = highlight .. "\32"
 			end
 		end)
-	
+
 		return highlight
 	end
-	
+
 	local comments = function(string)
 		local ret = ""
 		string:gsub("[^\r\n]+", function(c)
@@ -2925,10 +2810,10 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 			end)
 			ret = ret
 		end)
-	
+
 		return ret
 	end
-	
+
 	local numbers = function(string)
 		local A = ""
 		string:gsub(".", function(c)
@@ -2942,10 +2827,10 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 				A = A .. "\32"
 			end
 		end)
-	
+
 		return A
 	end
-	
+
 	local highlight_source = function(type)
 		if type == "Text" then
 			src.Text = Source.Text:gsub("\13", "")
@@ -2958,26 +2843,26 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 			src.Strings_.Text = strings(s)
 		end
 	end
-	
+
 	highlight_source("Text")
 	src.Changed:Connect(highlight_source)
 	local exeframe = exeframe
-	
+
 	local frame = exeframe.tx.ScrollingFrame
 	local textbox = frame.Source
 	local textlab1 = frame.Frame.lol
-	
+
 	local function updateScrollFrameSize()
 		frame.CanvasSize = UDim2.new(0, 0, 0, textbox.TextBounds.Y)
 	end
-	
+
 	textbox:GetPropertyChangedSignal("Text"):Connect(updateScrollFrameSize)
 	updateScrollFrameSize()
-	
+
 	local frame = exeframe.tx.ScrollingFrame
 	local src = frame.Frame.lol
 	local sr = frame.Frame
-	
+
 	local highlight_source = function(type)
 		if type == "Text" then
 			src.Text = Source.Text:gsub("\13", "")
@@ -2998,21 +2883,21 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 			end
 		end
 	end
-	
+
 	highlight_source("Text")
 	src.Changed:Connect(highlight_source)
-	
+
 	--llllllllllllllllllllllllllllllllllllllll
-	
+
 	print("No Errors From Roblox Studio!")
-	
-	
+
+
 	local execute = script.Parent.executor.execute.TextButton
 	local clear = script.Parent.executor.clear.TextButton
 	local copy = script.Parent.executor.copy.TextButton
 	local clip = script.Parent.executor.clip.TextButton
 	local txtbox = script.Parent.executor.tx.ScrollingFrame.Source
-	
+
 	execute.MouseButton1Click:Connect(function()
 		loadstring(txtbox.Text)()
 	end)
@@ -3032,7 +2917,7 @@ local function VZQHPC_fake_script() -- dev.Frame.execute
 			end
 		end
 	end)
-	
+
 	for _, obj in pairs(script.Parent:GetDescendants()) do
 		if obj:IsA("TextLabel") or obj:IsA("TextButton") then
 			obj.FontFace = Font.fromId(12187377099) 
@@ -3076,11 +2961,11 @@ local function UCJU_fake_script() -- dev.Frame.homr
 	local b2 = tabs.e
 	local b4 = tabs.search
 	local b5 = tabs.s
-	
+
 	--fix ui 
 	script.Parent.Visible = false
 	local main = script.Parent
-	
+
 	local Conter = main.Corners
 	local down = main.Down
 	local left = main.Left
@@ -3090,15 +2975,15 @@ local function UCJU_fake_script() -- dev.Frame.homr
 	local b01 = Conter["01"]
 	local b10 = Conter["10"]
 	local b11 = Conter["11"]
-		down.Visible = false
-		left.Visible = false
-		right.Visible = false
-		up.Visible = false
-		b00.Visible = false
-		b01.Visible = false
-		b10.Visible = false
-		b11.Visible = false
-	
+	down.Visible = false
+	left.Visible = false
+	right.Visible = false
+	up.Visible = false
+	b00.Visible = false
+	b01.Visible = false
+	b10.Visible = false
+	b11.Visible = false
+
 	script.Parent.Parent.Enabled = true
 	tg.Visible = false
 	script.Parent.Position = UDim2.new(0.219, 0,-5, 0)
@@ -3109,8 +2994,8 @@ local function UCJU_fake_script() -- dev.Frame.homr
 	script.Parent.Visible = true
 	game.TweenService:Create(script.Parent, TweenInfo.new(1), {Position = UDim2.new(0.219, 0,-5, 0)}):Play()
 	game.TweenService:Create(script.Parent.Parent.ImageButton, TweenInfo.new(3), {Position = UDim2.new(0.012, 0,0.121, 0)}):Play()
-	
-	
+
+
 	b1.MouseButton1Click:Connect(function()
 		f1.Visible = true
 		f2.Visible = false
@@ -3139,10 +3024,10 @@ local function UCJU_fake_script() -- dev.Frame.homr
 		f5.Visible = true
 		tg.Visible = false
 	end)
-	
+
 	script.Parent.Active = true
 	script.Parent.Draggable = true
-	
+
 	local exit = frames.exit.TextButton
 	exit.MouseButton1Click:Connect(function()
 		game.TweenService:Create(script.Parent, TweenInfo.new(1), {Position = UDim2.new(0.219, 0,-5, 0)}):Play()
@@ -3152,22 +3037,22 @@ local function UCJU_fake_script() -- dev.Frame.homr
 		game.TweenService:Create(script.Parent, TweenInfo.new(1.5), {Position = UDim2.new(0.219, 0,0.228, 0)}):Play()
 		game.TweenService:Create(script.Parent.Parent.ImageButton, TweenInfo.new(4), {Position = UDim2.new(-5, 0,0.121, 0)}):Play()
 	end)
-	
+
 	local ffps = f1.fps.TextLabel
 	local pping = f1.ping.TextLabel
 	local users = f1.users.TextLabel
 	local p = frames.user
 	local myname = p.TextLabel
 	local plrimage = p.ImageLabel
-	
+
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
-	
+
 	local function updateStats()
 		local fps = math.floor(1 / RunService.Heartbeat:Wait())
-	
+
 		local playerCount = #Players:GetPlayers()
-	
+
 		local ping = 0
 		for _, player in pairs(Players:GetPlayers()) do
 			if player ~= Players.LocalPlayer then
@@ -3177,31 +3062,31 @@ local function UCJU_fake_script() -- dev.Frame.homr
 				end
 			end
 		end
-	
+
 		ffps.Text = "FPS: " .. fps
 		pping.Text = "Ping: " .. ping
 		users.Text = "Users: " .. playerCount
-	
+
 		for _, player in pairs(Players:GetPlayers()) do
 			myname.Text = player.Name
 		end
 	end
-	
+
 	while true do
 		updateStats()
 		wait(1)
 	end
-	
+
 	repeat wait() until game.Players.LocalPlayer.Character ~= nil
-	
+
 	local Player = game.Players.LocalPlayer
-	
+
 	local UserId = game.Players.LocalPlayer.UserId
 	local ThumbType = Enum.ThumbnailType.HeadShot
 	local ThumbSize = Enum.ThumbnailSize.Size420x420
-	
+
 	plrimage.Image = game.Players:GetUserThumbnailAsync(UserId,ThumbType,ThumbSize)
-	
+
 	print("No Errors From Roblox Studio!")
 	print("No Errors From Executor!")
 end
@@ -3210,20 +3095,20 @@ local function TCMIAWP_fake_script() -- dev.dev.resize
 	local script = Instance.new('LocalScript', dev.dev)
 
 	-- bruh this is probably not the most optimal way to do this, but it works so i dont care
-	
+
 	local MIN_SIZE = Vector2.new(601, 353)
-	
+
 	local player = game.Players.LocalPlayer
 	local mouse = player:GetMouse()
 	local uis = game:GetService("UserInputService")
 	local main = script.Parent.Frame
-	
+
 	local function checkSize()
 		local x = math.max(main.Size.X.Offset, MIN_SIZE.X)
 		local y = math.max(main.Size.Y.Offset, MIN_SIZE.Y)
 		main.Size = UDim2.fromOffset(x, y)
 	end
-	
+
 	local function updateAnchorPoint(new : Vector2)
 		local old = main.AnchorPoint
 		local delta = new - old
@@ -3231,10 +3116,10 @@ local function TCMIAWP_fake_script() -- dev.dev.resize
 		main.AnchorPoint = new
 		main.Position += UDim2.fromOffset(net.X, net.Y)
 	end
-	
+
 	local resizeConnection : RBXScriptConnection
 	local inputConnection : RBXScriptConnection
-	
+
 	local function inputEnded(input : InputObject)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Focus then
 			inputConnection:Disconnect(); inputConnection = nil
@@ -3242,11 +3127,11 @@ local function TCMIAWP_fake_script() -- dev.dev.resize
 			checkSize()
 		end
 	end
-	
+
 	local function connectInputFunction()
 		inputConnection = uis.InputEnded:Connect(inputEnded)
 	end
-	
+
 	local sideHandles = {
 		main:WaitForChild("Left"),
 		main:WaitForChild("Right")
@@ -3256,7 +3141,7 @@ local function TCMIAWP_fake_script() -- dev.dev.resize
 		main:WaitForChild("Down")
 	}
 	local corners : {TextButton} = main:WaitForChild("Corners"):GetChildren()
-	
+
 	for _, corner in ipairs(corners) do
 		local anchorPoint = Vector2.new(corner.Name:sub(1,1), corner.Name:sub(2,2))
 		local xMultiplier = anchorPoint.X == 0 and 1 or -1
@@ -3276,7 +3161,7 @@ local function TCMIAWP_fake_script() -- dev.dev.resize
 			connectInputFunction()
 		end)
 	end
-	
+
 	for _, handle in ipairs(otherHandles) do
 		local isUpHandle = handle.Name == "Up"
 		local multiplier = isUpHandle and -1 or 1
@@ -3298,7 +3183,7 @@ local function TCMIAWP_fake_script() -- dev.dev.resize
 			connectInputFunction()
 		end)
 	end
-	
+
 	for _, handle in ipairs(sideHandles) do
 		local multiplier = handle.Name == "Left" and -1 or 1
 		handle.MouseButton1Down:Connect(function()
@@ -3334,10 +3219,10 @@ coroutine.wrap(TCMIAWP_fake_script)()
 	╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝
 	]]--
 local scriptsframe = sr
-local btn = game.ServerStorage.dev.Frame.sr.tags.clip.TextButton
+local btn = game.CoreGui.dev.Frame.sr.tags.clip.TextButton
 
 local function AddTab(imageTab, scriptname, source)
-	local scriptFrame = game.ServerStorage.dev.Frame.sr.tx.ScrollingFrame
+	local scriptFrame = game.CoreGui.dev.Frame.sr.tx.ScrollingFrame
 	local newList = scriptFrame.Frame.Folder.Frame:Clone()
 
 	local execute = newList.load
@@ -3384,4 +3269,3 @@ btn.MouseButton1Click:Connect(function()
 	end
 
 end)
-
