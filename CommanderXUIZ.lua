@@ -1654,7 +1654,7 @@ local function RMQRF_fake_script() -- EVONUI.LocalScript
 	local function setColor(newColor)
 		local abs, pi, sin, asin, acos, sign, deg, rad, clamp = math.abs, math.pi, math.sin, math.asin, math.acos, math.sign, math.deg, math.rad, math.clamp 
 	
-	function setColor(newColor)
+	local function setColor(newColor)
 	game:GetService("TweenService"):Create(Frame,TweenInfo.new(0.3),{BackgroundColor3=newColor}):Play()
 	game:GetService("TweenService"):Create(main.gg9,TweenInfo.new(0.3),{ImageColor3=newColor}):Play()
 	
