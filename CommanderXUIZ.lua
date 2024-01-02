@@ -1654,7 +1654,7 @@ local function RMQRF_fake_script() -- EVONUI.LocalScript
 	local function setColor(newColor)
 		local abs, pi, sin, asin, acos, sign, deg, rad, clamp = math.abs, math.pi, math.sin, math.asin, math.acos, math.sign, math.deg, math.rad, math.clamp 
 	
-	local function setColor(newColor)
+	function setColor(newColor)
 	game:GetService("TweenService"):Create(Frame,TweenInfo.new(0.3),{BackgroundColor3=newColor}):Play()
 	game:GetService("TweenService"):Create(main.gg9,TweenInfo.new(0.3),{ImageColor3=newColor}):Play()
 	
@@ -2214,7 +2214,7 @@ local function RMQRF_fake_script() -- EVONUI.LocalScript
 				gg9.Image = "rbxassetid://15115194626"
 				gg9.SliceScale = 0.000
 				gg9.MouseButton1Click:Connect(function()
-					--loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/executer/main/infyieldevon.lua'))()
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/executer/main/infyieldevon.lua'))()
 				end)
 	
 	
@@ -2504,27 +2504,12 @@ coroutine.wrap(JRLT_fake_script)()
 -- EVONUI.resize is disabled.
 local function XHTFYZV_fake_script() -- KeyS.PandaAuth 
 	local script = Instance.new('LocalScript', KeyS)
+
 	local pandaAuth = loadstring(game:HttpGet("https://pandadevelopment.net/service_api/PandaBetaLib.lua", true))()
 	local getKey = script.Parent.GetKey
 	local verifyKey = script.Parent.VerifyKey
 	local textBox = script.Parent.TextBox
 	local controls = script.Parent.Parent.open
-	
-	local plr = game.Players.LocalPlayer
-	
-	if plr.UserId == 3622071182 then
-		wait(2)
-		script.Parent.KeyS.Visible = false
-		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
-		print("skipping key! whitelisted USER!")
-	end
-	
-	if plr.Name == "AKM_97" then
-		wait(2)
-		script.Parent.KeyS.Visible = false
-		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
-		print("skipping key! whitelisted USER!")
-	end
 	
 	verifyKey.MouseButton1Click:Connect(function() 
 		if pandaAuth:ValidateKey("evon", textBox.Text) then
