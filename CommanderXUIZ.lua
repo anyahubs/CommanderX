@@ -2488,28 +2488,29 @@ coroutine.wrap(JRLT_fake_script)()
 -- EVONUI.resize is disabled.
 local function XHTFYZV_fake_script() -- KeyS.PandaAuth 
 	local script = Instance.new('LocalScript', KeyS)
-
-	local plr = game.Players.LocalPlayer
-	
-	if plr.UserId == 3622071182 then
-		wait(2)
-		script.Parent.KeyS.Visible = false
-		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
-		print("skipping key! whitelisted USER!")
-	end
-	
-	if plr.Name == "AKM_97" then
-		wait(2)
-		script.Parent.KeyS.Visible = false
-		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
-		print("skipping key! whitelisted USER!")
-	end
 	--[[
 	local pandaAuth = loadstring(game:HttpGet("https://pandadevelopment.net/service_api/PandaBetaLib.lua", true))()
 	local getKey = script.Parent.GetKey
 	local verifyKey = script.Parent.VerifyKey
 	local textBox = script.Parent.TextBox
 	local controls = script.Parent.Parent.open
+
+
+	local plr = game.Players.LocalPlayer
+	
+	if plr.UserId == 3622071182 then
+		wait(2)
+		script.Parent.KeyS.Visible = false
+		game:GetService("TweenService"):Create(controls,TweenInfo.new(1),{ImageTransparency=0}):Play()
+		print("skipping key! whitelisted USER!")
+	end
+	
+	if plr.Name == "AKM_97" then
+		wait(2)
+		script.Parent.KeyS.Visible = false
+		game:GetService("TweenService"):Create(controls,TweenInfo.new(1),{ImageTransparency=0}):Play()
+		print("skipping key! whitelisted USER!")
+	end
 	
 	verifyKey.MouseButton1Click:Connect(function() 
 		if pandaAuth:ValidateKey("evon", textBox.Text) then
