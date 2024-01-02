@@ -119,6 +119,8 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0, 0, 0.117549665, 0)
 Frame.Size = UDim2.new(1.00143409, 0, 0.882450342, 0)
+Frame.Visible = false
+Frame.Zindex = 99999999999
 
 l.Name = "l"
 l.Parent = Frame
