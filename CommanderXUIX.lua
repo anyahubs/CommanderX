@@ -15,6 +15,8 @@ G2L["1"] = Instance.new("ScreenGui", game.CoreGui.RobloxGui);
 G2L["1"]["Name"] = [[dev]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
+print("اهلا بك الى الهاك العربي")
+
 -- StarterGui.dev.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 0;
