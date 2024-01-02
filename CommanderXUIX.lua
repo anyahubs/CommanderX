@@ -1,4 +1,3 @@
-repeat wait() until game:IsLoaded()
 local gmt = getrawmetatable(game)
 setreadonly(gmt, false)
 
