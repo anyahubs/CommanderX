@@ -2133,14 +2133,17 @@ local function RMQRF_fake_script() -- EVONUI.LocalScript
 	
 	--executor load
 	exeframe.buttons.execute.TextButton.MouseButton1Click:Connect(function()
-		loadstring(exeframe.txtbox.TextBox.Text)()
+		loadstring(Source.Text)()
+		warn("script Load!")
 	end)
 	--clear
 	exeframe.buttons.clear.TextButton.MouseButton1Click:Connect(function()
-		exeframe.txtbox.TextBox.Text = ""
+		Source.Text = ""
+		warn("script cleared")
 	end)
 	exeframe.buttons.copy.TextButton.MouseButton1Click:Connect(function()
-		setclipboard(exeframe.txtbox.TextBox.Text)
+		setclipboard(Source.Text)
+		warn("script copied")
 	end)
 	
 	--search script
