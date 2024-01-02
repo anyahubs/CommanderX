@@ -3216,7 +3216,7 @@ coroutine.wrap(TCMIAWP_fake_script)()
 	╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝
 	]]--
 local scriptsframe = sr
-local btn = game.CoreGui.dev.Frame.sr.tags.clip.TextButton
+local btn = TextButton_2
 
 local function AddTab(imageTab, scriptname, source)
 	local scriptFrame = game.CoreGui.dev.Frame.sr.tx.ScrollingFrame
