@@ -2216,7 +2216,7 @@ local function RMQRF_fake_script() -- EVONUI.LocalScript
 				gg9.Image = "rbxassetid://15115194626"
 				gg9.SliceScale = 0.000
 				gg9.MouseButton1Click:Connect(function()
-					loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/executer/main/infyieldevon.lua'))()
+					--loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/executer/main/infyieldevon.lua'))()
 				end)
 	
 	
