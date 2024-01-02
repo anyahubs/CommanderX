@@ -2485,23 +2485,6 @@ local function RMQRF_fake_script() -- EVONUI.LocalScript
 	
 end
 coroutine.wrap(RMQRF_fake_script)()
-local function MIGFMAP_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
-
-	local textLabel = script.Parent.lol
-	local txtbox = script.Parent.Parent.Source
-	while wait() do
-		textLabel.Text = txtbox.Text
-	end
-end
-coroutine.wrap(MIGFMAP_fake_script)()
-local function JRLT_fake_script() -- Frame_5.ColorWheel_LocalScript 
-	local script = Instance.new('LocalScript', Frame_5)
-
-	
-end
-coroutine.wrap(JRLT_fake_script)()
--- EVONUI.resize is disabled.
 local function XHTFYZV_fake_script() -- KeyS.PandaAuth 
 	local script = Instance.new('LocalScript', KeyS)
 --[[
@@ -2525,4 +2508,16 @@ local function XHTFYZV_fake_script() -- KeyS.PandaAuth
 	end)
 	]]--
 end
+--[[
 coroutine.wrap(XHTFYZV_fake_script)()
+local function MIGFMAP_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local textLabel = script.Parent.lol
+	local txtbox = script.Parent.Parent.Source
+	while wait() do
+		textLabel.Text = txtbox.Text
+	end
+end
+coroutine.wrap(MIGFMAP_fake_script)()
+]]--
