@@ -3150,19 +3150,18 @@ local function UCJU_fake_script() -- dev.Frame.homr
 		game.TweenService:Create(script.Parent, TweenInfo.new(1.5), {Position = UDim2.new(0.219, 0,0.228, 0)}):Play()
 		game.TweenService:Create(script.Parent.Parent.ImageButton, TweenInfo.new(4), {Position = UDim2.new(-5, 0,0.121, 0)}):Play()
 	end)
-	
-local Players = game:GetService("Players")
-local Chat = game:GetService("Chat")
+	local uscmd = "/us"
 
-local function onPlayerChatted(message)
-	if message:lower():sub(1, 4) == "/US" then
+game.Players.PlayerAdded:Connect(function(player)
+	player.Chatted:Connect(function(msg)
+		if msg:sub(1, uscmd:len()):lower() == uscmd:lower() then
+		print("english loaded")
 		game.CoreGui.dev:Destroy()
 		wait(3)
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/CommanderX/main/Commander.lua'))()
-	end
-end
---Players.LocalPlayer.Chatted:Connect(onPlayerChatted)
-onPlayerChatted()
+		end
+	end)
+end)
 
 	local ffps = f1.fps.TextLabel
 	local pping = f1.ping.TextLabel
