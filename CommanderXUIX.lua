@@ -1,3 +1,4 @@
+print("loaded")
 local function waitForGameLoad()
     repeat
         wait()
@@ -11,6 +12,7 @@ if getgenv().logs then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/anyahubs/CommanderX/main/logs.lua", true))()
     getgenv().logs = false
 end
+print("loaded")
 --[=[
  d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
 88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
