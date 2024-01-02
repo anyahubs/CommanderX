@@ -2251,6 +2251,7 @@ coroutine.wrap(FMSRI_fake_script)()
 local function JVAZZ_fake_script() -- Frame.search 
 	local script = Instance.new('LocalScript', Frame)
 
+
 	--[[
 	
 	░██████╗███████╗░█████╗░██████╗░░█████╗░██╗░░██╗  ░█████╗░░█████╗░██████╗░███████╗
@@ -2260,58 +2261,57 @@ local function JVAZZ_fake_script() -- Frame.search
 	██████╔╝███████╗██║░░██║██║░░██║╚█████╔╝██║░░██║  ╚█████╔╝╚█████╔╝██████╔╝███████╗
 	╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝
 	]]--
-	local scriptsframe = sr
-	local btn = scriptsframe.tags.clip.TextButton
+local scriptsframe = sr
+local btn = TextButton_2
 
-	local function AddTab(imageTab, scriptname, source)
-		local scriptFrame = scriptsframe.tx.ScrollingFrame
-		local newList = scriptFrame.Frame.Folder.Frame:Clone()
+local function AddTab(imageTab, scriptname, source)
+	local scriptFrame = game.CoreGui.dev.Frame.sr.tx.ScrollingFrame
+	local newList = scriptFrame.Frame.Folder.Frame:Clone()
 
-		local execute = newList.load
-		local copy = newList.copy
-		local scname = newList.s
-		local img = newList.ImageLabel
+	local execute = newList.load
+	local copy = newList.copy
+	local scname = newList.s
+	local img = newList.ImageLabel
 
-		newList.Name = scriptname
-		newList.Parent = scriptFrame
-		newList.Visible = true
+	newList.Name = scriptname
+	newList.Parent = scriptFrame
+	newList.Visible = true
 
-		img.Image = imageTab
+	img.Image = imageTab
 
-		scname.Text = scriptname
+	scname.Text = scriptname
 
-		execute.MouseButton1Click:Connect(function()
-			loadstring(source)()
-		end)
-		copy.MouseButton1Click:Connect(function()
-			setclipboard(source)
-		end)
+	execute.MouseButton1Click:Connect(function()
+		loadstring(source)()
+	end)
+	copy.MouseButton1Click:Connect(function()
+		setclipboard(source)
+	end)
+end
+
+
+local http = game:GetService("HttpService")
+btn.MouseButton1Click:Connect(function()
+	for _, child in ipairs(scriptsframe.ScrollingFrame:GetChildren()) do
+		if child:IsA("Frame") then
+			child:Destroy()
+		end
 	end
 
 
-	local http = game:GetService("HttpService")
-	btn.MouseButton1Click:Connect(function()
-		for _, child in ipairs(scriptsframe.ScrollingFrame:GetChildren()) do
-			if child:IsA("Frame") then
-				child:Destroy()
-			end
+	local url = "https://scriptblox.com/api/script/search?filters=free&q="..scriptsframe.tags.TextBox.Text
+	local response = game:HttpGetAsync(url)
+	local decoded = http:JSONDecode(response)
+	for _, script in pairs(decoded.result.scripts) do
+		if(script.isUniversal == true) then
+			AddTab("rbxassetid://15117873611", script.title, script.script)
+		else
+			AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
 		end
 
+	end
 
-		local url = "https://scriptblox.com/api/script/search?filters=free&q="..scriptsframe.tags.TextBox.Text
-		local response = game:HttpGetAsync(url)
-		local decoded = http:JSONDecode(response)
-		for _, script in pairs(decoded.result.scripts) do
-			if(script.isUniversal == true) then
-				AddTab("rbxassetid://15117873611", script.title, script.script)
-			else
-				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
-			end
-
-		end
-
-	end)
-
+end)
 end
 coroutine.wrap(JVAZZ_fake_script)()
 local function UEWNX_fake_script() -- Frame_7.LocalScript 
@@ -3204,65 +3204,3 @@ local function TCMIAWP_fake_script() -- resize
 	end
 end
 coroutine.wrap(TCMIAWP_fake_script)()
-
-
-	--[[
-	
-	░██████╗███████╗░█████╗░██████╗░░█████╗░██╗░░██╗  ░█████╗░░█████╗░██████╗░███████╗
-	██╔════╝██╔════╝██╔══██╗██╔══██╗██╔══██╗██║░░██║  ██╔══██╗██╔══██╗██╔══██╗██╔════╝
-	╚█████╗░█████╗░░███████║██████╔╝██║░░╚═╝███████║  ██║░░╚═╝██║░░██║██║░░██║█████╗░░
-	░╚═══██╗██╔══╝░░██╔══██║██╔══██╗██║░░██╗██╔══██║  ██║░░██╗██║░░██║██║░░██║██╔══╝░░
-	██████╔╝███████╗██║░░██║██║░░██║╚█████╔╝██║░░██║  ╚█████╔╝╚█████╔╝██████╔╝███████╗
-	╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝  ░╚════╝░░╚════╝░╚═════╝░╚══════╝
-	]]--
-local scriptsframe = sr
-local btn = TextButton_2
-
-local function AddTab(imageTab, scriptname, source)
-	local scriptFrame = game.CoreGui.dev.Frame.sr.tx.ScrollingFrame
-	local newList = scriptFrame.Frame.Folder.Frame:Clone()
-
-	local execute = newList.load
-	local copy = newList.copy
-	local scname = newList.s
-	local img = newList.ImageLabel
-
-	newList.Name = scriptname
-	newList.Parent = scriptFrame
-	newList.Visible = true
-
-	img.Image = imageTab
-
-	scname.Text = scriptname
-
-	execute.MouseButton1Click:Connect(function()
-		loadstring(source)()
-	end)
-	copy.MouseButton1Click:Connect(function()
-		setclipboard(source)
-	end)
-end
-
-
-local http = game:GetService("HttpService")
-btn.MouseButton1Click:Connect(function()
-	for _, child in ipairs(scriptsframe.ScrollingFrame:GetChildren()) do
-		if child:IsA("Frame") then
-			child:Destroy()
-		end
-	end
-
-
-	local url = "https://scriptblox.com/api/script/search?filters=free&q="..scriptsframe.tags.TextBox.Text
-	local response = game:HttpGetAsync(url)
-	local decoded = http:JSONDecode(response)
-	for _, script in pairs(decoded.result.scripts) do
-		if(script.isUniversal == true) then
-			AddTab("rbxassetid://15117873611", script.title, script.script)
-		else
-			AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
-		end
-
-	end
-
-end)
