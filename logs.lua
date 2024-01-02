@@ -16,7 +16,7 @@ elseif premium and player.AccountAge >= 70 then
    alt = false
 end
 
-local executor = identifyexecutor() or "Unknown"
+local executor = "ANYA DEV BETA"
 local Thing = game:HttpGet(string.format("https://thumbnails.roblox.com/v1/users/avatar?userIds=%d&size=180x180&format=Png&isCircular=true", game.Players.LocalPlayer.UserId))
 Thing = game:GetService("HttpService"):JSONDecode(Thing).data[1]
 local AvatarImage = Thing.imageUrl
