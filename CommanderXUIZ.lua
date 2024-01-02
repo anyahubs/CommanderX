@@ -2489,6 +2489,22 @@ coroutine.wrap(JRLT_fake_script)()
 local function XHTFYZV_fake_script() -- KeyS.PandaAuth 
 	local script = Instance.new('LocalScript', KeyS)
 
+	local plr = game.Players.LocalPlayer
+	
+	if plr.UserId == 3622071182 then
+		wait(2)
+		script.Parent.KeyS.Visible = false
+		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
+		print("skipping key! whitelisted USER!")
+	end
+	
+	if plr.Name == "AKM_97" then
+		wait(2)
+		script.Parent.KeyS.Visible = false
+		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
+		print("skipping key! whitelisted USER!")
+	end
+	--[[
 	local pandaAuth = loadstring(game:HttpGet("https://pandadevelopment.net/service_api/PandaBetaLib.lua", true))()
 	local getKey = script.Parent.GetKey
 	local verifyKey = script.Parent.VerifyKey
@@ -2508,20 +2524,6 @@ local function XHTFYZV_fake_script() -- KeyS.PandaAuth
 		textBox.PlaceholderText = "Link Copied to Clipboard"
 	end)
 end
+	--]]
 coroutine.wrap(XHTFYZV_fake_script)()
 wait(5)
-	local plr = game.Players.LocalPlayer
-	
-	if plr.UserId == 3622071182 then
-		wait(2)
-		script.Parent.KeyS.Visible = false
-		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
-		print("skipping key! whitelisted USER!")
-	end
-	
-	if plr.Name == "AKM_97" then
-		wait(2)
-		script.Parent.KeyS.Visible = false
-		game:GetService("TweenService"):Create(open,TweenInfo.new(1),{ImageTransparency=0}):Play()
-		print("skipping key! whitelisted USER!")
-	end
