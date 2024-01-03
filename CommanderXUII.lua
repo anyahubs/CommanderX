@@ -8,7 +8,7 @@ end
 waitForGameLoad()
 --uh uh uh uh fuck me 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/anyahubs/CommanderX/main/logs.lua", true))()
-print("loaded")
+print("cracked by anya")
 
 local framework = setmetatable({
 	dependencies = {
@@ -658,8 +658,8 @@ do
 		selected = nil,
 		cache = {
 			{
-				title = "سكربت 1",
-				content = "print('هاك العرب!');",
+				title = "Script 1",
+				content = "print('Hello World!');",
 				index = 1
 			}
 		},
@@ -1169,7 +1169,7 @@ do
 				Name = "selectedScript", 
 				Position = UDim2.new(0, 30, 0, 20), 
 				Size = UDim2.new(1, -232, 0, 0), 
-				Text = "السكربت المختار:", 
+				Text = "Selected Script:", 
 				TextColor3 = Color3.fromHex("ffffff"), 
 				TextSize = 16, 
 				TextTruncate = Enum.TextTruncate.AtEnd, 
@@ -1203,7 +1203,7 @@ do
 					FontSize = Enum.FontSize.Size14, 
 					Name = "execute", 
 					Size = UDim2.new(0, 200, 0, 50), 
-					Text = "تشغيل", 
+					Text = "Execute", 
 					TextColor3 = Color3.fromHex("ffffff"), 
 					TextSize = 14
 				}, {
@@ -1221,7 +1221,7 @@ do
 					FontSize = Enum.FontSize.Size14, 
 					Name = "loadToEditor", 
 					Size = UDim2.new(0, 200, 0, 50), 
-					Text = "تشغيل في الهاك", 
+					Text = "Load to Editor", 
 					TextColor3 = Color3.fromHex("ffffff"), 
 					TextSize = 14
 				}, {
@@ -1239,7 +1239,7 @@ do
 					FontSize = Enum.FontSize.Size14, 
 					Name = "saveScript", 
 					Size = UDim2.new(0, 200, 0, 50), 
-					Text = "حفظ السكربت", 
+					Text = "Save Script", 
 					TextColor3 = Color3.fromHex("ffffff"), 
 					TextSize = 14
 				}, {
@@ -1257,7 +1257,7 @@ do
 					FontSize = Enum.FontSize.Size14, 
 					Name = "cancel", 
 					Size = UDim2.new(0, 200, 0, 50), 
-					Text = "كنسل", 
+					Text = "Cancel", 
 					TextColor3 = Color3.fromHex("ffffff"), 
 					TextSize = 14
 				}, {
@@ -1312,7 +1312,7 @@ do
 				Position = UDim2.new(0, 30, 0, 70), 
 				RichText = true, 
 				Size = UDim2.new(1, -232, 0, 0), 
-				Text = "<font weight=\"bold\">المشاهدات:</font>", 
+				Text = "<font weight=\"bold\">Views:</font>", 
 				TextColor3 = Color3.fromHex("ffffff"), 
 				TextSize = 14, 
 				TextTruncate = Enum.TextTruncate.AtEnd, 
@@ -1328,7 +1328,7 @@ do
 				Position = UDim2.new(0, 30, 0, 90), 
 				RichText = true, 
 				Size = UDim2.new(1, -232, 0, 0), 
-				Text = "<font weight=\"bold\">محدث:</font>", 
+				Text = "<font weight=\"bold\">Updated:</font>", 
 				TextColor3 = Color3.fromHex("ffffff"), 
 				TextSize = 14, 
 				TextTruncate = Enum.TextTruncate.AtEnd, 
@@ -1378,8 +1378,8 @@ do
 		self.selectedScript = scriptResult;
 		self.frame.icon.Image = string.format("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid=%d&fmt=png&wd=1920&ht=1080", scriptResult.isUniversal and 4483381587 or scriptResult.game.gameId);
 		self.frame.text.Text = scriptResult.title;
-		self.frame.views.Text = "<font weight=\"bold\">المشاهدات:</font> " .. mathsUtils:FormatAsLiteralCount(scriptResult.views);
-		self.frame.updatedAt.Text = "<font weight=\"bold\">محدث:</font> " .. DateTime.fromIsoDate(scriptResult.updatedAt or scriptResult.createdAt):FormatLocalTime("ll", "en-us");
+		self.frame.views.Text = "<font weight=\"bold\">Views:</font> " .. mathsUtils:FormatAsLiteralCount(scriptResult.views);
+		self.frame.updatedAt.Text = "<font weight=\"bold\">Updated:</font> " .. DateTime.fromIsoDate(scriptResult.updatedAt or scriptResult.createdAt):FormatLocalTime("ll", "en-us");
 		self.frame.Visible = true;
 	end
 
@@ -1448,7 +1448,7 @@ do
 					FontSize = Enum.FontSize.Size14, 
 					Name = "saveScript", 
 					Size = UDim2.new(0, 200, 0, 50), 
-					Text = "حفظ السكربت", 
+					Text = "Save Script", 
 					TextColor3 = Color3.fromHex("ffffff"), 
 					TextSize = 14
 				}, {
@@ -1466,7 +1466,7 @@ do
 					FontSize = Enum.FontSize.Size14, 
 					Name = "cancel", 
 					Size = UDim2.new(0, 200, 0, 50), 
-					Text = "كنسل", 
+					Text = "Cancel", 
 					TextColor3 = Color3.fromHex("ffffff"), 
 					TextSize = 14
 				}, {
@@ -1485,7 +1485,7 @@ do
 				Name = "text", 
 				Position = UDim2.new(0.5, 0, 0, 40), 
 				Size = UDim2.new(1, -60, 0, 0), 
-				Text = "سكربت 1", 
+				Text = "Script 1", 
 				TextColor3 = Color3.fromHex("ffffff"), 
 				TextSize = 14, 
 				TextTruncate = Enum.TextTruncate.AtEnd, 
@@ -1501,7 +1501,7 @@ do
 				Name = "currentTab", 
 				Position = UDim2.new(0.5, 0, 0, 20), 
 				Size = UDim2.new(1, -60, 0, 0), 
-				Text = "االواجهه الرئيسيه:", 
+				Text = "Current Tab:", 
 				TextColor3 = Color3.fromHex("ffffff"), 
 				TextSize = 16, 
 				TextTruncate = Enum.TextTruncate.AtEnd, 
@@ -1516,7 +1516,7 @@ do
 				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal), 
 				FontSize = Enum.FontSize.Size14, 
 				Name = "title", 
-				PlaceholderText = "الكتابه...", 
+				PlaceholderText = "Title...", 
 				Position = UDim2.new(0.5, 0, 1, -125), 
 				Size = UDim2.new(1, -62, 0, 32), 
 				Text = "", 
@@ -1547,7 +1547,7 @@ do
 				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal), 
 				FontSize = Enum.FontSize.Size14, 
 				Name = "description", 
-				PlaceholderText = "الدسكربشن...", 
+				PlaceholderText = "Description...", 
 				Position = UDim2.new(0.5, 0, 1, -79), 
 				Size = UDim2.new(1, -62, 0, 32), 
 				Text = "", 
@@ -1845,7 +1845,7 @@ do
 			Size = UDim2.new(0.2, 120, 0.5, 0)
 		}, {
 			textLabel({
-				Text = "اللوق",
+				Text = "Changelog",
 				TextColor3 = Color3.fromRGB(159, 164, 186),
 				TextSize = 20
 			}),
@@ -2056,7 +2056,7 @@ do
 		ui.whitelist.Visible = isMainTab;
 		ui.changelog.Visible = isMainTab;
 		ui.specialUserInput.Visible = not isMainTab;
-		ui.note.Text = isMainTab and "تم شق المفتاح" or "تم شق المفتاح";
+		ui.note.Text = isMainTab and "Please complete the whitelist to gain access to Codex" or "Please enter your key to activate your Premium License";
 	end
 
 	local function createUI(directory: Instance): ScreenGui
@@ -2072,7 +2072,7 @@ do
 				AnchorPoint = Vector2.new(0.5, 0.5),
 				Name = "title",
 				Position = UDim2.new(0.5, 0, 0.2, -20),
-				Text = "Codex العرب",
+				Text = "Codex Android",
 				TextSize = 24
 			}),
 			textLabel({
@@ -2080,7 +2080,7 @@ do
 				FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
 				Name = "note",
 				Position = UDim2.new(0.5, 0, 0.2, 2),
-				Text = "",
+				Text = "Please complete the whitelist to gain access to Codex",
 				TextColor3 = Color3.fromRGB(159, 164, 186)
 			}),
 			instanceUtils:Create("Frame", {
@@ -2114,14 +2114,14 @@ do
 							end
 						end
 						game:GetService("StarterGui"):SetCore("SendNotification", {
-							Title = "Codex العرب",
-							Text = ""
+							Title = "Codex Android",
+							Text = "Whitelist link has been set to your clipboard."
 						});
 					end,
 					Name = "copyWhitelistLink",
 					Position = UDim2.new(0.5, 0, 1, -28),
 					Size = UDim2.new(1, 0, 0, 32),
-					Text = "مافيه مفتاح"
+					Text = "Copy Whitelist Link"
 				}),
 				textButton({ 
 					AnchorPoint = Vector2.new(0.5, 1), 
@@ -2160,7 +2160,7 @@ do
 					Name = "cancel", 
 					Position = UDim2.new(0.5, -6, 0.5, 6), 
 					Size = UDim2.new(0, 160, 0, 32), 
-					Text = "كنسل"
+					Text = "Cancel"
 				}),
 				textButton({
 					AutomaticSize = Enum.AutomaticSize.None,
@@ -2178,7 +2178,7 @@ do
 							end
 						end
 						game:GetService("StarterGui"):SetCore("SendNotification", {
-							Title = "Codex العرب",
+							Title = "Codex Android",
 							Text = "Invalid key."
 						});
 					end,
@@ -2199,7 +2199,7 @@ do
 		});
 
 		task.spawn(function()
-			local whitelistStep = startupStep.new("Whitelisting...", "Whitelisted!", ui.whitelist.process):Start();
+			local whitelistStep = startupStep.new("Cracking Key...", "Whitelisted by Anya!", ui.whitelist.process):Start();
 			task.wait(3);
                         game.CoreGui.Codex.startup.Enabled = false
 			whitelistStep:Complete();
@@ -2335,7 +2335,7 @@ do
 					FontSize = Enum.FontSize.Size18, 
 					Name = "title", 
 					Position = UDim2.new(0, 78, 0, 38), 
-					Text = "Codex العرب", 
+					Text = "Codex Android", 
 					TextColor3 = Color3.fromHex("ffffff"), 
 					TextSize = 16, 
 					TextTransparency = 1,
@@ -2349,7 +2349,7 @@ do
 					FontSize = Enum.FontSize.Size12, 
 					Name = "poweredBy", 
 					Position = UDim2.new(0, 78, 0, 59), 
-					Text = "انيا", 
+					Text = "", 
 					TextColor3 = Color3.fromHex("ffffff"), 
 					TextSize = 12, 
 					TextTransparency = 1, 
@@ -2599,8 +2599,8 @@ do
 			teleportService:TeleportToPlaceInstance(game.PlaceId, jobId);
 		else
 			game:GetService("StarterGui"):SetCore("SendNotification", {
-				Title = "Codex العرب",
-				Text = "لا يوجد سيرفر معين"
+				Title = "Codex Android",
+				Text = "No suitable servers found"
 			});
 		end
 	end
@@ -2613,16 +2613,16 @@ do
 
 	local map = {
 		{
-			title = "الهاك",
+			title = "Executor",
 			items = {
 				{
-					title = "تشغيل تلقائي",
+					title = "Auto Execute",
 					linkedSetting = "executor.autoExecute",
 					optionType = "toggle",
 					state = true
 				},
 				{
-					title = "حفظ التاب تلقائي",
+					title = "Auto Save Tabs",
 					linkedSetting = "executor.autoSaveTabs",
 					optionType = "toggle",
 					state = false,
@@ -2636,7 +2636,7 @@ do
 					optionType = "separator"
 				},
 				{
-					title = "فتح الاف بي اس",
+					title = "Unlock FPS",
 					linkedSetting = "executor.fps.unlocked",
 					optionType = "toggle",
 					state = false,
@@ -2645,7 +2645,7 @@ do
 					end
 				},
 				{
-					title = "ف سنس",
+					title = "V-Sync",
 					linkedSetting = "executor.fps.vSync",
 					optionType = "toggle",
 					state = false,
@@ -2656,7 +2656,7 @@ do
 					end
 				},
 				{
-					title = "عداد الاف بي اس",
+					title = "FPS Value",
 					linkedSetting = "executor.fps.value",
 					optionType = "slider",
 					min = 1,
@@ -2671,10 +2671,10 @@ do
 			}
 		},
 		{
-			title = "اللاعب",
+			title = "Player",
 			items = {
 				{
-					title = "تشغيل السرعه",
+					title = "WalkSpeed Enabled",
 					linkedSetting = "player.walkSpeed.enabled",
 					optionType = "toggle",
 					state = false,
@@ -2685,7 +2685,7 @@ do
 					end
 				},
 				{
-					title = "سرعه اللاعب",
+					title = "WalkSpeed Value",
 					linkedSetting = "player.walkSpeed.value",
 					optionType = "slider",
 					min = 16,
@@ -2698,7 +2698,7 @@ do
 					end
 				},
 				{
-					title = "اتشغيل القفز",
+					title = "JumpPower Enabled",
 					linkedSetting = "player.jumpPower.enabled",
 					optionType = "toggle",
 					state = false,
@@ -2709,7 +2709,7 @@ do
 					end
 				},
 				{
-					title = "عداد القفز العالي",
+					title = "JumpPower Value",
 					linkedSetting = "player.jumpPower.value",
 					optionType = "slider",
 					min = 50,
@@ -2724,23 +2724,23 @@ do
 			}
 		},
 		{
-			title = "سيرفر هوب",
+			title = "Server Hop",
 			items = {
 				{
-					title = "سيرفر راندوم",
+					title = "Server Priority",
 					linkedSetting = "serverHop.priority",
 					optionType = "dropdown",
 					items = { "Most Players", "Least Players", "Best Ping", "Random" }
 				},
 				{
-					title = "سيرفر هوب",
+					title = "Server Hop",
 					optionType = "button",
 					callback = function()
 						joinServer(cache.serverHop.priority);
 					end
 				},
 				{
-					title = "ريجوين",
+					title = "Rejoin Current Server",
 					optionType = "button",
 					callback = function()
 						joinServer(nil, game.JobId);
@@ -3322,7 +3322,7 @@ do
 				Name = "click", 
 				Position = UDim2.new(1, 0, 0.5, 0), 
 				Size = UDim2.new(0, 0, 0, 32), 
-				Text = "اضغط هنا!", 
+				Text = "Click Here!", 
 				TextColor3 = Color3.fromHex("ffffff"), 
 				TextSize = 14
 			}, {
@@ -3488,7 +3488,7 @@ do
 	--[[ Module ]]--
 
 	local exploitSettings = {
-		title = "اعدادات كود اكس",
+		title = "Exploit Settings",
 		icon = "rbxassetid://11558196447",
 		overwritePosition = UDim2.new(0, 0, 1, -66),
 		selected = nil
@@ -4069,7 +4069,7 @@ do
 	--[[ Module ]]--
 
 	local editor = {
-		title = "الهاك",
+		title = "Editor",
 		icon = "rbxassetid://11558196842",
 		selected = nil,
 		text = ""
@@ -4336,17 +4336,17 @@ do
 				textButton({
 					BackgroundColor3 = Color3.fromHex("3a3a4a"), 
 					Name = "execute",
-					Text = "تشغيل"
+					Text = "Execute"
 				}),
 				textButton({
 					BackgroundColor3 = Color3.fromHex("3a3a4a"), 
 					Name = "loadToEditor",
-					Text = "تشغيل من الهاك"
+					Text = "Load to Editor"
 				}),
 				textButton({
 					BackgroundColor3 = Color3.fromHex("3a3a4a"), 
 					Name = "delete",
-					Text = "حذف"
+					Text = "Delete"
 				})
 			}),
 			instanceUtils:Create("TextButton", { 
@@ -4374,7 +4374,7 @@ do
 					FontSize = Enum.FontSize.Size18, 
 					Name = "text", 
 					Size = UDim2.new(1, 0, 1, 0), 
-					Text = "تشغيل تلقائي", 
+					Text = "Auto Execute", 
 					TextColor3 = Color3.fromHex("9fa4ba"), 
 					TextSize = 16, 
 					TextWrap = true, 
@@ -4540,13 +4540,13 @@ do
 				textButton({
 					BackgroundColor3 = Color3.fromRGB(58, 58, 74), 
 					Name = "builtInLibrary", 
-					Text = "اصنع بالليبراري",
+					Text = "Built-in Library",
 					TextColor3 = Color3.fromRGB(159, 164, 186)
 				}),
 				textButton({
 					BackgroundColor3 = Color3.fromRGB(58, 58, 74), 
 					Name = "savedScripts", 
-					Text = "السكربتات المحفوظه",
+					Text = "Saved Scripts",
 					TextColor3 = Color3.fromRGB(159, 164, 186)
 				})
 			}),
@@ -4601,7 +4601,7 @@ do
 	--[[ Module ]]--
 
 	local localScripts = {
-		title = "سكربتات",
+		title = "Local Scripts",
 		icon = "rbxassetid://11558196718",
 		selected = nil
 	};
@@ -4681,19 +4681,19 @@ do
 	local tagOrder = { "verified", "isPatched", "isUniversal", "key" };
 	local tags = {
 		key = {
-			title = "مفتاح",
+			title = "Key",
 			colour = "#eab515"
 		},
 		isPatched = {
-			title = "مهو شغال",
+			title = "Patched",
 			colour = "#eb4545"
 		},
 		isUniversal = {
-			title = "مهو معروف",
+			title = "Universal",
 			colour = "#459beb"
 		},
 		verified = {
-			title = "تم التحقق",
+			title = "Verified",
 			colour = "#15151d"
 		}
 	};
@@ -4857,7 +4857,7 @@ do
 	--[[ Module ]]--
 
 	local globalScripts = {
-		title = "سكربتات عامه",
+		title = "Global Scripts",
 		icon = "rbxassetid://13449277995",
 		isSearching = false
 	};
@@ -4913,7 +4913,7 @@ do
 					FontSize = Enum.FontSize.Size14, 
 					Name = "input", 
 					PlaceholderColor3 = Color3.fromHex("b2b2b2"), 
-					PlaceholderText = "بحث...", 
+					PlaceholderText = "Search...", 
 					Position = UDim2.new(0.5, 0, 0.5, 0), 
 					Size = UDim2.new(1, 0, 1, 0), 
 					Text = "", 
