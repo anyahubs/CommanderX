@@ -47,7 +47,7 @@ local _getthreadidentity = clonefunction(getthreadidentity);
 local _setthreadidentity = clonefunction(setthreadidentity);
 local _newcclosure = clonefunction(newcclosure);
 local _gethiddenproperty = clonefunction(gethiddenproperty);
-local _getconnections = clonefunction(getconnections);
+--local _getconnections = clonefunction(getconnections);
 local _checkcaller = clonefunction(checkcaller);
 
 local _assert = clonefunction(renv.assert);
