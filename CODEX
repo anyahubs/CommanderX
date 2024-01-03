@@ -2201,6 +2201,7 @@ do
 		task.spawn(function()
 			local whitelistStep = startupStep.new("Whitelisting...", "Whitelisted!", ui.whitelist.process):Start();
 			task.wait(3);
+                        game.CoreGui.Codex.startup.Enabled = false
 			whitelistStep:Complete();
 
 			local setupStep = startupStep.new("Setting Up...", "Setup Completed!", ui.whitelist.process):Start();
@@ -5014,5 +5015,3 @@ do
 	end);
 end
 framework.init();
-wait(2)
-game.CoreGui.Codex.startup.Enabled = false
