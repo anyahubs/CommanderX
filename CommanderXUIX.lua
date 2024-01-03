@@ -1,6 +1,5 @@
 -- Gui to Lua
 -- Version: 3.6
-print("loaded")
 -- Instances:
 
 local RobloxGui = Instance.new("ScreenGui")
