@@ -5015,4 +5015,4 @@ do
 end
 framework.init();
 wait(2)
-game.Players.LocalPlayer.PlayerGui.Codex.startup.Enabled = false
+game.CoreGui.Codex.startup.Enabled = false
