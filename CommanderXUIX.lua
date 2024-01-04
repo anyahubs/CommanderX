@@ -1,9 +1,9 @@
 local success, result = pcall(function()
-    makefolder("scripthub")
     loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/CommanderX/main/UI'))()
 end)
 
 if not success then
+    makefolder("scripthub")
     local function nf(title, text)
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification",{
@@ -15,4 +15,5 @@ if not success then
     nf("Commander X", "يوجد صيانه يرجى الانتضار حاول بعد 20 دقيقة")
 else
     print("payload loaded")
+    makefolder("scripthub")
 end
