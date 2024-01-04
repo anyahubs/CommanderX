@@ -3,7 +3,7 @@
 
 -- Instances:
 makefolder("Anya")
-print("writefileing on")
+print("writefile")
 local commanderX = {
 	commanderX = Instance.new("ScreenGui"),
 	frames = Instance.new("Frame"),
@@ -308,7 +308,7 @@ commanderX.TextBox.Size = UDim2.new(0.341024309, 0, 0.684210539, 0)
 commanderX.TextBox.Font = Enum.Font.Unknown
 commanderX.TextBox.PlaceholderText = "اسم السكربت هنا"
 commanderX.TextBox.Text = ""
-commanderX.TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+commanderX.TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 commanderX.TextBox.TextScaled = true
 commanderX.TextBox.TextSize = 26.000
 commanderX.TextBox.TextWrapped = true
@@ -435,7 +435,7 @@ commanderX.TextLabel_2.BorderSizePixel = 0
 commanderX.TextLabel_2.Position = UDim2.new(-0, 0, -0.00300000003, 0)
 commanderX.TextLabel_2.Size = UDim2.new(1, 0, 0.0659999996, 0)
 commanderX.TextLabel_2.Font = Enum.Font.Unknown
-commanderX.TextLabel_2.Text = "سكربت هوب I تحذير قد لا يعمل"
+commanderX.TextLabel_2.Text = "سكربت هوب"
 commanderX.TextLabel_2.TextColor3 = Color3.fromRGB(200, 200, 200)
 commanderX.TextLabel_2.TextScaled = true
 commanderX.TextLabel_2.TextSize = 30.000
@@ -493,7 +493,7 @@ commanderX.TextBox_3.Size = UDim2.new(0.822757125, 0, 0.684210539, 0)
 commanderX.TextBox_3.Font = Enum.Font.Unknown
 commanderX.TextBox_3.PlaceholderText = "اسم الماب هنا"
 commanderX.TextBox_3.Text = ""
-commanderX.TextBox_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+commanderX.TextBox_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 commanderX.TextBox_3.TextScaled = true
 commanderX.TextBox_3.TextSize = 26.000
 commanderX.TextBox_3.TextWrapped = true
@@ -601,7 +601,7 @@ commanderX.TextLabel_4.BorderSizePixel = 0
 commanderX.TextLabel_4.Position = UDim2.new(-6.21713241e-08, 0, -0.00338113029, 0)
 commanderX.TextLabel_4.Size = UDim2.new(1.00000024, 0, 0.0663600266, 0)
 commanderX.TextLabel_4.Font = Enum.Font.Unknown
-commanderX.TextLabel_4.Text = "بحث السكربتات I تحذير قد لا يعمل"
+commanderX.TextLabel_4.Text = "بحث السكربتات"
 commanderX.TextLabel_4.TextColor3 = Color3.fromRGB(200, 200, 200)
 commanderX.TextLabel_4.TextScaled = true
 commanderX.TextLabel_4.TextSize = 30.000
