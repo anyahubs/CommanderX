@@ -360,7 +360,7 @@ commanderX.Frame_2.BackgroundColor3 = Color3.fromRGB(25, 24, 25)
 commanderX.Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commanderX.Frame_2.BorderSizePixel = 0
 commanderX.Frame_2.Position = UDim2.new(0.0250000004, 0, 0.0199999996, 0)
-commanderX.Frame_2.Size = UDim2.new(0, 200, 55, 0)
+commanderX.Frame_2.Size = UDim2.new(0, 433, 55, 0)
 
 commanderX.UICorner_7.Parent = commanderX.Frame_2
 
@@ -375,7 +375,7 @@ commanderX.Frame_3.BackgroundColor3 = Color3.fromRGB(42, 40, 42)
 commanderX.Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commanderX.Frame_3.BorderSizePixel = 0
 commanderX.Frame_3.Position = UDim2.new(0.0240700711, 0, 0.0398230441, 0)
-commanderX.Frame_3.Size = UDim2.new(0, 395, 0, 46)
+commanderX.Frame_3.Size = UDim2.new(0, 250, 0, 46)
 commanderX.Frame_3.Visible = false
 
 commanderX.UICorner_8.Parent = commanderX.Frame_3
