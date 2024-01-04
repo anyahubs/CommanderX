@@ -2453,50 +2453,57 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 	
 	end)
 
-	--scripthub scripts
-	local btn = f3.Frame.TextButton
-	
-	local function AddScript(name, source)
-		makefolder("Anya")
-		writefile(name, source)
-	
-		local parent = f3.ScrollingFrame.Frame
-		local hub = parent.Folder.Frame
-		local newhub = hub:Clone()
-	
-		local scriptname = newhub.TextLabel
-		local execbutton = newhub.p
-		local delbutton = newhub.x
-		local copybutton = newhub.c
-	
-		newhub.Parent = parent
-                scriptname.Text = name
-		newhub.Visible = true
-		execbutton.MouseButton1Click:Connect(function()
-			loadstring(source)()
-		end)
-		copybutton.MouseButton1Click:Connect(function()
-			setclipboard(source)
-		end)
-		delbutton.MouseButton1Click:Connect(function()
-			newhub:Destroy()
-			delfile(name)
-		end)
-	end
-	
-	btn.MouseButton1Click:Connect(function()
-		AddScript(commanderX.TextBox.Text, commanderX.TextBox_2.Text, false)
-		commanderX.TextBox_2.Text = ""
-		commanderX.TextBox.Text = ""
-	end)
-	
-    --for _, file in ipairs(listfiles("Anya")) do
-       -- AddScript(file:sub(1, #file), readfile(file), true)
-    --end
-    for _, file in ipairs(listfiles("")) do
-    local fileName = file:sub(10, #file)
-    local fileContent = readfile(file)
-    AddScript(fileName, fileContent)
+-- Define the parent frame and button for better readability
+local parentFrame = f3.ScrollingFrame.Frame
+local addButton = f3.Frame.TextButton
+
+-- Function to add a script
+local function AddScript(name, source)
+    makefolder("Anya")
+    writefile("Anya/" .. name, source)
+
+    local hubTemplate = parentFrame.Folder.Frame:Clone()
+    hubTemplate.Parent = parentFrame
+
+    local scriptNameLabel = hubTemplate.TextLabel
+    local execButton = hubTemplate.p
+    local delButton = hubTemplate.x
+    local copyButton = hubTemplate.c
+
+    scriptNameLabel.Text = name
+    hubTemplate.Visible = true
+
+    execButton.MouseButton1Click:Connect(function()
+        loadstring(source)()
+    end)
+
+    copyButton.MouseButton1Click:Connect(function()
+        setclipboard(source)
+    end)
+
+    delButton.MouseButton1Click:Connect(function()
+        hubTemplate:Destroy()
+        delfile("Anya/" .. name)
+    end)
+end
+
+-- Button click event
+addButton.MouseButton1Click:Connect(function()
+    local scriptName = commanderX.TextBox.Text
+    local scriptSource = commanderX.TextBox_2.Text
+    AddScript(scriptName, scriptSource)
+    commanderX.TextBox.Text = ""
+    commanderX.TextBox_2.Text = ""
+end)
+
+-- Load existing scripts
+local anyaFolder = "Anya"
+for _, file in ipairs(listfiles(anyaFolder)) do
+    if file:find(anyaFolder) == 1 then
+        local fileName = file:sub(#anyaFolder + 2)  -- +2 to skip the "/" separator
+        local fileContent = readfile(file)
+        AddScript(fileName, fileContent)
+    end
 end
 end
 coroutine.wrap(CRFI_fake_script)()
