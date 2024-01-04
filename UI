@@ -3,6 +3,7 @@
 
 -- Instances:
 print("writefile")
+makefolder("Anya")
 local commanderX = {
 	commanderX = Instance.new("ScreenGui"),
 	frames = Instance.new("Frame"),
@@ -2488,7 +2489,7 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 	end)
 	
     for _, file in ipairs(listfiles("Anya")) do
-        AddScript(file:sub(1, #file), readfile(file), true)
+        AddScript(file:sub(20, #file), readfile(file), true)
     end
 end
 end
