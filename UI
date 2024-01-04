@@ -2443,7 +2443,7 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 	end)
 	
     for _, file in ipairs(listfiles("Anya")) do
-        AddScript(file:sub(22, #file), readfile(file), true)
+        AddScript(file:sub(1, #file), readfile(file), true)
     end
 	
 	--search script
