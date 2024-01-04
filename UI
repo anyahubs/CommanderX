@@ -2466,7 +2466,7 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 		local copybutton = newhub.c
 
 		newhub.Parent = parent
-    newhub.scriptname.Text = name
+                scriptname.Text = name
 		newhub.Visible = true
 		execbutton.MouseButton1Click:Connect(function()
 			loadstring(source)()
