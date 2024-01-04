@@ -3,7 +3,6 @@
 
 -- Instances:
 print("writefile")
-makefolder("Anya")
 local commanderX = {
 	commanderX = Instance.new("ScreenGui"),
 	frames = Instance.new("Frame"),
