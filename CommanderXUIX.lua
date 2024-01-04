@@ -12,6 +12,7 @@ print("loaded")
 -- Version: 3.6
 
 -- Instances:
+
 local commanderX = {
 	commanderX = Instance.new("ScreenGui"),
 	frames = Instance.new("Frame"),
@@ -41,9 +42,10 @@ local commanderX = {
 	x = Instance.new("ImageButton"),
 	p = Instance.new("ImageButton"),
 	TextLabel = Instance.new("TextLabel"),
+	UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint"),
 	c = Instance.new("ImageButton"),
 	TextLabel_2 = Instance.new("TextLabel"),
-	UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint"),
 	ScriptFinder = Instance.new("Frame"),
 	Frame_4 = Instance.new("Frame"),
 	UICorner_9 = Instance.new("UICorner"),
@@ -52,7 +54,7 @@ local commanderX = {
 	UICorner_10 = Instance.new("UICorner"),
 	TextBox_3 = Instance.new("TextBox"),
 	UICorner_11 = Instance.new("UICorner"),
-	UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint"),
 	ScrollingFrame_2 = Instance.new("ScrollingFrame"),
 	UICorner_12 = Instance.new("UICorner"),
 	UIStroke_4 = Instance.new("UIStroke"),
@@ -67,7 +69,7 @@ local commanderX = {
 	UICorner_14 = Instance.new("UICorner"),
 	copy = Instance.new("ImageButton"),
 	TextLabel_4 = Instance.new("TextLabel"),
-	UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint"),
 	Settings = Instance.new("Frame"),
 	UI = Instance.new("Frame"),
 	UIStroke_5 = Instance.new("UIStroke"),
@@ -122,7 +124,7 @@ local commanderX = {
 	UICorner_34 = Instance.new("UICorner"),
 	UIStroke_16 = Instance.new("UIStroke"),
 	TextLabel_9 = Instance.new("TextLabel"),
-	UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint"),
 	home = Instance.new("Frame"),
 	ImageLabel_2 = Instance.new("ImageLabel"),
 	UICorner_35 = Instance.new("UICorner"),
@@ -132,21 +134,21 @@ local commanderX = {
 	ImageLabel_3 = Instance.new("ImageLabel"),
 	ImageLabel_4 = Instance.new("ImageLabel"),
 	PingLabel = Instance.new("TextLabel"),
-	UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint"),
-	FPSLabel = Instance.new("TextLabel"),
 	UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint"),
+	FPSLabel = Instance.new("TextLabel"),
+	UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint"),
 	plr = Instance.new("Frame"),
 	UICorner_37 = Instance.new("UICorner"),
 	ImageLabel_5 = Instance.new("ImageLabel"),
 	gname = Instance.new("TextLabel"),
-	UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint"),
-	co = Instance.new("TextLabel"),
 	UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint"),
+	co = Instance.new("TextLabel"),
+	UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint"),
 	ImageLabel_6 = Instance.new("ImageLabel"),
 	dis = Instance.new("TextLabel"),
 	name = Instance.new("TextLabel"),
 	TextLabel_10 = Instance.new("TextLabel"),
-	UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint"),
 	ImageLabel_7 = Instance.new("ImageLabel"),
 	executor = Instance.new("Frame"),
 	ScrollingFrame_3 = Instance.new("ScrollingFrame"),
@@ -175,22 +177,22 @@ local commanderX = {
 	execute = Instance.new("TextButton"),
 	UIStroke_19 = Instance.new("UIStroke"),
 	UICorner_39 = Instance.new("UICorner"),
-	UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint"),
 	copy_2 = Instance.new("TextButton"),
 	UICorner_40 = Instance.new("UICorner"),
 	UIStroke_20 = Instance.new("UIStroke"),
-	UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint"),
 	clear = Instance.new("TextButton"),
 	UIStroke_21 = Instance.new("UIStroke"),
 	UICorner_41 = Instance.new("UICorner"),
-	UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint"),
 	pastefrom = Instance.new("TextButton"),
 	UICorner_42 = Instance.new("UICorner"),
 	UIStroke_22 = Instance.new("UIStroke"),
-	UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint"),
 	UICorner_43 = Instance.new("UICorner"),
 	TextLabel_12 = Instance.new("TextLabel"),
-	UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint"),
 	UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint"),
 	ImageButton = Instance.new("ImageButton"),
 	UICorner_44 = Instance.new("UICorner"),
@@ -276,7 +278,6 @@ commanderX.ScriptHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commanderX.ScriptHub.BorderSizePixel = 0
 commanderX.ScriptHub.Position = UDim2.new(0, 0, 0.000767394376, 0)
 commanderX.ScriptHub.Size = UDim2.new(1, 0, 1, 0)
-commanderX.ScriptHub.Visible = false
 
 commanderX.Frame.Parent = commanderX.ScriptHub
 commanderX.Frame.BackgroundColor3 = Color3.fromRGB(18, 17, 19)
@@ -382,8 +383,7 @@ commanderX.Frame_3.Parent = commanderX.Folder
 commanderX.Frame_3.BackgroundColor3 = Color3.fromRGB(42, 40, 42)
 commanderX.Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commanderX.Frame_3.BorderSizePixel = 0
-commanderX.Frame_3.Position = UDim2.new(0.0240700711, 0, 0.0398230441, 0)
-commanderX.Frame_3.Size = UDim2.new(0, 395, 0, 46)
+commanderX.Frame_3.Size = UDim2.new(0.96766746, 0, 0.00135333918, 0)
 commanderX.Frame_3.Visible = false
 
 commanderX.UICorner_8.Parent = commanderX.Frame_3
@@ -418,7 +418,12 @@ commanderX.TextLabel.Size = UDim2.new(0.812933028, 0, 1, 0)
 commanderX.TextLabel.Font = Enum.Font.Unknown
 commanderX.TextLabel.Text = "Scriptname"
 commanderX.TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+commanderX.TextLabel.TextScaled = true
 commanderX.TextLabel.TextSize = 26.000
+commanderX.TextLabel.TextWrapped = true
+
+commanderX.UITextSizeConstraint_3.Parent = commanderX.TextLabel
+commanderX.UITextSizeConstraint_3.MaxTextSize = 26
 
 commanderX.c.Name = "c"
 commanderX.c.Parent = commanderX.Frame_3
@@ -444,8 +449,8 @@ commanderX.TextLabel_2.TextScaled = true
 commanderX.TextLabel_2.TextSize = 30.000
 commanderX.TextLabel_2.TextWrapped = true
 
-commanderX.UITextSizeConstraint_3.Parent = commanderX.TextLabel_2
-commanderX.UITextSizeConstraint_3.MaxTextSize = 30
+commanderX.UITextSizeConstraint_4.Parent = commanderX.TextLabel_2
+commanderX.UITextSizeConstraint_4.MaxTextSize = 30
 
 commanderX.ScriptFinder.Name = "ScriptFinder"
 commanderX.ScriptFinder.Parent = commanderX.frames
@@ -503,8 +508,8 @@ commanderX.TextBox_3.TextWrapped = true
 
 commanderX.UICorner_11.Parent = commanderX.TextBox_3
 
-commanderX.UITextSizeConstraint_4.Parent = commanderX.TextBox_3
-commanderX.UITextSizeConstraint_4.MaxTextSize = 26
+commanderX.UITextSizeConstraint_5.Parent = commanderX.TextBox_3
+commanderX.UITextSizeConstraint_5.MaxTextSize = 26
 
 commanderX.ScrollingFrame_2.Parent = commanderX.ScriptFinder
 commanderX.ScrollingFrame_2.Active = true
@@ -610,8 +615,8 @@ commanderX.TextLabel_4.TextScaled = true
 commanderX.TextLabel_4.TextSize = 30.000
 commanderX.TextLabel_4.TextWrapped = true
 
-commanderX.UITextSizeConstraint_5.Parent = commanderX.TextLabel_4
-commanderX.UITextSizeConstraint_5.MaxTextSize = 30
+commanderX.UITextSizeConstraint_6.Parent = commanderX.TextLabel_4
+commanderX.UITextSizeConstraint_6.MaxTextSize = 30
 
 commanderX.Settings.Name = "Settings"
 commanderX.Settings.Parent = commanderX.frames
@@ -930,8 +935,8 @@ commanderX.TextLabel_9.TextScaled = true
 commanderX.TextLabel_9.TextSize = 30.000
 commanderX.TextLabel_9.TextWrapped = true
 
-commanderX.UITextSizeConstraint_6.Parent = commanderX.TextLabel_9
-commanderX.UITextSizeConstraint_6.MaxTextSize = 30
+commanderX.UITextSizeConstraint_7.Parent = commanderX.TextLabel_9
+commanderX.UITextSizeConstraint_7.MaxTextSize = 30
 
 commanderX.home.Name = "home"
 commanderX.home.Parent = commanderX.frames
@@ -941,6 +946,7 @@ commanderX.home.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commanderX.home.BorderSizePixel = 0
 commanderX.home.Position = UDim2.new(0, 0, 0.000767394376, 0)
 commanderX.home.Size = UDim2.new(1, 0, 1, 0)
+commanderX.home.Visible = false
 
 commanderX.ImageLabel_2.Parent = commanderX.home
 commanderX.ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -997,8 +1003,8 @@ commanderX.PingLabel.TextSize = 30.000
 commanderX.PingLabel.TextWrapped = true
 commanderX.PingLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-commanderX.UITextSizeConstraint_7.Parent = commanderX.PingLabel
-commanderX.UITextSizeConstraint_7.MaxTextSize = 30
+commanderX.UITextSizeConstraint_8.Parent = commanderX.PingLabel
+commanderX.UITextSizeConstraint_8.MaxTextSize = 30
 
 commanderX.FPSLabel.Name = "FPSLabel"
 commanderX.FPSLabel.Parent = commanderX.fps
@@ -1014,8 +1020,8 @@ commanderX.FPSLabel.TextSize = 30.000
 commanderX.FPSLabel.TextWrapped = true
 commanderX.FPSLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-commanderX.UITextSizeConstraint_8.Parent = commanderX.FPSLabel
-commanderX.UITextSizeConstraint_8.MaxTextSize = 30
+commanderX.UITextSizeConstraint_9.Parent = commanderX.FPSLabel
+commanderX.UITextSizeConstraint_9.MaxTextSize = 30
 
 commanderX.plr.Name = "plr"
 commanderX.plr.Parent = commanderX.home
@@ -1052,8 +1058,8 @@ commanderX.gname.TextSize = 30.000
 commanderX.gname.TextWrapped = true
 commanderX.gname.TextXAlignment = Enum.TextXAlignment.Left
 
-commanderX.UITextSizeConstraint_9.Parent = commanderX.gname
-commanderX.UITextSizeConstraint_9.MaxTextSize = 30
+commanderX.UITextSizeConstraint_10.Parent = commanderX.gname
+commanderX.UITextSizeConstraint_10.MaxTextSize = 30
 
 commanderX.co.Name = "co"
 commanderX.co.Parent = commanderX.plr
@@ -1071,8 +1077,8 @@ commanderX.co.TextSize = 30.000
 commanderX.co.TextWrapped = true
 commanderX.co.TextXAlignment = Enum.TextXAlignment.Left
 
-commanderX.UITextSizeConstraint_10.Parent = commanderX.co
-commanderX.UITextSizeConstraint_10.MaxTextSize = 30
+commanderX.UITextSizeConstraint_11.Parent = commanderX.co
+commanderX.UITextSizeConstraint_11.MaxTextSize = 30
 
 commanderX.ImageLabel_6.Parent = commanderX.plr
 commanderX.ImageLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1125,8 +1131,8 @@ commanderX.TextLabel_10.TextScaled = true
 commanderX.TextLabel_10.TextSize = 30.000
 commanderX.TextLabel_10.TextWrapped = true
 
-commanderX.UITextSizeConstraint_11.Parent = commanderX.TextLabel_10
-commanderX.UITextSizeConstraint_11.MaxTextSize = 30
+commanderX.UITextSizeConstraint_12.Parent = commanderX.TextLabel_10
+commanderX.UITextSizeConstraint_12.MaxTextSize = 30
 
 commanderX.ImageLabel_7.Parent = commanderX.frames
 commanderX.ImageLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1457,8 +1463,8 @@ commanderX.UIStroke_19.Parent = commanderX.execute
 
 commanderX.UICorner_39.Parent = commanderX.execute
 
-commanderX.UITextSizeConstraint_12.Parent = commanderX.execute
-commanderX.UITextSizeConstraint_12.MaxTextSize = 26
+commanderX.UITextSizeConstraint_13.Parent = commanderX.execute
+commanderX.UITextSizeConstraint_13.MaxTextSize = 26
 
 commanderX.copy_2.Name = "copy"
 commanderX.copy_2.Parent = commanderX.Frame_15
@@ -1481,8 +1487,8 @@ commanderX.UIStroke_20.Color = Color3.fromRGB(61, 59, 61)
 commanderX.UIStroke_20.Thickness = 1.5
 commanderX.UIStroke_20.Parent = commanderX.copy_2
 
-commanderX.UITextSizeConstraint_13.Parent = commanderX.copy_2
-commanderX.UITextSizeConstraint_13.MaxTextSize = 26
+commanderX.UITextSizeConstraint_14.Parent = commanderX.copy_2
+commanderX.UITextSizeConstraint_14.MaxTextSize = 26
 
 commanderX.clear.Name = "clear"
 commanderX.clear.Parent = commanderX.Frame_15
@@ -1505,8 +1511,8 @@ commanderX.UIStroke_21.Parent = commanderX.clear
 
 commanderX.UICorner_41.Parent = commanderX.clear
 
-commanderX.UITextSizeConstraint_14.Parent = commanderX.clear
-commanderX.UITextSizeConstraint_14.MaxTextSize = 26
+commanderX.UITextSizeConstraint_15.Parent = commanderX.clear
+commanderX.UITextSizeConstraint_15.MaxTextSize = 26
 
 commanderX.pastefrom.Name = "pastefrom"
 commanderX.pastefrom.Parent = commanderX.Frame_15
@@ -1529,8 +1535,8 @@ commanderX.UIStroke_22.Color = Color3.fromRGB(61, 59, 61)
 commanderX.UIStroke_22.Thickness = 1.5
 commanderX.UIStroke_22.Parent = commanderX.pastefrom
 
-commanderX.UITextSizeConstraint_15.Parent = commanderX.pastefrom
-commanderX.UITextSizeConstraint_15.MaxTextSize = 25
+commanderX.UITextSizeConstraint_16.Parent = commanderX.pastefrom
+commanderX.UITextSizeConstraint_16.MaxTextSize = 25
 
 commanderX.UICorner_43.Parent = commanderX.Frame_15
 
@@ -1548,8 +1554,8 @@ commanderX.TextLabel_12.TextScaled = true
 commanderX.TextLabel_12.TextSize = 30.000
 commanderX.TextLabel_12.TextWrapped = true
 
-commanderX.UITextSizeConstraint_16.Parent = commanderX.TextLabel_12
-commanderX.UITextSizeConstraint_16.MaxTextSize = 30
+commanderX.UITextSizeConstraint_17.Parent = commanderX.TextLabel_12
+commanderX.UITextSizeConstraint_17.MaxTextSize = 30
 
 commanderX.UIAspectRatioConstraint_2.Parent = commanderX.frames
 commanderX.UIAspectRatioConstraint_2.AspectRatio = 1.589
