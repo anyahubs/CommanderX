@@ -1,6 +1,3 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/CommanderX/main/Commander.lua'))()
-Phantom.schedule_script("print("hi")");
---[[
 -- Gui to Lua
 -- Version: 3.6
 
@@ -902,4 +899,3 @@ local function CMXATC_fake_script() -- TextButton_11.LocalScript
 	end)
 end
 coroutine.wrap(CMXATC_fake_script)()
-]]--
