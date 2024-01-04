@@ -1,5 +1,4 @@
 local success, result = pcall(function()
-	makefolder("Anya")
     loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/CommanderX/main/UI'))()
 end)
 
