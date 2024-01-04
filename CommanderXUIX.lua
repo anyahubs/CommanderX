@@ -269,6 +269,7 @@ commanderX.ScriptHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commanderX.ScriptHub.BorderSizePixel = 0
 commanderX.ScriptHub.Position = UDim2.new(0, 0, 0.000767394376, 0)
 commanderX.ScriptHub.Size = UDim2.new(1, 0, 1, 0)
+commanderX.ScriptHub.Visible = false
 
 commanderX.Frame.Parent = commanderX.ScriptHub
 commanderX.Frame.BackgroundColor3 = Color3.fromRGB(18, 17, 19)
@@ -937,7 +938,7 @@ commanderX.home.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commanderX.home.BorderSizePixel = 0
 commanderX.home.Position = UDim2.new(0, 0, 0.000767394376, 0)
 commanderX.home.Size = UDim2.new(1, 0, 1, 0)
-commanderX.home.Visible = false
+commanderX.home.Visible = true
 
 commanderX.ImageLabel_2.Parent = commanderX.home
 commanderX.ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -2496,6 +2497,7 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 	
 end
 coroutine.wrap(CRFI_fake_script)()
+
 local function nf(title, text)
 local StarterGui = game:GetService("StarterGui")
 StarterGui:SetCore("SendNotification",{
