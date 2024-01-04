@@ -2,7 +2,9 @@
 -- Version: 3.6
 
 -- Instances:
-makefolder("Anya")
+if not isfolder("Anya") then
+    makefolder("Anya")
+end
 print("writefile")
 local commanderX = {
 	commanderX = Instance.new("ScreenGui"),
