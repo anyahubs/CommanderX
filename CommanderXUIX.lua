@@ -2439,9 +2439,9 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 	end
 	
 	btn.MouseButton1Click:Connect(function()
-		AddScript(script.Parent.Parent.sname.Text, script.Parent.Parent.code.Text, false)
-		script.Parent.Parent.code.Text = ""
-		script.Parent.Parent.sname.Text = ""
+		AddScript(commanderX.TextBox.Text, commanderX.TextBox_2.Text, false)
+		commanderX.TextBox_2.Text = ""
+		commanderX.TextBox.Text = ""
 	end)
 	
 	--
