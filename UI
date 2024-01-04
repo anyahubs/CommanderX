@@ -2452,7 +2452,7 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 	local btn = f3.Frame.TextButton
 
 	local function AddScript(name, source)
-		makefolder("Anya")
+		--makefolder("Anya")
 		writefile("Anya/" .. name, source)
 
 		local parent = f3.ScrollingFrame.Frame
