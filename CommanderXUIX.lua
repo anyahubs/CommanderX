@@ -361,7 +361,7 @@ commanderX.Frame_2.BackgroundColor3 = Color3.fromRGB(25, 24, 25)
 commanderX.Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commanderX.Frame_2.BorderSizePixel = 0
 commanderX.Frame_2.Position = UDim2.new(0.0250000004, 0, 0.0199999996, 0)
-commanderX.Frame_2.Size = UDim2.new(0, 433, 55, 0)
+commanderX.Frame_2.Size = UDim2.new(0, 216, 55, 0)
 
 commanderX.UICorner_7.Parent = commanderX.Frame_2
 
