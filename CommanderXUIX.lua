@@ -2196,7 +2196,7 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 	end)
 	
 	clear.MouseButton1Click:Connect(function()
-		script.Parent.Parent.TextBox.Text = ""
+		scriptBox.Text = ""
 	end)
 	
 	copy.MouseButton1Click:Connect(function(plr)
