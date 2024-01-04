@@ -1,7 +1,4 @@
 local success, result = pcall(function()
-if not isfolder("Anya") then
-    makefolder("Anya")
-end
     loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/CommanderX/main/UI'))()
 end)
 
