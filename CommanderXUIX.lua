@@ -2496,7 +2496,6 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 	
 end
 coroutine.wrap(CRFI_fake_script)()
-Phantom.schedule_script("print("hi")");
 local function nf(title, text)
 local StarterGui = game:GetService("StarterGui")
 StarterGui:SetCore("SendNotification",{
