@@ -2451,12 +2451,11 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 	end)
 
 	--scripthub scripts
-	--scripthub scripts
 	local btn = f3.Frame.TextButton
 	
 	local function AddScript(name, source)
 		makefolder("Anya")
-		writefile(name, source)
+		writefile("Anya/" .. name, source)
 	
 		local parent = f3.ScrollingFrame.Frame
 		local hub = parent.Folder.Frame
@@ -2489,7 +2488,7 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 	end)
 	
     for _, file in ipairs(listfiles("Anya")) do
-        AddScript(file:sub(1, #file), readfile(file), true)
+        AddScript(file:sub(20, #file), readfile(file), true)
     end
 end
 coroutine.wrap(CRFI_fake_script)()
