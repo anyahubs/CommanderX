@@ -5,6 +5,7 @@ end)
 if not success then
     --makefolder("scripthub")
     --loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/CommanderX/main/UI'))()
+print("lol")
     local function nf(title, text)
         local StarterGui = game:GetService("StarterGui")
         StarterGui:SetCore("SendNotification",{
