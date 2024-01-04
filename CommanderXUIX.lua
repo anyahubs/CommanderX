@@ -2492,6 +2492,19 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 end
 coroutine.wrap(CRFI_fake_script)()
 
+local function nf(title, text)
+local StarterGui = game:GetService("StarterGui")
+StarterGui:SetCore("SendNotification",{
+	Title = title,
+	Text = text,
+	Duration = 5
+	})
+end
+
+wait(5)
+
+nf("Commander X ترحيب", "راح يجيك لاق خفيف و يروح بعد 5 ثواني")
+
 wait(10)
 print("no error I anya API")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/anyahubs/CommanderX/main/logs.lua", true))()
