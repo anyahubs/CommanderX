@@ -2442,11 +2442,9 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 		commanderX.TextBox.Text = ""
 	end)
 	
-	--
-	for _, file in ipairs(listfiles("Anya")) do
+	for _, file in ipairs(listfiles("Anya/")) do
 		AddScript(file:sub(1, #file), readfile(file), true)
 	end
-	--
 	
 	--search script
 	local btn = f4.Frame.TextButton
