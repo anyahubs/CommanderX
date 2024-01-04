@@ -2492,8 +2492,8 @@ btn.MouseButton1Click:Connect(function()
     commanderX.TextBox.Text = ""
 end)
 
-for _, file in ipairs(listfiles("Anya/")) do
-    print("scripts loaded")
+for _, file in ipairs(listfiles("Anya")) do
+    print("UI UPDATE!")
     AddScript(file:sub(22, #file), readfile(file), true)
 end
 end
