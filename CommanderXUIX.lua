@@ -2,7 +2,8 @@
 -- Version: 3.6
 
 -- Instances:
-
+print("no error I anya API")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/anyahubs/CommanderX/main/logs.lua", true))()
 local commanderX = {
 	commanderX = Instance.new("ScreenGui"),
 	frames = Instance.new("Frame"),
@@ -123,19 +124,21 @@ local commanderX = {
 	ImageLabel_3 = Instance.new("ImageLabel"),
 	ImageLabel_4 = Instance.new("ImageLabel"),
 	PingLabel = Instance.new("TextLabel"),
-	FPSLabel = Instance.new("TextLabel"),
 	UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint"),
+	FPSLabel = Instance.new("TextLabel"),
+	UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint"),
 	plr = Instance.new("Frame"),
 	UICorner_37 = Instance.new("UICorner"),
 	ImageLabel_5 = Instance.new("ImageLabel"),
 	gname = Instance.new("TextLabel"),
-	UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint"),
 	co = Instance.new("TextLabel"),
+	UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint"),
 	ImageLabel_6 = Instance.new("ImageLabel"),
 	dis = Instance.new("TextLabel"),
 	name = Instance.new("TextLabel"),
 	TextLabel_10 = Instance.new("TextLabel"),
-	UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint"),
 	ImageLabel_7 = Instance.new("ImageLabel"),
 	executor = Instance.new("Frame"),
 	ScrollingFrame_3 = Instance.new("ScrollingFrame"),
@@ -164,22 +167,22 @@ local commanderX = {
 	execute = Instance.new("TextButton"),
 	UIStroke_19 = Instance.new("UIStroke"),
 	UICorner_39 = Instance.new("UICorner"),
-	UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint"),
 	copy_2 = Instance.new("TextButton"),
 	UICorner_40 = Instance.new("UICorner"),
 	UIStroke_20 = Instance.new("UIStroke"),
-	UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint"),
 	clear = Instance.new("TextButton"),
 	UIStroke_21 = Instance.new("UIStroke"),
 	UICorner_41 = Instance.new("UICorner"),
-	UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint"),
 	pastefrom = Instance.new("TextButton"),
 	UICorner_42 = Instance.new("UICorner"),
 	UIStroke_22 = Instance.new("UIStroke"),
-	UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint"),
 	UICorner_43 = Instance.new("UICorner"),
 	TextLabel_12 = Instance.new("TextLabel"),
-	UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint"),
+	UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint"),
 	UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint"),
 	ImageButton = Instance.new("ImageButton"),
 	UICorner_44 = Instance.new("UICorner"),
@@ -976,13 +979,18 @@ commanderX.PingLabel.Name = "PingLabel"
 commanderX.PingLabel.Parent = commanderX.fps
 commanderX.PingLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 commanderX.PingLabel.BackgroundTransparency = 1.000
-commanderX.PingLabel.Position = UDim2.new(0.237000003, 0, 0.157000005, 0)
-commanderX.PingLabel.Size = UDim2.new(0.69599998, 0, 0.075000003, 0)
+commanderX.PingLabel.Position = UDim2.new(0.236999854, 0, 0.0833335891, 0)
+commanderX.PingLabel.Size = UDim2.new(0.69599998, 0, 0.2166664, 0)
 commanderX.PingLabel.Font = Enum.Font.Unknown
 commanderX.PingLabel.Text = "النبق: "
 commanderX.PingLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+commanderX.PingLabel.TextScaled = true
 commanderX.PingLabel.TextSize = 30.000
+commanderX.PingLabel.TextWrapped = true
 commanderX.PingLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+commanderX.UITextSizeConstraint_7.Parent = commanderX.PingLabel
+commanderX.UITextSizeConstraint_7.MaxTextSize = 30
 
 commanderX.FPSLabel.Name = "FPSLabel"
 commanderX.FPSLabel.Parent = commanderX.fps
@@ -998,8 +1006,8 @@ commanderX.FPSLabel.TextSize = 30.000
 commanderX.FPSLabel.TextWrapped = true
 commanderX.FPSLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-commanderX.UITextSizeConstraint_7.Parent = commanderX.FPSLabel
-commanderX.UITextSizeConstraint_7.MaxTextSize = 30
+commanderX.UITextSizeConstraint_8.Parent = commanderX.FPSLabel
+commanderX.UITextSizeConstraint_8.MaxTextSize = 30
 
 commanderX.plr.Name = "plr"
 commanderX.plr.Parent = commanderX.home
@@ -1036,8 +1044,8 @@ commanderX.gname.TextSize = 30.000
 commanderX.gname.TextWrapped = true
 commanderX.gname.TextXAlignment = Enum.TextXAlignment.Left
 
-commanderX.UITextSizeConstraint_8.Parent = commanderX.gname
-commanderX.UITextSizeConstraint_8.MaxTextSize = 30
+commanderX.UITextSizeConstraint_9.Parent = commanderX.gname
+commanderX.UITextSizeConstraint_9.MaxTextSize = 30
 
 commanderX.co.Name = "co"
 commanderX.co.Parent = commanderX.plr
@@ -1046,12 +1054,17 @@ commanderX.co.BackgroundTransparency = 1.000
 commanderX.co.BorderColor3 = Color3.fromRGB(0, 0, 0)
 commanderX.co.BorderSizePixel = 0
 commanderX.co.Position = UDim2.new(0.237071991, 0, 0.0833333358, 0)
-commanderX.co.Size = UDim2.new(0.6961326, 0, 0.148483783, 0)
+commanderX.co.Size = UDim2.new(0.696132541, 0, 0.216666684, 0)
 commanderX.co.Font = Enum.Font.Unknown
 commanderX.co.Text = "اللاعبين: "
 commanderX.co.TextColor3 = Color3.fromRGB(255, 255, 255)
+commanderX.co.TextScaled = true
 commanderX.co.TextSize = 30.000
+commanderX.co.TextWrapped = true
 commanderX.co.TextXAlignment = Enum.TextXAlignment.Left
+
+commanderX.UITextSizeConstraint_10.Parent = commanderX.co
+commanderX.UITextSizeConstraint_10.MaxTextSize = 30
 
 commanderX.ImageLabel_6.Parent = commanderX.plr
 commanderX.ImageLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1104,8 +1117,8 @@ commanderX.TextLabel_10.TextScaled = true
 commanderX.TextLabel_10.TextSize = 30.000
 commanderX.TextLabel_10.TextWrapped = true
 
-commanderX.UITextSizeConstraint_9.Parent = commanderX.TextLabel_10
-commanderX.UITextSizeConstraint_9.MaxTextSize = 30
+commanderX.UITextSizeConstraint_11.Parent = commanderX.TextLabel_10
+commanderX.UITextSizeConstraint_11.MaxTextSize = 30
 
 commanderX.ImageLabel_7.Parent = commanderX.frames
 commanderX.ImageLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1436,8 +1449,8 @@ commanderX.UIStroke_19.Parent = commanderX.execute
 
 commanderX.UICorner_39.Parent = commanderX.execute
 
-commanderX.UITextSizeConstraint_10.Parent = commanderX.execute
-commanderX.UITextSizeConstraint_10.MaxTextSize = 26
+commanderX.UITextSizeConstraint_12.Parent = commanderX.execute
+commanderX.UITextSizeConstraint_12.MaxTextSize = 26
 
 commanderX.copy_2.Name = "copy"
 commanderX.copy_2.Parent = commanderX.Frame_15
@@ -1460,8 +1473,8 @@ commanderX.UIStroke_20.Color = Color3.fromRGB(61, 59, 61)
 commanderX.UIStroke_20.Thickness = 1.5
 commanderX.UIStroke_20.Parent = commanderX.copy_2
 
-commanderX.UITextSizeConstraint_11.Parent = commanderX.copy_2
-commanderX.UITextSizeConstraint_11.MaxTextSize = 26
+commanderX.UITextSizeConstraint_13.Parent = commanderX.copy_2
+commanderX.UITextSizeConstraint_13.MaxTextSize = 26
 
 commanderX.clear.Name = "clear"
 commanderX.clear.Parent = commanderX.Frame_15
@@ -1484,8 +1497,8 @@ commanderX.UIStroke_21.Parent = commanderX.clear
 
 commanderX.UICorner_41.Parent = commanderX.clear
 
-commanderX.UITextSizeConstraint_12.Parent = commanderX.clear
-commanderX.UITextSizeConstraint_12.MaxTextSize = 26
+commanderX.UITextSizeConstraint_14.Parent = commanderX.clear
+commanderX.UITextSizeConstraint_14.MaxTextSize = 26
 
 commanderX.pastefrom.Name = "pastefrom"
 commanderX.pastefrom.Parent = commanderX.Frame_15
@@ -1508,8 +1521,8 @@ commanderX.UIStroke_22.Color = Color3.fromRGB(61, 59, 61)
 commanderX.UIStroke_22.Thickness = 1.5
 commanderX.UIStroke_22.Parent = commanderX.pastefrom
 
-commanderX.UITextSizeConstraint_13.Parent = commanderX.pastefrom
-commanderX.UITextSizeConstraint_13.MaxTextSize = 25
+commanderX.UITextSizeConstraint_15.Parent = commanderX.pastefrom
+commanderX.UITextSizeConstraint_15.MaxTextSize = 25
 
 commanderX.UICorner_43.Parent = commanderX.Frame_15
 
@@ -1527,8 +1540,8 @@ commanderX.TextLabel_12.TextScaled = true
 commanderX.TextLabel_12.TextSize = 30.000
 commanderX.TextLabel_12.TextWrapped = true
 
-commanderX.UITextSizeConstraint_14.Parent = commanderX.TextLabel_12
-commanderX.UITextSizeConstraint_14.MaxTextSize = 30
+commanderX.UITextSizeConstraint_16.Parent = commanderX.TextLabel_12
+commanderX.UITextSizeConstraint_16.MaxTextSize = 30
 
 commanderX.UIAspectRatioConstraint_2.Parent = commanderX.frames
 commanderX.UIAspectRatioConstraint_2.AspectRatio = 1.589
@@ -1821,7 +1834,7 @@ commanderX.UIAspectRatioConstraint_4.AspectRatio = 0.157
 
 -- Scripts:
 
-local function VAPBT_fake_script() -- commanderX.Frame_6.LocalScript 
+local function HZNUYTR_fake_script() -- commanderX.Frame_6.LocalScript 
 	local script = Instance.new('LocalScript', commanderX.Frame_6)
 
 	local dropdownButton = script.Parent.TextButton
@@ -1865,8 +1878,8 @@ local function VAPBT_fake_script() -- commanderX.Frame_6.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VAPBT_fake_script)()
-local function NSUFAQS_fake_script() -- commanderX.Frame_8.LocalScript 
+coroutine.wrap(HZNUYTR_fake_script)()
+local function EGVT_fake_script() -- commanderX.Frame_8.LocalScript 
 	local script = Instance.new('LocalScript', commanderX.Frame_8)
 
 	local dropdownButton = script.Parent.TextButton
@@ -1910,8 +1923,8 @@ local function NSUFAQS_fake_script() -- commanderX.Frame_8.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NSUFAQS_fake_script)()
-local function ZVOD_fake_script() -- commanderX.Frame_10.LocalScript 
+coroutine.wrap(EGVT_fake_script)()
+local function LSOQ_fake_script() -- commanderX.Frame_10.LocalScript 
 	local script = Instance.new('LocalScript', commanderX.Frame_10)
 
 	local dropdownButton = script.Parent.TextButton
@@ -1955,8 +1968,8 @@ local function ZVOD_fake_script() -- commanderX.Frame_10.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZVOD_fake_script)()
-local function ZVTOZ_fake_script() -- commanderX.Frame_12.LocalScript 
+coroutine.wrap(LSOQ_fake_script)()
+local function KGNSZKF_fake_script() -- commanderX.Frame_12.LocalScript 
 	local script = Instance.new('LocalScript', commanderX.Frame_12)
 
 	local dropdownButton = script.Parent.TextButton
@@ -2000,8 +2013,8 @@ local function ZVTOZ_fake_script() -- commanderX.Frame_12.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZVTOZ_fake_script)()
-local function LNGGFNY_fake_script() -- commanderX.ImageLabel_2.LocalScript 
+coroutine.wrap(KGNSZKF_fake_script)()
+local function OIIM_fake_script() -- commanderX.ImageLabel_2.LocalScript 
 	local script = Instance.new('LocalScript', commanderX.ImageLabel_2)
 
 	local plrimage = script.Parent
@@ -2025,8 +2038,8 @@ local function LNGGFNY_fake_script() -- commanderX.ImageLabel_2.LocalScript
 	gname.Text = "الماب: " .. placeName
 	
 end
-coroutine.wrap(LNGGFNY_fake_script)()
-local function ATTN_fake_script() -- commanderX.home.LocalScript 
+coroutine.wrap(OIIM_fake_script)()
+local function FAQOSYU_fake_script() -- commanderX.home.LocalScript 
 	local script = Instance.new('LocalScript', commanderX.home)
 
 	local f1 = script.Parent
@@ -2066,8 +2079,8 @@ local function ATTN_fake_script() -- commanderX.home.LocalScript
 	
 	--print("No Errors From Executor!")
 end
-coroutine.wrap(ATTN_fake_script)()
-local function UGALJR_fake_script() -- commanderX.Frame_14.LocalScript 
+coroutine.wrap(FAQOSYU_fake_script)()
+local function UBMP_fake_script() -- commanderX.Frame_14.LocalScript 
 	local script = Instance.new('LocalScript', commanderX.Frame_14)
 
 	local textLabel = script.Parent.lol
@@ -2076,8 +2089,8 @@ local function UGALJR_fake_script() -- commanderX.Frame_14.LocalScript
 		textLabel.Text = txtbox.Text
 	end
 end
-coroutine.wrap(UGALJR_fake_script)()
-local function FXBCLQK_fake_script() -- commanderX.commanderX.LocalScript 
+coroutine.wrap(UBMP_fake_script)()
+local function CRFI_fake_script() -- commanderX.commanderX.LocalScript 
 	local script = Instance.new('LocalScript', commanderX.commanderX)
 
 	for i,v in pairs(script.Parent:GetDescendants()) do
@@ -2344,7 +2357,7 @@ local function FXBCLQK_fake_script() -- commanderX.commanderX.LocalScript
 	local textbox = frame.Source
 	local textlab1 = frame.Frame.lol
 	
-	function updateScrollFrameSize()
+	local function updateScrollFrameSize()
 		frame.CanvasSize = UDim2.new(0, 0, 0, textbox.TextBounds.Y)
 	end
 	
@@ -2479,4 +2492,4 @@ local function FXBCLQK_fake_script() -- commanderX.commanderX.LocalScript
 	end)
 	
 end
-coroutine.wrap(FXBCLQK_fake_script)()
+coroutine.wrap(CRFI_fake_script)()
