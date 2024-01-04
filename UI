@@ -2478,7 +2478,7 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 		end)
 		delbutton.MouseButton1Click:Connect(function()
 			newhub:Destroy()
-			delfile("Anya/"..name)
+			delfile("/Anya/"..name)
 		end)
 	end
 	
