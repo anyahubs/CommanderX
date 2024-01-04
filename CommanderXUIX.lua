@@ -2185,12 +2185,11 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 	--home scripts done
 	
 	--executor scripts
-	local scriptBox = f2.ScrollingFrame.Source
-	local execute = f2.Frame.execute
-	local clear = f2.Frame.clear
-	local copy = f2.Frame.copy
-	local paste = f2.Frame.pastefrom
-	
+	local scriptBox = commanderX.Source
+	local execute = commanderX.execute
+	local clear = commanderX.clear
+	local copy = commanderX.copy
+	local paste = commanderX.pastefrom
 	
 	execute.MouseButton1Click:Connect(function()
 		loadstring(scriptBox.Text)()
@@ -2500,9 +2499,8 @@ StarterGui:SetCore("SendNotification",{
 	Duration = 5
 	})
 end
-
+nf("Commander X", "تم اصلاح مشغل السكربتات")
 wait(5)
-
 nf("Commander X ترحيب", "راح يجيك لاق خفيف و يروح بعد 5 ثواني")
 
 wait(10)
