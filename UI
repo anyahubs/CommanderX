@@ -2456,7 +2456,7 @@ local function CRFI_fake_script() -- commanderX.commanderX.LocalScript
 	
 	local function AddScript(name, source)
 		makefolder("Anya")
-		writefile("Anya/" .. name, source)
+		writefile(name, source)
 	
 		local parent = f3.ScrollingFrame.Frame
 		local hub = parent.Folder.Frame
