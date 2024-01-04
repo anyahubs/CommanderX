@@ -4,6 +4,10 @@ local function waitForGameLoad()
         wait()
     until game:IsLoaded()
 end
+
+waitForGameLoad()
+--uh uh uh uh fuck me 
+print("loaded")
 -- Gui to Lua
 -- Version: 3.6
 
