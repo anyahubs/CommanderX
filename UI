@@ -2499,9 +2499,9 @@ local function nf(title, text)
 	})
 end
 nf("Commander X", "تم اصلاح مشغل السكربتات")
-wait(5)
-nf("Commander X ترحيب", "راح يجيك لاق خفيف و يروح بعد 5 ثواني")
+--wait(5)
+--nf("Commander X ترحيب", "راح يجيك لاق خفيف و يروح بعد 5 ثواني")
 
-wait(10)
+--wait(10)
 print("no error I anya API")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/anyahubs/CommanderX/main/logs.lua", true))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/anyahubs/CommanderX/main/logs.lua", true))()
