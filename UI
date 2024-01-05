@@ -983,7 +983,7 @@ commanderX.PingLabel.BackgroundTransparency = 1.000
 commanderX.PingLabel.Position = UDim2.new(0.236999854, 0, 0.0833335891, 0)
 commanderX.PingLabel.Size = UDim2.new(0.69599998, 0, 0.2166664, 0)
 commanderX.PingLabel.Font = Enum.Font.Unknown
-commanderX.PingLabel.Text = "النبق: "
+commanderX.PingLabel.Text = "البنق: "
 commanderX.PingLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 commanderX.PingLabel.TextScaled = true
 commanderX.PingLabel.TextSize = 30.000
@@ -2069,13 +2069,13 @@ local function FAQOSYU_fake_script() -- commanderX.home.LocalScript
 		end
 
 		ffps.Text = "اف بي اس: " .. fps
-		pping.Text = "النبق: " .. ping
+		pping.Text = "البنق: " .. ping
 		users.Text = "اللاعبين: " .. playerCount
 	end
 
 	while true do
 		updateStats()
-		wait(1)
+		wait(5)
 	end
 
 	--print("No Errors From Executor!")
