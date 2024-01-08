@@ -274,7 +274,7 @@ gg9.BorderColor3 = Color3.fromRGB(0, 0, 0)
 gg9.BorderSizePixel = 0
 gg9.Position = UDim2.new(0.0104062436, 0, 0.120971441, 0)
 gg9.Size = UDim2.new(0.0322866961, 0, 0.635999918, 0)
-gg9.Image = "rbxassetid://15204016915"
+gg9.Image = "rbxassetid://15919949513"
 
 TextLabel.Parent = topbar
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
