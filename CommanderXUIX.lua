@@ -228,7 +228,7 @@ local function JJFIP_fake_script() -- openBtn.openScript
 	local openKr = script.Parent.Parent.Parent.OpenKr
 	
 	btn.MouseButton1Click:Connect(function()	
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/lr77world/ir77/main/file1"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/anyahubs/executer/main/Krypton(UI).txt"))()
 		openKr:Destroy()
 	end)
 end
