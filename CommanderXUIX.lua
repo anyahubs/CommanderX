@@ -25,7 +25,7 @@ gmt.__namecall = (function(...)
 	if checkcaller() then
         if args[1] == game then -- self == game
 			if getnamecallmethod() == "HttpGet" or getnamecallmethod() == "HttpGetAsync" then
-			    return httpget(game, args[2])
+			    --return httpget(game, args[2])
 		    end
 	        if getnamecallmethod() == "GetObjects" then
 	            return getobjs(game, args[2])
