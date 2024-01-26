@@ -35,7 +35,7 @@ G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["4"]["BackgroundTransparency"] = 1;
 G2L["4"]["Size"] = UDim2.new(1, 0, 0.1054590567946434, 0);
 G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Position"] = UDim2.new(0, 0, 0.8823529481887817, 0);
+G2L["4"]["Position"] = UDim2.new(0.05137186124920845, 0, 0.8873655200004578, 0);
 G2L["4"]["Name"] = [[down]];
 
 -- StarterGui.ValyseExploit.UI.down.btns
@@ -203,7 +203,7 @@ G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1c"]["BackgroundTransparency"] = 1;
 G2L["1c"]["Size"] = UDim2.new(1, 0, 0.1054590567946434, 0);
 G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1c"]["Position"] = UDim2.new(-0.001868460327386856, 0, 0.0017301038606092334, 0);
+G2L["1c"]["Position"] = UDim2.new(0.049503397196531296, 0, 0.006742635276168585, 0);
 G2L["1c"]["Name"] = [[up]];
 
 -- StarterGui.ValyseExploit.UI.up.logo
@@ -333,7 +333,7 @@ G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2e"]["BackgroundTransparency"] = 1;
 G2L["2e"]["Size"] = UDim2.new(1, 0, 0.7507877349853516, 0);
 G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2e"]["Position"] = UDim2.new(-0.002802690491080284, 0, 0.11937716603279114, 0);
+G2L["2e"]["Position"] = UDim2.new(0.04856916144490242, 0, 0.12438968569040298, 0);
 G2L["2e"]["Name"] = [[Center]];
 
 -- StarterGui.ValyseExploit.UI.Center.home
@@ -1274,7 +1274,7 @@ G2L["ac"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
 G2L["ac"]["BackgroundTransparency"] = 0.20000000298023224;
 G2L["ac"]["Size"] = UDim2.new(0.2299244999885559, 0, 1.0024118423461914, 0);
 G2L["ac"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ac"]["Position"] = UDim2.new(0.3856273293495178, 0, 0.04746507480740547, 0);
+G2L["ac"]["Position"] = UDim2.new(0.3856273293495178, 0, -0.0009385579032823443, 0);
 G2L["ac"]["Visible"] = false;
 G2L["ac"]["Name"] = [[search]];
 
@@ -1372,73 +1372,73 @@ G2L["b8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["b8"]["ScrollBarThickness"] = 6;
 G2L["b8"]["Position"] = UDim2.new(0.035820893943309784, 0, 0.18838025629520416, 0);
 
--- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.UIGridLayout
-G2L["b9"] = Instance.new("UIGridLayout", G2L["b8"]);
-G2L["b9"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-G2L["b9"]["CellSize"] = UDim2.new(0, 139, 0, 155);
-
 -- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.Folder
-G2L["ba"] = Instance.new("Folder", G2L["b8"]);
+G2L["b9"] = Instance.new("Folder", G2L["b8"]);
 
 
 -- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.Folder.XCR
-G2L["bb"] = Instance.new("Frame", G2L["ba"]);
-G2L["bb"]["BorderSizePixel"] = 0;
-G2L["bb"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
-G2L["bb"]["Size"] = UDim2.new(0.448387086391449, 0, 0.3436807096004486, 0);
-G2L["bb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["bb"]["Position"] = UDim2.new(0.040588196367025375, 0, 0.21837148070335388, 0);
-G2L["bb"]["Visible"] = false;
-G2L["bb"]["Name"] = [[XCR]];
+G2L["ba"] = Instance.new("Frame", G2L["b9"]);
+G2L["ba"]["BorderSizePixel"] = 0;
+G2L["ba"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["ba"]["Size"] = UDim2.new(0.2642274498939514, 0, 0.19712121784687042, 0);
+G2L["ba"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ba"]["Position"] = UDim2.new(0, 0, 3.19982049745704e-08, 0);
+G2L["ba"]["Visible"] = false;
+G2L["ba"]["Name"] = [[XCR]];
 
 -- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.Folder.XCR.UICorner
-G2L["bc"] = Instance.new("UICorner", G2L["bb"]);
+G2L["bb"] = Instance.new("UICorner", G2L["ba"]);
 
 
 -- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.Folder.XCR.ImageLabel
-G2L["bd"] = Instance.new("ImageLabel", G2L["bb"]);
-G2L["bd"]["BorderSizePixel"] = 0;
-G2L["bd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["bd"]["Image"] = [[rbxassetid://16094776369]];
-G2L["bd"]["Size"] = UDim2.new(0.9928057789802551, 0, 0.42066094279289246, 0);
-G2L["bd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["bd"]["BackgroundTransparency"] = 1;
-G2L["bd"]["Position"] = UDim2.new(0.008268287405371666, 0, -1.968875977809148e-07, 0);
+G2L["bc"] = Instance.new("ImageLabel", G2L["ba"]);
+G2L["bc"]["BorderSizePixel"] = 0;
+G2L["bc"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bc"]["Image"] = [[rbxassetid://16094776369]];
+G2L["bc"]["Size"] = UDim2.new(0.9928057789802551, 0, 0.42066094279289246, 0);
+G2L["bc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bc"]["BackgroundTransparency"] = 1;
+G2L["bc"]["Position"] = UDim2.new(0.008268287405371666, 0, -1.968875977809148e-07, 0);
 
 -- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.Folder.XCR.ImageLabel.UICorner
-G2L["be"] = Instance.new("UICorner", G2L["bd"]);
-G2L["be"]["CornerRadius"] = UDim.new(1, 0);
+G2L["bd"] = Instance.new("UICorner", G2L["bc"]);
+G2L["bd"]["CornerRadius"] = UDim.new(1, 0);
 
 -- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.Folder.XCR.TextLabel
-G2L["bf"] = Instance.new("TextLabel", G2L["bb"]);
-G2L["bf"]["BorderSizePixel"] = 0;
-G2L["bf"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["bf"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["bf"]["TextSize"] = 30;
-G2L["bf"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["bf"]["Size"] = UDim2.new(0, 137, 0, 22);
-G2L["bf"]["ClipsDescendants"] = true;
-G2L["bf"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["bf"]["Text"] = [[SOON!]];
-G2L["bf"]["BackgroundTransparency"] = 1;
-G2L["bf"]["Position"] = UDim2.new(0.008268287405371666, 0, 0.5055634379386902, 0);
+G2L["be"] = Instance.new("TextLabel", G2L["ba"]);
+G2L["be"]["BorderSizePixel"] = 0;
+G2L["be"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["be"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["be"]["TextSize"] = 30;
+G2L["be"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["be"]["Size"] = UDim2.new(0, 63, 0, 22);
+G2L["be"]["ClipsDescendants"] = true;
+G2L["be"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["be"]["Text"] = [[SOON!]];
+G2L["be"]["BackgroundTransparency"] = 1;
+G2L["be"]["Position"] = UDim2.new(0.09197736531496048, 0, 0.5183840990066528, 0);
 
 -- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.Folder.XCR.TextButton
-G2L["c0"] = Instance.new("TextButton", G2L["bb"]);
-G2L["c0"]["BorderSizePixel"] = 0;
-G2L["c0"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
-G2L["c0"]["TextSize"] = 30;
-G2L["c0"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["c0"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c0"]["Size"] = UDim2.new(0.7553957104682922, 0, 0.22645962238311768, 0);
-G2L["c0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c0"]["Text"] = [[Load Script!]];
-G2L["c0"]["Position"] = UDim2.new(0.12230215966701508, 0, 0.7225808501243591, 0);
-G2L["c0"]["BackgroundTransparency"] = 0.5;
+G2L["bf"] = Instance.new("TextButton", G2L["ba"]);
+G2L["bf"]["BorderSizePixel"] = 0;
+G2L["bf"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["bf"]["TextSize"] = 15;
+G2L["bf"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["bf"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bf"]["Size"] = UDim2.new(0.714292049407959, 0, 0.22645962238311768, 0);
+G2L["bf"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bf"]["Text"] = [[Load Script!]];
+G2L["bf"]["Position"] = UDim2.new(0.16340680420398712, 0, 0.7225807309150696, 0);
+G2L["bf"]["BackgroundTransparency"] = 0.5;
 
 -- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.Folder.XCR.TextButton.UICorner
-G2L["c1"] = Instance.new("UICorner", G2L["c0"]);
+G2L["c0"] = Instance.new("UICorner", G2L["bf"]);
 
+
+-- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.UIGridLayout
+G2L["c1"] = Instance.new("UIGridLayout", G2L["b8"]);
+G2L["c1"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["c1"]["CellSize"] = UDim2.new(0, 70, 0, 78);
 
 -- StarterGui.ValyseExploit.UI.Center.UIAspectRatioConstraint
 G2L["c2"] = Instance.new("UIAspectRatioConstraint", G2L["2e"]);
@@ -1463,7 +1463,7 @@ G2L["c4"]["Image"] = [[rbxassetid://16094776369]];
 G2L["c4"]["Size"] = UDim2.new(0.04365915432572365, 0, 0.07894736528396606, 0);
 G2L["c4"]["Name"] = [[show]];
 G2L["c4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c4"]["Position"] = UDim2.new(0.0005000000237487257, 0, 0.07800000160932541, 0);
+G2L["c4"]["Position"] = UDim2.new(0.47802481055259705, 0, 0.11058145016431808, 0);
 
 -- StarterGui.ValyseExploit.show.UICorner
 G2L["c5"] = Instance.new("UICorner", G2L["c4"]);
