@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
 ]=]
 
--- Instances: 195 | Scripts: 6 | Modules: 0
+-- Instances: 199 | Scripts: 7 | Modules: 0
 local G2L = {};
 
 -- StarterGui.ValyseExploit
@@ -20,9 +20,8 @@ G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
 G2L["2"]["BackgroundTransparency"] = 0.20000000298023224;
-G2L["2"]["Size"] = UDim2.new(1, 0, 1.117891788482666, 0);
+G2L["2"]["Size"] = UDim2.new(1, 0, 1, 0);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Position"] = UDim2.new(0, 0, -0.11789177358150482, 0);
 G2L["2"]["Name"] = [[UI]];
 
 -- StarterGui.ValyseExploit.UI.UIGradient
@@ -142,9 +141,9 @@ G2L["13"] = Instance.new("Frame", G2L["4"]);
 G2L["13"]["BorderSizePixel"] = 0;
 G2L["13"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
 G2L["13"]["BackgroundTransparency"] = 0.20000000298023224;
-G2L["13"]["Size"] = UDim2.new(0.041354015469551086, 0, 0.5882353186607361, 0);
+G2L["13"]["Size"] = UDim2.new(0.03545509651303291, 0, 0.640999972820282, 0);
 G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13"]["Position"] = UDim2.new(0.9439381957054138, 0, -8.142773628234863, 0);
+G2L["13"]["Position"] = UDim2.new(0.6028263568878174, 0, 0.23649773001670837, 0);
 G2L["13"]["Name"] = [[exit]];
 
 -- StarterGui.ValyseExploit.UI.down.exit.UICorner
@@ -155,7 +154,7 @@ G2L["14"]["CornerRadius"] = UDim.new(1, 0);
 G2L["15"] = Instance.new("ImageButton", G2L["13"]);
 G2L["15"]["BorderSizePixel"] = 0;
 G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["15"]["Image"] = [[http://www.roblox.com/asset/?id=6031094678]];
+G2L["15"]["Image"] = [[rbxassetid://2777727756]];
 G2L["15"]["Size"] = UDim2.new(0.7777777910232544, 0, 0.75, 0);
 G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["15"]["Position"] = UDim2.new(0.10343967378139496, 0, 0.12247346341609955, 0);
@@ -166,9 +165,9 @@ G2L["16"] = Instance.new("Frame", G2L["4"]);
 G2L["16"]["BorderSizePixel"] = 0;
 G2L["16"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
 G2L["16"]["BackgroundTransparency"] = 0.5;
-G2L["16"]["Size"] = UDim2.new(0.03643497824668884, 0, 0.5882353186607361, 0);
+G2L["16"]["Size"] = UDim2.new(0.03550000116229057, 0, 0.640999972820282, 0);
 G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["16"]["Position"] = UDim2.new(0.9460623264312744, 0, -7.388926982879639, 0);
+G2L["16"]["Position"] = UDim2.new(0.362671822309494, 0, 0.23747777938842773, 0);
 G2L["16"]["Name"] = [[dis]];
 
 -- StarterGui.ValyseExploit.UI.down.dis.UICorner
@@ -180,9 +179,9 @@ G2L["18"] = Instance.new("ImageButton", G2L["16"]);
 G2L["18"]["BorderSizePixel"] = 0;
 G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["18"]["Image"] = [[rbxasset://textures/ui/LuaApp/ExternalSite/discord@3x.png]];
-G2L["18"]["Size"] = UDim2.new(0.7200000286102295, 0, 0.7111111283302307, 0);
+G2L["18"]["Size"] = UDim2.new(0.7199999690055847, 0, 0.6776910424232483, 0);
 G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["Position"] = UDim2.new(0.14000000059604645, 0, 0.13333334028720856, 0);
+G2L["18"]["Position"] = UDim2.new(0.14000000059604645, 0, 0.13333342969417572, 0);
 G2L["18"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.ValyseExploit.UI.down.dis.ImageButton.UICorner
@@ -1275,7 +1274,7 @@ G2L["ac"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
 G2L["ac"]["BackgroundTransparency"] = 0.20000000298023224;
 G2L["ac"]["Size"] = UDim2.new(0.2299244999885559, 0, 1.0024118423461914, 0);
 G2L["ac"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ac"]["Position"] = UDim2.new(0.3856273293495178, 0, 0.1621776968240738, 0);
+G2L["ac"]["Position"] = UDim2.new(0.3856273293495178, 0, 0.04746507480740547, 0);
 G2L["ac"]["Visible"] = false;
 G2L["ac"]["Name"] = [[search]];
 
@@ -1317,7 +1316,6 @@ G2L["b1"]["MaxTextSize"] = 30;
 
 -- StarterGui.ValyseExploit.UI.Center.search.LLL.TextBox
 G2L["b2"] = Instance.new("TextBox", G2L["ae"]);
-G2L["b2"]["CursorPosition"] = -1;
 G2L["b2"]["BorderSizePixel"] = 0;
 G2L["b2"]["TextSize"] = 25;
 G2L["b2"]["TextWrapped"] = true;
@@ -1402,10 +1400,10 @@ G2L["bd"] = Instance.new("ImageLabel", G2L["bb"]);
 G2L["bd"]["BorderSizePixel"] = 0;
 G2L["bd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["bd"]["Image"] = [[rbxassetid://16094776369]];
-G2L["bd"]["Size"] = UDim2.new(0.9928057789802551, 0, 0.16904816031455994, 0);
+G2L["bd"]["Size"] = UDim2.new(0.9928057789802551, 0, 0.42066094279289246, 0);
 G2L["bd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["bd"]["BackgroundTransparency"] = 1;
-G2L["bd"]["Position"] = UDim2.new(0.008268287405371666, 0, 0, 0);
+G2L["bd"]["Position"] = UDim2.new(0.008268287405371666, 0, -1.968875977809148e-07, 0);
 
 -- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.Folder.XCR.ImageLabel.UICorner
 G2L["be"] = Instance.new("UICorner", G2L["bd"]);
@@ -1423,7 +1421,7 @@ G2L["bf"]["ClipsDescendants"] = true;
 G2L["bf"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["bf"]["Text"] = [[SOON!]];
 G2L["bf"]["BackgroundTransparency"] = 1;
-G2L["bf"]["Position"] = UDim2.new(0.008268287405371666, 0, 0.47975701093673706, 0);
+G2L["bf"]["Position"] = UDim2.new(0.008268287405371666, 0, 0.5055634379386902, 0);
 
 -- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.Folder.XCR.TextButton
 G2L["c0"] = Instance.new("TextButton", G2L["bb"]);
@@ -1432,10 +1430,10 @@ G2L["c0"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
 G2L["c0"]["TextSize"] = 30;
 G2L["c0"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["c0"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c0"]["Size"] = UDim2.new(0.7553957104682922, 0, 0.08452408015727997, 0);
+G2L["c0"]["Size"] = UDim2.new(0.7553957104682922, 0, 0.22645962238311768, 0);
 G2L["c0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["c0"]["Text"] = [[Load Script!]];
-G2L["c0"]["Position"] = UDim2.new(0.12230215966701508, 0, 0.6903225779533386, 0);
+G2L["c0"]["Position"] = UDim2.new(0.12230215966701508, 0, 0.7225808501243591, 0);
 G2L["c0"]["BackgroundTransparency"] = 0.5;
 
 -- StarterGui.ValyseExploit.UI.Center.search.ScrollingFrame.Folder.XCR.TextButton.UICorner
@@ -1457,6 +1455,30 @@ G2L["c3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["c3"]["BackgroundTransparency"] = 1;
 G2L["c3"]["Position"] = UDim2.new(0.3839685916900635, 0, 0.2115117907524109, 0);
 
+-- StarterGui.ValyseExploit.show
+G2L["c4"] = Instance.new("ImageButton", G2L["1"]);
+G2L["c4"]["BorderSizePixel"] = 0;
+G2L["c4"]["BackgroundColor3"] = Color3.fromRGB(31, 31, 31);
+G2L["c4"]["Image"] = [[rbxassetid://16094776369]];
+G2L["c4"]["Size"] = UDim2.new(0.04365915432572365, 0, 0.07894736528396606, 0);
+G2L["c4"]["Name"] = [[show]];
+G2L["c4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c4"]["Position"] = UDim2.new(0.0005000000237487257, 0, 0.07800000160932541, 0);
+
+-- StarterGui.ValyseExploit.show.UICorner
+G2L["c5"] = Instance.new("UICorner", G2L["c4"]);
+G2L["c5"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.ValyseExploit.show.UIStroke
+G2L["c6"] = Instance.new("UIStroke", G2L["c4"]);
+G2L["c6"]["Color"] = Color3.fromRGB(69, 68, 69);
+G2L["c6"]["Thickness"] = 3;
+G2L["c6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.ValyseExploit.LocalScript
+G2L["c7"] = Instance.new("LocalScript", G2L["1"]);
+
+
 -- StarterGui.ValyseExploit.UI.down.LocalScript
 local function C_1a()
 local script = G2L["1a"];
@@ -1464,6 +1486,7 @@ local script = G2L["1a"];
 	local all = script.Parent.Parent.Center
 	local discordinvite = script.Parent.dis.ImageButton
 	local close = script.Parent.exit.ImageButton
+	local show = script.Parent.Parent.Parent.show
 	
 	local openexe = btns.executor.ImageButton
 	local openmain = btns.home.ImageButton
@@ -1510,8 +1533,15 @@ local script = G2L["1a"];
 		setclipboard("https://discord.gg/0000000")
 	end)
 	close.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent:Destroy()
+		game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(1), {Position = UDim2.new(0, 0,2, 0)}):Play()
+		game:GetService("TweenService"):Create(script.Parent.Parent.Parent.show, TweenInfo.new(1), {Position = UDim2.new(0.005, 0,0.078, 0)}):Play()
 	end)
+	show.MouseButton1Click:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent, TweenInfo.new(1), {Position = UDim2.new(0, 0,0, 0)}):Play()
+		game:GetService("TweenService"):Create(script.Parent.Parent.Parent.show, TweenInfo.new(1), {Position = UDim2.new(-0.1, 0,0.078, 0)}):Play()
+	end)
+	
+	-- show game:GetService("TweenService"):Create(script.Parent.Parent.Parent, TweenInfo.new(1), {Position = UDim2.new(0, 0,0, 0)}):Play()
 	
 end;
 task.spawn(C_1a);
@@ -1793,5 +1823,19 @@ local script = G2L["b6"];
 	end)
 end;
 task.spawn(C_b6);
+-- StarterGui.ValyseExploit.LocalScript
+local function C_c7()
+local script = G2L["c7"];
+	--fixer dont delete it !!!!!!
+	script.Parent.UI.Position = UDim2.new(0, 0,2, 0)
+	script.Parent.show.Position = UDim2.new(0.001, 0,0.078, 0)
+	print("Valyse Better Bruh")
+	--SCRIPTING BY ANYA HAHAHAHAHAHA 
+	
+	
+	
+	--REXI MAD BRUH
+end;
+task.spawn(C_c7);
 
 return G2L["1"], require;
